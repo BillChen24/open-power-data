@@ -30,14 +30,18 @@ export default function HeroSection() {
           </h1>
 
           <p className="text-xl text-muted-foreground leading-relaxed mb-8">
-            Access comprehensive power and energy datasets from countries worldwide.
-            Explore demand patterns, generation capacity, and infrastructure data
-            to drive your research forward.
+            Access comprehensive power and energy datasets from countries
+            worldwide. Explore demand patterns, generation capacity, and
+            infrastructure data to drive your research forward.
           </p>
 
           <div className="flex flex-wrap gap-4">
             <Link href="/explore" data-testid="link-explore-data">
-              <Button size="lg" className="text-lg font-semibold" data-testid="button-explore-data">
+              <Button
+                size="lg"
+                className="text-lg font-semibold"
+                data-testid="button-explore-data"
+              >
                 Explore Datasets
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
@@ -56,8 +60,10 @@ export default function HeroSection() {
 
           <div className="grid grid-cols-3 gap-8 mt-12 pt-8 border-t border-border/50">
             <div>
-              <div className="text-3xl font-bold text-primary">12+</div>
-              <div className="text-sm text-muted-foreground mt-1">Countries</div>
+              <div className="text-3xl font-bold text-primary">5+</div>
+              <div className="text-sm text-muted-foreground mt-1">
+                Countries
+              </div>
             </div>
             <div>
               <div className="text-3xl font-bold text-primary">45+</div>
@@ -65,7 +71,9 @@ export default function HeroSection() {
             </div>
             <div>
               <div className="text-3xl font-bold text-primary">5M+</div>
-              <div className="text-sm text-muted-foreground mt-1">Data Points</div>
+              <div className="text-sm text-muted-foreground mt-1">
+                Data Points
+              </div>
             </div>
           </div>
         </div>

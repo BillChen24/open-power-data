@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { useRoute, Link } from "wouter";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
@@ -11,12 +12,28 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { Download, Calendar, FileType, HardDrive, Scale, ChevronRight } from "lucide-react";
+import {
+  Download,
+  Calendar,
+  FileType,
+  HardDrive,
+  Scale,
+  ChevronRight,
+} from "lucide-react";
 import { mockDatasets } from "@/lib/mockData";
 
 export default function DatasetPage() {
   const [, params] = useRoute("/dataset/:id");
   const dataset = mockDatasets.find((d) => d.id === params?.id);
+
+  // Ensure we scroll to top when navigating to a dataset page (or when id changes)
+  useEffect(() => {
+    try {
+      window.scrollTo({ top: 0, left: 0, behavior: "auto" });
+    } catch (e) {
+      // window may be undefined in some SSR contexts; swallow errors safely
+    }
+  }, [params?.id]);
 
   if (!dataset) {
     return (
@@ -47,7 +64,9 @@ export default function DatasetPage() {
               </Link>
               <ChevronRight className="h-4 w-4" />
               <Link href="/explore" data-testid="link-breadcrumb-explore">
-                <span className="hover:text-primary cursor-pointer">Explore</span>
+                <span className="hover:text-primary cursor-pointer">
+                  Explore
+                </span>
               </Link>
               <ChevronRight className="h-4 w-4" />
               <span>{dataset.country}</span>
@@ -57,10 +76,15 @@ export default function DatasetPage() {
 
             <div className="flex items-start justify-between gap-8">
               <div className="flex-1">
-                <h1 className="text-4xl font-bold mb-4" data-testid="text-dataset-name">
+                <h1
+                  className="text-4xl font-bold mb-4"
+                  data-testid="text-dataset-name"
+                >
                   {dataset.name}
                 </h1>
-                <p className="text-lg text-muted-foreground mb-6">{dataset.description}</p>
+                <p className="text-lg text-muted-foreground mb-6">
+                  {dataset.description}
+                </p>
                 <div className="flex flex-wrap gap-2">
                   <Badge variant="secondary">{dataset.country}</Badge>
                   <Badge variant="secondary">{dataset.category}</Badge>
@@ -68,7 +92,11 @@ export default function DatasetPage() {
                 </div>
               </div>
 
-              <Button size="lg" className="whitespace-nowrap" data-testid="button-download">
+              <Button
+                size="lg"
+                className="whitespace-nowrap"
+                data-testid="button-download"
+              >
                 <Download className="mr-2 h-5 w-5" />
                 Download Dataset
               </Button>
@@ -128,18 +156,29 @@ export default function DatasetPage() {
                     <table className="w-full">
                       <thead className="sticky top-0 bg-muted">
                         <tr>
-                          {dataset.preview && dataset.preview[0] && Object.keys(dataset.preview[0]).map((key) => (
-                            <th key={key} className="px-4 py-3 text-left text-xs font-semibold uppercase tracking-wide">
-                              {key.replace(/_/g, ' ')}
-                            </th>
-                          ))}
+                          {dataset.preview &&
+                            dataset.preview[0] &&
+                            Object.keys(dataset.preview[0]).map((key) => (
+                              <th
+                                key={key}
+                                className="px-4 py-3 text-left text-xs font-semibold uppercase tracking-wide"
+                              >
+                                {key.replace(/_/g, " ")}
+                              </th>
+                            ))}
                         </tr>
                       </thead>
                       <tbody>
                         {dataset.preview?.map((row, idx) => (
-                          <tr key={idx} className="border-b last:border-b-0 hover:bg-muted/50">
+                          <tr
+                            key={idx}
+                            className="border-b last:border-b-0 hover:bg-muted/50"
+                          >
                             {Object.values(row).map((value, colIdx) => (
-                              <td key={colIdx} className="px-4 py-3 font-mono text-sm">
+                              <td
+                                key={colIdx}
+                                className="px-4 py-3 font-mono text-sm"
+                              >
                                 {String(value)}
                               </td>
                             ))}
@@ -165,7 +204,9 @@ export default function DatasetPage() {
 
             <div className="space-y-6">
               <Card className="p-6 sticky top-24">
-                <h3 className="text-xl font-semibold mb-4">About This Dataset</h3>
+                <h3 className="text-xl font-semibold mb-4">
+                  About This Dataset
+                </h3>
                 <p className="text-muted-foreground leading-relaxed mb-6">
                   {dataset.about}
                 </p>
@@ -195,7 +236,10 @@ export default function DatasetPage() {
           </div>
 
           <Card className="p-8 bg-muted/30">
-            <DataRequestForm datasetId={dataset.id} datasetName={dataset.name} />
+            <DataRequestForm
+              datasetId={dataset.id}
+              datasetName={dataset.name}
+            />
           </Card>
         </div>
       </main>

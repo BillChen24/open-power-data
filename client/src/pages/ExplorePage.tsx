@@ -10,27 +10,43 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { Badge } from "@/components/ui/badge";
-import { TrendingUp, Zap, Battery } from "lucide-react";
+import {
+  TrendingUp,
+  Zap,
+  Battery,
+  Network,
+  Sun,
+  DollarSign,
+} from "lucide-react";
 import { mockCountries } from "@/lib/mockData";
 
 const iconMap: Record<string, any> = {
   TrendingUp,
   Zap,
   Battery,
+  Network,
+  Sun,
+  DollarSign,
 };
 
 export default function ExplorePage() {
   const [location] = useLocation();
-  const [defaultOpen, setDefaultOpen] = useState<string | undefined>();
+  const [openCountry, setOpenCountry] = useState<string | undefined>();
 
   useEffect(() => {
-    const hash = window.location.hash.replace('#', '');
+    const hash = window.location.hash.replace("#", "");
     if (hash) {
-      setDefaultOpen(hash);
+      setOpenCountry(hash);
       setTimeout(() => {
         const element = document.getElementById(hash);
         if (element) {
-          element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          const elementPosition =
+            element.getBoundingClientRect().top + window.scrollY;
+          const offsetPosition = elementPosition - 100;
+          window.scrollTo({
+            top: offsetPosition,
+            behavior: "smooth",
+          });
         }
       }, 100);
     }
@@ -50,9 +66,18 @@ export default function ExplorePage() {
         </div>
 
         <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-16 py-12">
-          <Accordion type="single" collapsible defaultValue={defaultOpen}>
+          <Accordion
+            type="single"
+            collapsible
+            value={openCountry}
+            onValueChange={setOpenCountry}
+          >
             {mockCountries.map((country) => (
-              <AccordionItem key={country.id} value={country.id} id={country.id}>
+              <AccordionItem
+                key={country.id}
+                value={country.id}
+                id={country.id}
+              >
                 <AccordionTrigger
                   className="py-6 px-8 hover:bg-muted/50 rounded-lg data-[state=open]:bg-muted/50"
                   data-testid={`accordion-country-${country.id}`}
@@ -60,7 +85,10 @@ export default function ExplorePage() {
                   <div className="flex items-center gap-4 w-full">
                     <span className="text-4xl">{country.flag}</span>
                     <div className="flex-1 text-left">
-                      <h2 className="text-2xl font-semibold" data-testid={`text-country-${country.id}`}>
+                      <h2
+                        className="text-2xl font-semibold"
+                        data-testid={`text-country-${country.id}`}
+                      >
                         {country.name}
                       </h2>
                     </div>
@@ -71,27 +99,43 @@ export default function ExplorePage() {
                 </AccordionTrigger>
                 <AccordionContent className="px-8 py-6">
                   {country.categories.length > 0 ? (
-                    <div className="space-y-8">
+                    <Accordion type="multiple" className="space-y-4">
                       {country.categories.map((category) => {
                         const Icon = iconMap[category.icon] || TrendingUp;
                         return (
-                          <div key={category.id}>
-                            <div className="flex items-center gap-2 mb-4">
-                              <Icon className="h-5 w-5 text-primary" />
-                              <h3 className="text-xl font-semibold">{category.name}</h3>
-                              <Badge variant="outline" className="ml-2">
-                                {category.datasets.length}
-                              </Badge>
-                            </div>
-                            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-                              {category.datasets.map((dataset) => (
-                                <DatasetCard key={dataset.id} dataset={dataset} />
-                              ))}
-                            </div>
-                          </div>
+                          <AccordionItem
+                            key={category.id}
+                            value={category.id}
+                            className="border rounded-lg"
+                          >
+                            <AccordionTrigger
+                              className="px-6 py-4 hover:bg-muted/30 rounded-lg"
+                              data-testid={`accordion-category-${category.id}`}
+                            >
+                              <div className="flex items-center gap-2">
+                                <Icon className="h-5 w-5 text-primary" />
+                                <h3 className="text-xl font-semibold">
+                                  {category.name}
+                                </h3>
+                                <Badge variant="outline" className="ml-2">
+                                  {category.datasets.length}
+                                </Badge>
+                              </div>
+                            </AccordionTrigger>
+                            <AccordionContent className="px-6 pb-6 pt-2">
+                              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                                {category.datasets.map((dataset) => (
+                                  <DatasetCard
+                                    key={dataset.id}
+                                    dataset={dataset}
+                                  />
+                                ))}
+                              </div>
+                            </AccordionContent>
+                          </AccordionItem>
                         );
                       })}
-                    </div>
+                    </Accordion>
                   ) : (
                     <p className="text-muted-foreground text-center py-8">
                       Datasets coming soon for {country.name}
