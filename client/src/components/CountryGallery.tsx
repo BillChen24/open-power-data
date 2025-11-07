@@ -23,13 +23,19 @@ export default function CountryGallery() {
               className="p-0 overflow-hidden hover-elevate cursor-pointer"
               data-testid={`card-country-${country.id}`}
             >
-              <Link href={`/explore#${country.id}`} data-testid={`link-country-${country.id}`}>
+              <Link
+                href={`/country/${country.id}`}
+                data-testid={`link-country-gallery-${country.id}`}
+              >
                 <div className="h-48 bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center">
                   <span className="text-8xl">{country.flag}</span>
                 </div>
                 <div className="p-6">
                   <div className="flex items-center justify-between mb-2">
-                    <h3 className="text-2xl font-semibold" data-testid={`text-country-name-${country.id}`}>
+                    <h3
+                      className="text-2xl font-semibold"
+                      data-testid={`text-country-name-${country.id}`}
+                    >
                       {country.name}
                     </h3>
                     <Badge variant="secondary">
@@ -49,7 +55,11 @@ export default function CountryGallery() {
 
         <div className="mt-12 text-center">
           <Link href="/explore" data-testid="link-view-all-countries">
-            <Button size="lg" variant="outline" data-testid="button-view-all-countries">
+            <Button
+              size="lg"
+              variant="outline"
+              data-testid="button-view-all-countries"
+            >
               View All Countries
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
