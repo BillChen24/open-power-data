@@ -1,8 +1,7 @@
 import { useState, useEffect } from "react";
-import { useLocation } from "wouter";
+import { useLocation, Link } from "wouter";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import DatasetCard from "@/components/DatasetCard";
 import {
   Accordion,
   AccordionContent,
@@ -10,6 +9,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
 import {
   TrendingUp,
   Zap,
@@ -17,6 +17,7 @@ import {
   Network,
   Sun,
   DollarSign,
+  ArrowRight,
 } from "lucide-react";
 import { mockCountries } from "@/lib/mockData";
 
@@ -58,9 +59,10 @@ export default function ExplorePage() {
       <main className="flex-1">
         <div className="bg-gradient-to-b from-primary/5 to-background py-16 md:py-24">
           <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-16">
-            <h1 className="text-5xl font-bold mb-4">Data Gallery</h1>
+            <h1 className="text-5xl font-bold mb-4">Dataset Catalog</h1>
             <p className="text-xl text-muted-foreground">
-              Explore datasets organized by country and category
+              Browse and download power system datasets organized by country and
+              category
             </p>
           </div>
         </div>
@@ -98,6 +100,20 @@ export default function ExplorePage() {
                   </div>
                 </AccordionTrigger>
                 <AccordionContent className="px-8 py-6">
+                  <div className="mb-6">
+                    <Link
+                      href={`/country/${country.id}`}
+                      data-testid={`link-country-page-${country.id}`}
+                    >
+                      <Button
+                        variant="outline"
+                        data-testid={`button-country-page-${country.id}`}
+                      >
+                        View {country.name} Country Page
+                        <ArrowRight className="ml-2 h-4 w-4" />
+                      </Button>
+                    </Link>
+                  </div>
                   {country.categories.length > 0 ? (
                     <Accordion type="multiple" className="space-y-4">
                       {country.categories.map((category) => {
@@ -123,14 +139,28 @@ export default function ExplorePage() {
                               </div>
                             </AccordionTrigger>
                             <AccordionContent className="px-6 pb-6 pt-2">
-                              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                              <ul className="space-y-1">
                                 {category.datasets.map((dataset) => (
-                                  <DatasetCard
-                                    key={dataset.id}
-                                    dataset={dataset}
-                                  />
+                                  <li key={dataset.id}>
+                                    <Link
+                                      href={`/dataset/${dataset.id}`}
+                                      data-testid={`link-dataset-${dataset.id}`}
+                                    >
+                                      <div
+                                        className="px-3 py-2 rounded hover-elevate active-elevate-2 cursor-pointer"
+                                        data-testid={`menu-item-dataset-${dataset.id}`}
+                                      >
+                                        <span
+                                          className="text-sm"
+                                          data-testid={`text-dataset-name-${dataset.id}`}
+                                        >
+                                          {dataset.name}
+                                        </span>
+                                      </div>
+                                    </Link>
+                                  </li>
                                 ))}
-                              </div>
+                              </ul>
                             </AccordionContent>
                           </AccordionItem>
                         );
