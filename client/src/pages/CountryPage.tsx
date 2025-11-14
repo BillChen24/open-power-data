@@ -41,6 +41,9 @@ export default function CountryPage() {
   };
 
   const allDatasets = country.categories.flatMap((cat) => cat.datasets);
+  const featuredDatasets = allDatasets.slice(0, 3);
+  const featuredIds = new Set(featuredDatasets.map((d) => d.id));
+  const nonFeaturedDatasets = allDatasets.filter((d) => !featuredIds.has(d.id));
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -77,6 +80,23 @@ export default function CountryPage() {
             </p>
           </div>
 
+          {/* Featured Datasets Section */}
+          {featuredDatasets.length > 0 && (
+            <div className="mb-12">
+              <h2
+                className="text-2xl font-bold mb-6"
+                data-testid="heading-featured-datasets"
+              >
+                Featured Datasets
+              </h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {featuredDatasets.map((dataset) => (
+                  <DatasetCard key={dataset.id} dataset={dataset} />
+                ))}
+              </div>
+            </div>
+          )}
+
           {/* Category Tabs */}
           <Tabs defaultValue="all" className="w-full">
             <TabsList
@@ -84,56 +104,67 @@ export default function CountryPage() {
               data-testid="tabs-categories"
             >
               <TabsTrigger value="all" data-testid="tab-all">
-                All ({allDatasets.length})
+                All ({nonFeaturedDatasets.length})
               </TabsTrigger>
-              {country.categories.map((category) => (
-                <TabsTrigger
-                  key={category.id}
-                  value={category.id}
-                  data-testid={`tab-${category.id}`}
-                >
-                  {category.name} ({category.datasets.length})
-                </TabsTrigger>
-              ))}
+              {country.categories.map((category) => {
+                const nonFeaturedCount = category.datasets.filter(
+                  (d) => !featuredIds.has(d.id)
+                ).length;
+                return (
+                  <TabsTrigger
+                    key={category.id}
+                    value={category.id}
+                    data-testid={`tab-${category.id}`}
+                  >
+                    {category.name} ({nonFeaturedCount})
+                  </TabsTrigger>
+                );
+              })}
             </TabsList>
 
             <TabsContent value="all" data-testid="content-all">
-              {allDatasets.length === 0 ? (
+              {nonFeaturedDatasets.length === 0 ? (
                 <div className="text-center py-12">
                   <p className="text-muted-foreground">
-                    No datasets available yet.
+                    No additional datasets available.
                   </p>
                 </div>
               ) : (
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                  {allDatasets.map((dataset) => (
+                  {nonFeaturedDatasets.map((dataset) => (
                     <DatasetCard key={dataset.id} dataset={dataset} />
                   ))}
                 </div>
               )}
             </TabsContent>
 
-            {country.categories.map((category) => (
-              <TabsContent
-                key={category.id}
-                value={category.id}
-                data-testid={`content-${category.id}`}
-              >
-                {category.datasets.length === 0 ? (
-                  <div className="text-center py-12">
-                    <p className="text-muted-foreground">
-                      No {category.name.toLowerCase()} datasets available yet.
-                    </p>
-                  </div>
-                ) : (
-                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    {category.datasets.map((dataset) => (
-                      <DatasetCard key={dataset.id} dataset={dataset} />
-                    ))}
-                  </div>
-                )}
-              </TabsContent>
-            ))}
+            {country.categories.map((category) => {
+              const nonFeaturedCategoryDatasets = category.datasets.filter(
+                (d) => !featuredIds.has(d.id)
+              );
+              return (
+                <TabsContent
+                  key={category.id}
+                  value={category.id}
+                  data-testid={`content-${category.id}`}
+                >
+                  {nonFeaturedCategoryDatasets.length === 0 ? (
+                    <div className="text-center py-12">
+                      <p className="text-muted-foreground">
+                        No additional {category.name.toLowerCase()} datasets
+                        available.
+                      </p>
+                    </div>
+                  ) : (
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                      {nonFeaturedCategoryDatasets.map((dataset) => (
+                        <DatasetCard key={dataset.id} dataset={dataset} />
+                      ))}
+                    </div>
+                  )}
+                </TabsContent>
+              );
+            })}
           </Tabs>
         </div>
       </main>
