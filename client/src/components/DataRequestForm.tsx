@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { dataRequestSchema } from "@shared/schema";
@@ -16,15 +16,26 @@ import {
 } from "@/components/ui/form";
 import { useToast } from "@/hooks/use-toast";
 import { Send } from "lucide-react";
+import ReCAPTCHA from "react-google-recaptcha";
 
 interface DataRequestFormProps {
   datasetId: string;
   datasetName: string;
 }
 
-export default function DataRequestForm({ datasetId, datasetName }: DataRequestFormProps) {
+export default function DataRequestForm({
+  datasetId,
+  datasetName,
+}: DataRequestFormProps) {
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [recaptchaToken, setRecaptchaToken] = useState<string | null>(null);
+  const recaptchaRef = useRef<ReCAPTCHA>(null);
+
+  const siteKey =
+    import.meta.env.VITE_RECAPTCHA_SITE_KEY ||
+    "6LeS7AssAAAAAM4B7T805CMGOWh6Xb371jnIrX_l";
+  console.log("reCAPTCHA site key status:", siteKey ? "LOADED" : "MISSING");
 
   const form = useForm<DataRequest>({
     resolver: zodResolver(dataRequestSchema),
@@ -37,9 +48,23 @@ export default function DataRequestForm({ datasetId, datasetName }: DataRequestF
     },
   });
 
+  const onRecaptchaChange = (token: string | null) => {
+    setRecaptchaToken(token);
+  };
+
   const onSubmit = async (data: DataRequest) => {
+    if (!recaptchaToken) {
+      toast({
+        title: "Verification Required",
+        description: "Please complete the reCAPTCHA verification.",
+        variant: "destructive",
+      });
+      return;
+    }
+
     setIsSubmitting(true);
     console.log("Data request submitted:", data);
+    console.log("reCAPTCHA token:", recaptchaToken);
 
     setTimeout(() => {
       toast({
@@ -53,6 +78,8 @@ export default function DataRequestForm({ datasetId, datasetName }: DataRequestF
         purpose: "",
         datasetId,
       });
+      setRecaptchaToken(null);
+      recaptchaRef.current?.reset();
       setIsSubmitting(false);
     }, 1000);
   };
@@ -62,7 +89,8 @@ export default function DataRequestForm({ datasetId, datasetName }: DataRequestF
       <div className="mb-8">
         <h3 className="text-2xl font-semibold mb-2">Request Dataset Access</h3>
         <p className="text-muted-foreground">
-          Submit your request to access <span className="font-medium">{datasetName}</span>
+          Submit your request to access{" "}
+          <span className="font-medium">{datasetName}</span>
         </p>
       </div>
 
@@ -76,7 +104,11 @@ export default function DataRequestForm({ datasetId, datasetName }: DataRequestF
                 <FormItem>
                   <FormLabel>Full Name</FormLabel>
                   <FormControl>
-                    <Input placeholder="Enter your name" {...field} data-testid="input-name" />
+                    <Input
+                      placeholder="Enter your name"
+                      {...field}
+                      data-testid="input-name"
+                    />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -140,16 +172,27 @@ export default function DataRequestForm({ datasetId, datasetName }: DataRequestF
             )}
           />
 
-          <Button
-            type="submit"
-            size="lg"
-            disabled={isSubmitting}
-            className="w-full md:w-auto"
-            data-testid="button-submit-request"
-          >
-            {isSubmitting ? "Submitting..." : "Submit Request"}
-            <Send className="ml-2 h-4 w-4" />
-          </Button>
+          <div className="space-y-6">
+            <div className="flex justify-center md:justify-start">
+              <ReCAPTCHA
+                ref={recaptchaRef}
+                sitekey={siteKey || ""}
+                onChange={onRecaptchaChange}
+                data-testid="recaptcha"
+              />
+            </div>
+
+            <Button
+              type="submit"
+              size="lg"
+              disabled={isSubmitting || !recaptchaToken}
+              className="w-full md:w-auto"
+              data-testid="button-submit-request"
+            >
+              {isSubmitting ? "Submitting..." : "Submit Request"}
+              <Send className="ml-2 h-4 w-4" />
+            </Button>
+          </div>
         </form>
       </Form>
     </div>
