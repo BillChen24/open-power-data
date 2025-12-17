@@ -12,6 +12,7 @@ import {
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
 import { mockCountries } from "@/lib/mockData";
+import CountryIcon from "@/components/CountryIcon";
 
 export default function Navigation() {
   const [location, navigate] = useLocation();
@@ -102,12 +103,21 @@ export default function Navigation() {
                                 data-testid={`link-country-${country.id}`}
                                 className="block select-none rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
                               >
-                                <div className="text-sm font-medium leading-none">
-                                  {country.flag} {country.name}
+                                <div className="flex items-center gap-2">
+                                  <CountryIcon
+                                    countryId={country.id}
+                                    countryName={country.name}
+                                    size="sm"
+                                  />
+                                  <div>
+                                    <div className="text-sm font-medium leading-none">
+                                      {country.name}
+                                    </div>
+                                    <p className="mt-1 text-xs leading-snug text-muted-foreground">
+                                      {country.datasetCount} datasets
+                                    </p>
+                                  </div>
                                 </div>
-                                <p className="mt-1 text-xs leading-snug text-muted-foreground">
-                                  {country.datasetCount} datasets
-                                </p>
                               </a>
                             </NavigationMenuLink>
                           </li>
@@ -194,12 +204,17 @@ export default function Navigation() {
                     href={`/country/${country.id}`}
                     data-testid={`link-mobile-country-${country.id}`}
                   >
-                    <span
-                      className="text-sm text-muted-foreground cursor-pointer block hover:text-primary"
+                    <div
+                      className="flex items-center gap-2 text-sm text-muted-foreground cursor-pointer hover:text-primary"
                       onClick={() => setMobileMenuOpen(false)}
                     >
-                      {country.flag} {country.name}
-                    </span>
+                      <CountryIcon
+                        countryId={country.id}
+                        countryName={country.name}
+                        size="sm"
+                      />
+                      <span>{country.name}</span>
+                    </div>
                   </Link>
                 ))}
               </div>

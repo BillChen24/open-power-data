@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { ArrowRight, Database } from "lucide-react";
 import { mockCountries } from "@/lib/mockData";
+import CountryIcon from "./CountryIcon";
 
 export default function CountryGallery() {
   return (
@@ -28,7 +29,11 @@ export default function CountryGallery() {
                 data-testid={`link-country-gallery-${country.id}`}
               >
                 <div className="h-48 bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center">
-                  <span className="text-8xl">{country.flag}</span>
+                  <CountryIcon
+                    countryId={country.id}
+                    countryName={country.name}
+                    size="xl"
+                  />
                 </div>
                 <div className="p-6">
                   <div className="flex items-center justify-between mb-2">

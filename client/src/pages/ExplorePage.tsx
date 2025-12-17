@@ -20,6 +20,7 @@ import {
   ArrowRight,
 } from "lucide-react";
 import { mockCountries } from "@/lib/mockData";
+import CountryIcon from "@/components/CountryIcon";
 
 const iconMap: Record<string, any> = {
   TrendingUp,
@@ -85,7 +86,11 @@ export default function ExplorePage() {
                   data-testid={`accordion-country-${country.id}`}
                 >
                   <div className="flex items-center gap-4 w-full">
-                    <span className="text-4xl">{country.flag}</span>
+                    <CountryIcon
+                      countryId={country.id}
+                      countryName={country.name}
+                      size="lg"
+                    />
                     <div className="flex-1 text-left">
                       <h2
                         className="text-2xl font-semibold"
@@ -101,18 +106,19 @@ export default function ExplorePage() {
                 </AccordionTrigger>
                 <AccordionContent className="px-8 py-6">
                   <div className="mb-6">
-                    <Link
-                      href={`/country/${country.id}`}
-                      data-testid={`link-country-page-${country.id}`}
+                    <Button
+                      variant="outline"
+                      asChild
+                      data-testid={`button-country-page-${country.id}`}
                     >
-                      <Button
-                        variant="outline"
-                        data-testid={`button-country-page-${country.id}`}
+                      <Link
+                        href={`/country/${country.id}`}
+                        data-testid={`link-country-page-${country.id}`}
                       >
                         View {country.name} Country Page
                         <ArrowRight className="ml-2 h-4 w-4" />
-                      </Button>
-                    </Link>
+                      </Link>
+                    </Button>
                   </div>
                   {country.categories.length > 0 ? (
                     <Accordion type="multiple" className="space-y-4">
