@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
 import { useRoute, Link } from "wouter";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
@@ -6,6 +6,12 @@ import DataRequestForm from "@/components/DataRequestForm";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card } from "@/components/ui/card";
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+} from "@/components/ui/dialog";
 import {
   Accordion,
   AccordionContent,
@@ -17,13 +23,14 @@ import {
   Calendar,
   FileType,
   HardDrive,
-  Scale,
+  Quote,
   ChevronRight,
 } from "lucide-react";
 import { powerDatasets } from "@/lib/powerData";
 
 export default function DatasetPage() {
   const [, params] = useRoute("/dataset/:id");
+  const [citationOpen, setCitationOpen] = useState(false);
   const dataset = powerDatasets.find((d) => d.id === params?.id);
 
   // Ensure we scroll to top when navigating to a dataset page (or when id changes)
@@ -88,7 +95,11 @@ export default function DatasetPage() {
                 <div className="flex flex-wrap gap-2">
                   <Badge variant="secondary">{dataset.country}</Badge>
                   <Badge variant="secondary">{dataset.category}</Badge>
-                  <Badge variant="outline">{dataset.license}</Badge>
+                  <Link href="/licence" data-testid="link-license-badge">
+                    <Badge variant="outline" className="cursor-pointer">
+                      {dataset.license}
+                    </Badge>
+                  </Link>
                 </div>
               </div>
 
@@ -136,13 +147,22 @@ export default function DatasetPage() {
               </div>
             </Card>
 
-            <Card className="p-6">
+            <Card
+              className="p-6 cursor-pointer hover-elevate"
+              onClick={() => setCitationOpen(true)}
+              data-testid="card-citation"
+            >
               <div className="flex items-center gap-2 text-muted-foreground mb-2">
-                <Scale className="h-4 w-4" />
-                <span className="text-xs uppercase tracking-wide">License</span>
+                <Quote className="h-4 w-4" />
+                <span className="text-xs uppercase tracking-wide">
+                  Citation
+                </span>
               </div>
-              <div className="text-xl font-semibold" data-testid="text-license">
-                {dataset.license}
+              <div
+                className="text-xl font-semibold"
+                data-testid="text-citation"
+              >
+                Click to view
               </div>
             </Card>
           </div>
@@ -207,10 +227,9 @@ export default function DatasetPage() {
                 <h3 className="text-xl font-semibold mb-4">
                   About This Dataset
                 </h3>
-                <p className="text-muted-foreground leading-relaxed mb-6">
+                <div className="text-muted-foreground leading-relaxed mb-6">
                   {dataset.about}
-                </p>
-
+                </div>
                 <div className="space-y-3">
                   <div>
                     <div className="text-xs uppercase tracking-wide text-muted-foreground mb-1">
@@ -226,9 +245,15 @@ export default function DatasetPage() {
                   </div>
                   <div>
                     <div className="text-xs uppercase tracking-wide text-muted-foreground mb-1">
-                      Last Updated
+                      Data Period
                     </div>
-                    <div className="font-medium">{dataset.updated}</div>
+                    <div className="font-medium">
+                      {dataset.startDate && dataset.endDate
+                        ? `${dataset.startDate} - ${dataset.endDate}`
+                        : dataset.startDate ||
+                          dataset.endDate ||
+                          "Not specified"}
+                    </div>
                   </div>
                 </div>
               </Card>
@@ -244,6 +269,47 @@ export default function DatasetPage() {
         </div>
       </main>
       <Footer />
+
+      <Dialog open={citationOpen} onOpenChange={setCitationOpen}>
+        <DialogContent data-testid="dialog-citation">
+          <DialogHeader>
+            <DialogTitle>How to Cite This Dataset</DialogTitle>
+          </DialogHeader>
+          <div className="mt-4">
+            <p className="text-sm text-muted-foreground mb-4">
+              Please use the following citation when referencing this dataset:
+            </p>
+            <div
+              className="bg-muted p-4 rounded-lg font-mono text-sm"
+              data-testid="text-citation-content"
+            >
+              {dataset?.citation ||
+                `Open Power Data Initiative. "${
+                  dataset?.name
+                }". Open Power Data, ${new Date().getFullYear()}. Available at: https://openpowerdata.org/dataset/${
+                  dataset?.id
+                }`}
+            </div>
+            <Button
+              variant="outline"
+              className="mt-4 w-full"
+              onClick={() => {
+                navigator.clipboard.writeText(
+                  dataset?.citation ||
+                    `Open Power Data Initiative. "${
+                      dataset?.name
+                    }". Open Power Data, ${new Date().getFullYear()}. Available at: https://openpowerdata.org/dataset/${
+                      dataset?.id
+                    }`
+                );
+              }}
+              data-testid="button-copy-citation"
+            >
+              Copy Citation
+            </Button>
+          </div>
+        </DialogContent>
+      </Dialog>
     </div>
   );
 }

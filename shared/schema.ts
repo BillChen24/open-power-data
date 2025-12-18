@@ -41,6 +41,11 @@ export interface Dataset {
   methodology: string;
   about: string;
   preview?: any[];
+  Link?: string;
+  UserAgreement?: string;
+  citation?: string;
+  startDate?: string;
+  endDate?: string;
 }
 
 export interface Country {
