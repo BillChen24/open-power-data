@@ -20,11 +20,11 @@ import {
   Scale,
   ChevronRight,
 } from "lucide-react";
-import { mockDatasets } from "@/lib/mockData";
+import { powerDatasets } from "@/lib/powerData";
 
 export default function DatasetPage() {
   const [, params] = useRoute("/dataset/:id");
-  const dataset = mockDatasets.find((d) => d.id === params?.id);
+  const dataset = powerDatasets.find((d) => d.id === params?.id);
 
   // Ensure we scroll to top when navigating to a dataset page (or when id changes)
   useEffect(() => {

@@ -3,7 +3,7 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { ArrowRight, Database } from "lucide-react";
-import { mockCountries } from "@/lib/mockData";
+import { Countries } from "@/lib/powerData";
 import CountryIcon from "./CountryIcon";
 
 export default function CountryGallery() {
@@ -18,7 +18,7 @@ export default function CountryGallery() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {mockCountries.map((country) => (
+          {Countries.map((country) => (
             <Card
               key={country.id}
               className="p-0 overflow-hidden hover-elevate cursor-pointer"

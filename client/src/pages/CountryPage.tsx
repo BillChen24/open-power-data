@@ -1,6 +1,6 @@
 import { useRoute, Link } from "wouter";
 import Navigation from "@/components/Navigation";
-import { mockCountries } from "@/lib/mockData";
+import { Countries } from "@/lib/powerData";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import DatasetCard from "@/components/DatasetCard";
 import { Badge } from "@/components/ui/badge";
@@ -10,7 +10,7 @@ import { ArrowRight } from "lucide-react";
 
 export default function CountryPage() {
   const [, params] = useRoute("/country/:countryId");
-  const country = mockCountries.find((c) => c.id === params?.countryId);
+  const country = Countries.find((c) => c.id === params?.countryId);
 
   if (!country) {
     return (

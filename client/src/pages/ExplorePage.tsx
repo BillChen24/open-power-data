@@ -19,7 +19,7 @@ import {
   DollarSign,
   ArrowRight,
 } from "lucide-react";
-import { mockCountries } from "@/lib/mockData";
+import { Countries } from "@/lib/powerData";
 import CountryIcon from "@/components/CountryIcon";
 
 const iconMap: Record<string, any> = {
@@ -75,7 +75,7 @@ export default function ExplorePage() {
             value={openCountry}
             onValueChange={setOpenCountry}
           >
-            {mockCountries.map((country) => (
+            {Countries.map((country) => (
               <AccordionItem
                 key={country.id}
                 value={country.id}

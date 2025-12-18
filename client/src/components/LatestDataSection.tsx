@@ -3,10 +3,10 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { ArrowRight, Download, Calendar } from "lucide-react";
-import { mockDatasets } from "@/lib/mockData";
+import { powerDatasets } from "@/lib/powerData";
 
 export default function LatestDataSection() {
-  const latestDatasets = mockDatasets.slice(0, 3);
+  const latestDatasets = powerDatasets.slice(0, 3);
 
   return (
     <section className="py-16 md:py-24 bg-muted/30">
@@ -19,7 +19,11 @@ export default function LatestDataSection() {
             </p>
           </div>
           <Link href="/explore" data-testid="link-view-all">
-            <Button variant="outline" className="hidden md:flex" data-testid="button-view-all">
+            <Button
+              variant="outline"
+              className="hidden md:flex"
+              data-testid="button-view-all"
+            >
               View All Datasets
               <ArrowRight className="ml-2 h-4 w-4" />
             </Button>
@@ -28,7 +32,11 @@ export default function LatestDataSection() {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {latestDatasets.map((dataset) => (
-            <Card key={dataset.id} className="p-6 hover-elevate" data-testid={`card-dataset-${dataset.id}`}>
+            <Card
+              key={dataset.id}
+              className="p-6 hover-elevate"
+              data-testid={`card-dataset-${dataset.id}`}
+            >
               <div className="flex items-start justify-between mb-4">
                 <Badge variant="secondary" className="text-xs">
                   {dataset.category}
@@ -39,7 +47,10 @@ export default function LatestDataSection() {
                 </div>
               </div>
 
-              <h3 className="text-xl font-medium mb-2 line-clamp-2" data-testid={`text-dataset-name-${dataset.id}`}>
+              <h3
+                className="text-xl font-medium mb-2 line-clamp-2"
+                data-testid={`text-dataset-name-${dataset.id}`}
+              >
                 {dataset.name}
               </h3>
 
@@ -49,7 +60,7 @@ export default function LatestDataSection() {
 
               <div className="flex flex-wrap gap-2 mb-4">
                 <Badge variant="outline" className="text-xs">
-                  {dataset.format.split(',')[0].trim()}
+                  {dataset.format.split(",")[0].trim()}
                 </Badge>
                 <Badge variant="outline" className="text-xs">
                   {dataset.size}
@@ -59,8 +70,15 @@ export default function LatestDataSection() {
                 </Badge>
               </div>
 
-              <Link href={`/dataset/${dataset.id}`} data-testid={`link-view-dataset-${dataset.id}`}>
-                <Button variant="ghost" className="w-full justify-between" data-testid={`button-view-dataset-${dataset.id}`}>
+              <Link
+                href={`/dataset/${dataset.id}`}
+                data-testid={`link-view-dataset-${dataset.id}`}
+              >
+                <Button
+                  variant="ghost"
+                  className="w-full justify-between"
+                  data-testid={`button-view-dataset-${dataset.id}`}
+                >
                   <span>View Dataset</span>
                   <ArrowRight className="h-4 w-4" />
                 </Button>

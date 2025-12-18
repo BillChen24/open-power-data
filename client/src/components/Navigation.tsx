@@ -11,7 +11,7 @@ import {
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
-import { mockCountries } from "@/lib/mockData";
+import { Countries } from "@/lib/powerData";
 import CountryIcon from "@/components/CountryIcon";
 
 export default function Navigation() {
@@ -85,7 +85,7 @@ export default function Navigation() {
                             </a>
                           </NavigationMenuLink>
                         </li>
-                        {mockCountries.map((country) => (
+                        {Countries.map((country) => (
                           <li key={country.id}>
                             <NavigationMenuLink asChild>
                               <a
@@ -198,7 +198,7 @@ export default function Navigation() {
                 </span>
               </Link>
               <div className="pl-4 space-y-2">
-                {mockCountries.map((country) => (
+                {Countries.map((country) => (
                   <Link
                     key={country.id}
                     href={`/country/${country.id}`}

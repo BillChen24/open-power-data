@@ -927,7 +927,7 @@ const aseanParametersDatasets: Dataset[] = [
 ];
 
 //todo: remove mock functionality
-export const mockCountries: Country[] = [
+export const Countries: Country[] = [
   {
     id: "china",
     name: "China",
@@ -1121,7 +1121,7 @@ export const mockCountries: Country[] = [
 ];
 
 //todo: remove mock functionality
-export const mockDatasets: Dataset[] = [
+export const powerDatasets: Dataset[] = [
   ...chinaDemandDatasets,
   ...chinaSupplyDatasets,
   ...chinaTransmissionDatasets,
