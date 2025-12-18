@@ -10,6 +10,9 @@ import CountryPage from "@/pages/CountryPage";
 import DatasetPage from "@/pages/DatasetPage";
 import AboutPage from "@/pages/AboutPage";
 import ContactPage from "@/pages/ContactPage";
+import LicencePage from "@/pages/LicencePage";
+import PrivacyPage from "@/pages/PrivacyPage";
+import TermsPage from "@/pages/TermsPage";
 import NotFound from "@/pages/not-found";
 
 function ScrollToTop() {
@@ -39,6 +42,9 @@ function Router() {
         <Route path="/dataset/:id" component={DatasetPage} />
         <Route path="/about" component={AboutPage} />
         <Route path="/contact" component={ContactPage} />
+        <Route path="/licence" component={LicencePage} />
+        <Route path="/privacy" component={PrivacyPage} />
+        <Route path="/terms" component={TermsPage} />
         <Route component={NotFound} />
       </Switch>
     </>
