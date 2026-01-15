@@ -32,7 +32,6 @@ export interface Dataset {
   country: string;
   category: string;
   name: string;
-  description: string;
   format: string;
   size: string;
   updated: string;
@@ -41,11 +40,14 @@ export interface Dataset {
   methodology: string;
   about: string;
   preview?: any[];
-  Link?: string;
-  UserAgreement?: string;
   citation?: string;
-  startDate?: string;
-  endDate?: string;
+  regionLevel?: string;
+  frequency?: string;
+  dataCoverage?: string;
+  featured: boolean;
+  downloadable: boolean;
+  figureLink?: string;
+  inPreparation?: boolean;
 }
 
 export interface Country {
