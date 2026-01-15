@@ -25,7 +25,10 @@ import {
   HardDrive,
   Quote,
   ChevronRight,
+  Image,
+  Clock,
 } from "lucide-react";
+import ReactMarkdown from "react-markdown";
 import { powerDatasets } from "@/lib/powerData";
 
 export default function DatasetPage() {
@@ -52,6 +55,94 @@ export default function DatasetPage() {
             <Link href="/explore" data-testid="link-back-explore">
               <Button data-testid="button-back-explore">Back to Explore</Button>
             </Link>
+          </div>
+        </main>
+        <Footer />
+      </div>
+    );
+  }
+
+  if (dataset.inPreparation) {
+    return (
+      <div className="min-h-screen flex flex-col">
+        <Navigation />
+        <main className="flex-1">
+          <div className="bg-gradient-to-b from-primary/5 to-background py-12 border-b">
+            <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-16">
+              <div className="flex items-center gap-2 text-sm text-muted-foreground mb-4">
+                <Link href="/" data-testid="link-breadcrumb-home">
+                  <span className="hover:text-primary cursor-pointer">
+                    Home
+                  </span>
+                </Link>
+                <ChevronRight className="h-4 w-4" />
+                <Link href="/explore" data-testid="link-breadcrumb-explore">
+                  <span className="hover:text-primary cursor-pointer">
+                    Explore
+                  </span>
+                </Link>
+                <ChevronRight className="h-4 w-4" />
+                <span>{dataset.country}</span>
+                <ChevronRight className="h-4 w-4" />
+                <span>{dataset.category}</span>
+              </div>
+
+              <h1
+                className="text-4xl font-bold mb-4"
+                data-testid="text-dataset-name"
+              >
+                {dataset.name}
+              </h1>
+              <div className="flex flex-wrap gap-2">
+                <Badge variant="secondary">{dataset.country}</Badge>
+                <Badge variant="secondary">{dataset.category}</Badge>
+              </div>
+            </div>
+          </div>
+
+          <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-16 py-16">
+            <Card
+              className="p-12 text-center"
+              data-testid="card-in-preparation"
+            >
+              <div className="flex justify-center mb-6">
+                <div className="p-4 rounded-full bg-primary/10">
+                  <Clock className="h-12 w-12 text-primary" />
+                </div>
+              </div>
+              <h2
+                className="text-2xl font-semibold mb-4"
+                data-testid="text-preparation-title"
+              >
+                Dataset in Preparation
+              </h2>
+              <p
+                className="text-muted-foreground max-w-md mx-auto mb-8"
+                data-testid="text-preparation-message"
+              >
+                This dataset is currently being prepared and will be available
+                soon. Please check back later or contact us for more
+                information.
+              </p>
+              <div className="flex justify-center gap-4">
+                <Link
+                  href="/explore"
+                  data-testid="link-back-explore-preparation"
+                >
+                  <Button
+                    variant="outline"
+                    data-testid="button-back-explore-preparation"
+                  >
+                    Back to Explore
+                  </Button>
+                </Link>
+                <Link href="/contact" data-testid="link-contact-preparation">
+                  <Button data-testid="button-contact-preparation">
+                    Contact Us
+                  </Button>
+                </Link>
+              </div>
+            </Card>
           </div>
         </main>
         <Footer />
@@ -89,9 +180,6 @@ export default function DatasetPage() {
                 >
                   {dataset.name}
                 </h1>
-                <p className="text-lg text-muted-foreground mb-6">
-                  {dataset.description}
-                </p>
                 <div className="flex flex-wrap gap-2">
                   <Badge variant="secondary">{dataset.country}</Badge>
                   <Badge variant="secondary">{dataset.category}</Badge>
@@ -210,13 +298,32 @@ export default function DatasetPage() {
                 </Card>
               </div>
 
+              {dataset.figureLink && (
+                <div>
+                  <h2 className="text-2xl font-semibold mb-4 flex items-center gap-2">
+                    <Image className="h-5 w-5" />
+                    Data Visualization
+                  </h2>
+                  <Card className="overflow-hidden">
+                    <img
+                      src={dataset.figureLink}
+                      alt={`Visualization for ${dataset.name}`}
+                      className="w-full h-auto"
+                      data-testid="img-data-visualization"
+                    />
+                  </Card>
+                </div>
+              )}
+
               <Accordion type="single" collapsible defaultValue="methodology">
                 <AccordionItem value="methodology">
                   <AccordionTrigger className="text-xl font-semibold">
                     Methodology
                   </AccordionTrigger>
-                  <AccordionContent className="text-muted-foreground leading-relaxed">
-                    {dataset.methodology}
+                  <AccordionContent>
+                    <div className="prose prose-sm dark:prose-invert max-w-none text-muted-foreground">
+                      <ReactMarkdown>{dataset.methodology}</ReactMarkdown>
+                    </div>
                   </AccordionContent>
                 </AccordionItem>
               </Accordion>
@@ -233,26 +340,22 @@ export default function DatasetPage() {
                 <div className="space-y-3">
                   <div>
                     <div className="text-xs uppercase tracking-wide text-muted-foreground mb-1">
-                      Country
+                      Region Level
                     </div>
-                    <div className="font-medium">{dataset.country}</div>
+                    <div className="font-medium">{dataset.regionLevel}</div>
                   </div>
                   <div>
                     <div className="text-xs uppercase tracking-wide text-muted-foreground mb-1">
-                      Category
+                      Frequency
                     </div>
-                    <div className="font-medium">{dataset.category}</div>
+                    <div className="font-medium">{dataset.frequency}</div>
                   </div>
                   <div>
                     <div className="text-xs uppercase tracking-wide text-muted-foreground mb-1">
                       Data Period
                     </div>
                     <div className="font-medium">
-                      {dataset.startDate && dataset.endDate
-                        ? `${dataset.startDate} - ${dataset.endDate}`
-                        : dataset.startDate ||
-                          dataset.endDate ||
-                          "Not specified"}
+                      {dataset.dataCoverage || "Not specified"}
                     </div>
                   </div>
                 </div>
