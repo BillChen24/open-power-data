@@ -43,7 +43,8 @@ export default function CountryPage() {
   };
 
   const allDatasets = country.categories.flatMap((cat) => cat.datasets);
-  const featuredDatasets = allDatasets.slice(0, 3);
+  //const featuredDatasets = allDatasets.slice(0, 3);
+  const featuredDatasets = allDatasets.filter((dataset) => dataset.featured);
 
   return (
     <div className="min-h-screen flex flex-col">
