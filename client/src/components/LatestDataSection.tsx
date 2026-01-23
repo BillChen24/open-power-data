@@ -30,11 +30,11 @@ export default function LatestDataSection() {
           </Link>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="flex gap-6 overflow-x-auto pb-2 -mx-2 px-2">
           {latestDatasets.map((dataset) => (
             <Card
               key={dataset.id}
-              className="p-6 hover-elevate"
+              className="p-6 hover-elevate w-80 flex-shrink-0"
               data-testid={`card-dataset-${dataset.id}`}
             >
               <div className="flex items-start justify-between mb-4">
