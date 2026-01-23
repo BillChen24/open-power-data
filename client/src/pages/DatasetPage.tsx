@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { useRoute, Link } from "wouter";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
@@ -27,6 +27,7 @@ import {
   ChevronRight,
   Image,
   Clock,
+  Send,
 } from "lucide-react";
 import ReactMarkdown from "react-markdown";
 import { powerDatasets } from "@/lib/powerData";
@@ -35,6 +36,10 @@ export default function DatasetPage() {
   const [, params] = useRoute("/dataset/:id");
   const [citationOpen, setCitationOpen] = useState(false);
   const dataset = powerDatasets.find((d) => d.id === params?.id);
+  const requestFormRef = useRef<HTMLDivElement>(null);
+  const scrollToRequestForm = () => {
+    requestFormRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
 
   // Ensure we scroll to top when navigating to a dataset page (or when id changes)
   useEffect(() => {
@@ -191,14 +196,26 @@ export default function DatasetPage() {
                 </div>
               </div>
 
-              <Button
-                size="lg"
-                className="whitespace-nowrap"
-                data-testid="button-download"
-              >
-                <Download className="mr-2 h-5 w-5" />
-                Download Dataset
-              </Button>
+              {dataset.downloadable !== false ? (
+                <Button
+                  size="lg"
+                  className="whitespace-nowrap"
+                  data-testid="button-download"
+                >
+                  <Download className="mr-2 h-5 w-5" />
+                  Download Dataset
+                </Button>
+              ) : (
+                <Button
+                  size="lg"
+                  className="whitespace-nowrap"
+                  onClick={scrollToRequestForm}
+                  data-testid="button-request-access"
+                >
+                  <Send className="mr-2 h-5 w-5" />
+                  Request Access
+                </Button>
+              )}
             </div>
           </div>
         </div>
@@ -301,7 +318,7 @@ export default function DatasetPage() {
               {dataset.figureLink && (
                 <div>
                   <h2 className="text-2xl font-semibold mb-4 flex items-center gap-2">
-                    <Image className="h-5 w-5" />
+                    {/* <Image className="h-5 w-5" /> */}
                     Data Visualization
                   </h2>
                   <Card className="overflow-hidden">
@@ -315,9 +332,9 @@ export default function DatasetPage() {
                 </div>
               )}
 
-              <Accordion type="single" collapsible defaultValue="methodology">
+              {/* <Accordion type="single" collapsible defaultValue="methodology">
                 <AccordionItem value="methodology">
-                  <AccordionTrigger className="text-xl font-semibold">
+                  <AccordionTrigger className="ext-2xl font-semibold mb-4">
                     Methodology
                   </AccordionTrigger>
                   <AccordionContent>
@@ -326,7 +343,14 @@ export default function DatasetPage() {
                     </div>
                   </AccordionContent>
                 </AccordionItem>
-              </Accordion>
+              </Accordion> */}
+
+              <div>
+                <h2 className="text-2xl font-semibold mb-4">Methodology</h2>
+                <div className="prose prose-sm dark:prose-invert max-w-none text-muted-foreground">
+                  <ReactMarkdown>{dataset.methodology}</ReactMarkdown>
+                </div>
+              </div>
             </div>
 
             <div className="space-y-6">
@@ -363,12 +387,16 @@ export default function DatasetPage() {
             </div>
           </div>
 
-          <Card className="p-8 bg-muted/30">
-            <DataRequestForm
-              datasetId={dataset.id}
-              datasetName={dataset.name}
-            />
-          </Card>
+          {dataset.downloadable === false && (
+            <div ref={requestFormRef}>
+              <Card className="p-8 bg-muted/30" data-testid="card-request-form">
+                <DataRequestForm
+                  datasetId={dataset.id}
+                  datasetName={dataset.name}
+                />
+              </Card>
+            </div>
+          )}
         </div>
       </main>
       <Footer />
