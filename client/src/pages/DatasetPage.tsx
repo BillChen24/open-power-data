@@ -87,7 +87,14 @@ export default function DatasetPage() {
                   </span>
                 </Link>
                 <ChevronRight className="h-4 w-4" />
-                <span>{dataset.country}</span>
+                <Link
+                  href={`/country/${dataset.country.toLowerCase()}`}
+                  data-testid="link-breadcrumb-country"
+                >
+                  <span className="hover:text-primary cursor-pointer">
+                    {dataset.country}
+                  </span>
+                </Link>
                 <ChevronRight className="h-4 w-4" />
                 <span>{dataset.category}</span>
               </div>
