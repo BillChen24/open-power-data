@@ -94,7 +94,7 @@ export default function CountryPage() {
               >
                 Featured Datasets
               </h2>
-              <div className="flex gap-4 overflow-x-auto pb-2 -mx-2 px-2 w-11/12">
+              <div className="flex gap-4 overflow-x-auto pb-2 -mx-2 px-2 w-4/5">
                 {featuredDatasets.map((dataset) => (
                   <Link
                     key={dataset.id}
@@ -105,7 +105,7 @@ export default function CountryPage() {
                       className="p-4 hover-elevate active-elevate-2 cursor-pointer h-full w-72 flex-shrink-0"
                       data-testid={`featured-card-${dataset.id}`}
                     >
-                      <div className="flex items-start justify-between gap-2 mb-2">
+                      <div className="flex items-center justify-between mb-3">
                         <Badge
                           variant="secondary"
                           className="text-xs"
