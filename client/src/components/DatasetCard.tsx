@@ -1,7 +1,7 @@
 import { Link } from "wouter";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Database, Download, Calendar } from "lucide-react";
+import { Database, Download, Calendar, ArrowRight } from "lucide-react";
 import type { Dataset } from "@shared/schema";
 
 interface DatasetCardProps {
@@ -10,8 +10,11 @@ interface DatasetCardProps {
 
 export default function DatasetCard({ dataset }: DatasetCardProps) {
   return (
-    <Link href={`/dataset/${dataset.id}`} data-testid={`link-dataset-${dataset.id}`}>
-      <Card className="p-6 h-full hover-elevate cursor-pointer" data-testid={`card-dataset-${dataset.id}`}>
+    <Link
+      href={`/dataset/${dataset.id}`}
+      data-testid={`link-dataset-${dataset.id}`}
+    >
+      {/* <Card className="p-6 h-full hover-elevate cursor-pointer" data-testid={`card-dataset-${dataset.id}`}>
         <div className="flex flex-col h-full">
           <div className="flex items-center justify-center h-32 bg-primary/10 rounded-lg mb-4">
             <Database className="h-16 w-16 text-primary" />
@@ -37,6 +40,38 @@ export default function DatasetCard({ dataset }: DatasetCardProps) {
           <div className="flex items-center gap-1 text-xs text-muted-foreground">
             <Calendar className="h-3 w-3" />
             Updated {dataset.updated}
+          </div>
+        </div>
+      </Card> */}
+
+      <Card
+        className="p-4 h-full hover-elevate cursor-pointer group"
+        data-testid={`card-dataset-${dataset.id}`}
+      >
+        <div className="flex flex-col h-full">
+          <div className="flex items-start justify-between gap-2 mb-2">
+            <Badge variant="secondary" className="text-xs">
+              {dataset.category}
+            </Badge>
+            <ArrowRight className="h-4 w-4 text-muted-foreground group-hover:text-primary transition-colors flex-shrink-0" />
+          </div>
+
+          <h4
+            className="text-sm font-medium mb-1 line-clamp-2"
+            data-testid={`text-dataset-name-${dataset.id}`}
+          >
+            {dataset.name}
+          </h4>
+
+          <p className="text-xs text-muted-foreground mb-3 line-clamp-2 flex-grow">
+            {dataset.about.split(".")[0]}.
+          </p>
+
+          <div className="flex items-center gap-2 text-xs text-muted-foreground">
+            <Badge variant="outline" className="text-xs px-1.5 py-0">
+              {dataset.format.split(",")[0].trim()}
+            </Badge>
+            <span>{dataset.size}</span>
           </div>
         </div>
       </Card>
