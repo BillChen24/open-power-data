@@ -34,7 +34,7 @@ Users should be aware that the NBS may periodically revise historical data to im
       { province: "Beijing", year: 2024, demand_gWh: 138940 },
       { province: "Chongqing", year: 2024, demand_gWh: 161260 },
     ],
-    figureLink: "/china-provincial-annual-load.svg"
+    figureLink: "/dataset_charts/china-provincial-annual-load.svg"
   },
   {
     id: "china-demand-provincial-monthly",
@@ -68,7 +68,7 @@ Users should be aware that electricity consumption data on Dianchacha is reporte
       { province: "Beijing", year: 2025, month: 6, demand_gWh: 12132 },
       { province: "Chongqing", year: 2025, month: 6, demand_gWh: 14283 },
     ],
-    figureLink: "/china-provincial-monthly-load.svg"
+    figureLink: "/dataset_charts/china-provincial-monthly-load.svg"
   },
   {
     id: "china-demand-provincial-hourly-simulated",
@@ -107,7 +107,7 @@ If you'd like to require a complete methodology for this dataset, please specify
       { province: "Anhui", year: 2022, month: 1, day: 1, hour: 2, load_mw: 31288.18473 },
       { province: "Anhui", year: 2022, month: 1, day: 1, hour: 3, load_mw: 30282.50421 },
     ],
-    figureLink: "/china-provincial-hourly-load.svg"
+    figureLink: "/dataset_charts/china-provincial-hourly-load.svg"
   },
 ];
 
@@ -144,7 +144,7 @@ Users should be aware that data collected by GEM on various types of generators 
       { type: "coal", province: "Anhui", plant_name: "Anhui Bengbu power station", unit_name: "Phase II Unit 4", capacity_mw: 660, status: "operating", start_year: 2018, technology: "ultra-supercritical", fuel: "bituminous", captive: null, chp: null, capacity_factor: 0.55, heat_rate_btu_per_kwh: 8272, emission_factor_kg_co2_per_tj: 94600 },
       { type: "coal", province: "Anhui", plant_name: "Anhui Bengbu power station", unit_name: "Phase I Unit 1", capacity_mw: 630, status: "operating", start_year: 2008, technology: "supercritical", fuel: "bituminous", captive: null, chp: null, capacity_factor: 0.55, heat_rate_btu_per_kwh: 9249.9, emission_factor_kg_co2_per_tj: 94600 },
     ],
-    figureLink: "/china-generators-by-tech.svg"
+    figureLink: "/dataset_charts/china-generators-by-tech.svg"
   },
   {
     id: "china-prov-annual-generator-tech",
@@ -178,7 +178,7 @@ Users should be aware that the NBS may periodically revise historical data to im
       { technology: "hydro", province: "Beijing", year: 2024, generation_gWh: 944 },
       { technology: "hydro", province: "Chongqing", year: 2024, generation_gWh: 21840 },
     ],
-    figureLink: "/china-prov-annual-generation-by-tech.svg"
+    figureLink: "/dataset_charts/china-prov-annual-generation-by-tech.svg"
   },
   {
     id: "china-prov-monthly-generator-tech",
@@ -212,7 +212,7 @@ Users should be aware that the NBS may periodically revise historical data to im
       { technology: "hydro", province: "Beijing", year: 2025, month: 8, generation_gwh: 110},
       { technology: "hydro", province: "Chongqing", year: 2025, month: 8, generation_gwh: 1960},
     ],
-    figureLink: "/china-prov-monthly-generation-by-tech.svg"
+    figureLink: "/dataset_charts/china-prov-monthly-generation-by-tech.svg"
   },
   {
     id: "china-prov-annual-capacity-tech",
@@ -246,7 +246,7 @@ Users should be aware that installed capacity data on Dianchacha is reportedly s
       { technology: "hydro", province: "Anhui", year: 2024, cumulative_capacity_gw: 6.19 },
       { technology: "hydro", province: "Beijing", year: 2024, cumulative_capacity_gw: 1.01 },
     ],
-    figureLink: "/china-prov-annual-capacity-by-tech.svg"
+    figureLink: "/dataset_charts/china-prov-annual-capacity-by-tech.svg"
   },
   {
     id: "china-prov-annual-solar-capacity-by-type",
@@ -280,7 +280,7 @@ Users should be aware that the solar PV installed capacity data released by the 
       { province: "All Provinces", year: 2024, pv_type: "New Non-Residential PV", capacity_gw: 88.63 },
       { province: "All Provinces", year: 2024, pv_type: "New Installed Capacity", capacity_gw: 277.57 },
     ],
-    figureLink: "/china-prov-annual-solar-pv-capacity-by-type.svg"
+    figureLink: "/dataset_charts/china-prov-annual-solar-pv-capacity-by-type.svg"
   },
   {
     id: "china-prov-monthly-solar-capacity",
@@ -315,7 +315,7 @@ Users should be aware that installed capacity data on PK Thinker is reportedly s
       { province: "Anhui", year: 2025, month: 7, cumulative_capacity_gw: 53.96 },
       { province: "Beijing", year: 2025, month: 7, cumulative_capacity_gw: 1.86 },
     ],
-    figureLink: "/china-prov-monthly-solar-pv-capacity.svg"
+    figureLink: "/dataset_charts/china-prov-monthly-solar-pv-capacity.svg"
   },
   {
     id: "china-prov-monthly-wind-capacity",
@@ -350,7 +350,7 @@ Users should be aware that installed capacity data on PK Thinker is reportedly s
       { province: "Anhui", year: 2025, month: 7, cumulative_capacity_gw: 10.39 },
       { province: "Beijing", year: 2025, month: 7, cumulative_capacity_gw: 0.23 },
     ],
-    figureLink: "/china-prov-monthly-wind-capacity.svg"
+    figureLink: "/dataset_charts/china-prov-monthly-wind-capacity.svg"
   },
 ];
 
@@ -386,7 +386,7 @@ The dataset is compiled exclusively from open and publicly accessible sources, i
 
 This dataset is the result of multi-source data integration and manual verification. Despite careful validation, minor discrepancies may remain due to inconsistent reporting or differing update cycles across sources.
 
-If you’d like to require a complete methodology for this dataset, please specify it in the request form.
+If you'd like to require a complete methodology for this dataset, please specify it in the request form.
 `,
     preview: [
       {
@@ -438,7 +438,7 @@ If you’d like to require a complete methodology for this dataset, please speci
         length_km: 389
       },
     ],
-    figureLink: "/china-ehv-uhv-power-network.svg"
+    figureLink: "/dataset_charts/china-ehv-uhv-power-network.svg"
   },
   {
     id: "china-guangdong-500kv-interprefecture-power-network",
@@ -465,7 +465,7 @@ Data is compiled from publicly available sources, including official grid inform
 
 Capacity values are estimated and may differ from real-time operational limits or actual dispatch constraints.
 
-If you’d like to require a complete methodology for this dataset, please specify it in the request form.
+If you'd like to require a complete methodology for this dataset, please specify it in the request form.
 `,
     preview: [
       {
@@ -493,7 +493,7 @@ If you’d like to require a complete methodology for this dataset, please speci
         circuits: 10
       },
     ],
-    figureLink: "/china-guangdong-500-kv-Interprefecture-power-network.png"
+    figureLink: "/dataset_charts/china-guangdong-500-kv-Interprefecture-power-network.png"
   },
   {
     id: "china-east-grid-simulated-hourly-electricity-flow-profiles",
@@ -561,7 +561,7 @@ If you'd like to require a complete methodology for this dataset, please specify
         hour: 3
       },
     ],
-    figureLink: "/china-east-grid-simulated-hourly-electricity-flow-profiles.svg"
+    figureLink: "/dataset_charts/china-east-grid-simulated-hourly-electricity-flow-profiles.svg"
   },
 ];
 
@@ -733,7 +733,7 @@ Users should be aware that the coal price indices currently available do not rea
         day: 17
       },
     ],
-    figureLink: "/china-coal-price-indices.svg"
+    figureLink: "/dataset_charts/china-coal-price-indices.svg"
   },
   {
     id: "china-gas-price-index",
