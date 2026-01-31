@@ -9,15 +9,15 @@ const countryAbbreviations: Record<string, string> = {
   india: "IN",
   indonesia: "ID",
   vietnam: "VN",
-  asean: "ASEAN",
+  other: "OTHER",
 };
 
 const countryStyles: Record<string, { bg: string; text: string }> = {
-  china: { bg: "bg-red-700", text: "text-white"},
+  china: { bg: "bg-red-700", text: "text-white" },
   india: { bg: "bg-orange-700", text: "text-white" },
   indonesia: { bg: "bg-blue-700", text: "text-white" },
   vietnam: { bg: "bg-yellow-600", text: "text-gray-900" },
-  asean: { bg: "bg-green-700", text: "text-white" },
+  other: { bg: "bg-green-700", text: "text-white" },
 };
 
 const sizeClasses = {
@@ -29,7 +29,7 @@ const sizeClasses = {
 
 const countryFlagUrl = (abbreviation: string): string => {
   // ASEAN doesn't have a flag code, so use fallback
-  if (abbreviation === "ASEAN") return "";
+  if (abbreviation === "OTHER") return "country_icon/earth.jpg";
   return `https://purecatamphetamine.github.io/country-flag-icons/3x2/${abbreviation}.svg`;
 };
 

@@ -1227,13 +1227,13 @@ const vietnamParametersDatasets: Dataset[] = [
   },
 ];
 
-// ASEAN datasets
-const aseanDemandDatasets: Dataset[] = [
+// Other Country datasets
+const otherCountryDemandDatasets: Dataset[] = [
   {
-    id: "asean-demand-country-yearly",
-    country: "ASEAN",
+    id: "other-countries-demand-yearly",
+    country: "Other Countries",
     category: "Demand",
-    name: "ASEAN Country Yearly Power Consumption",
+    name: "Other Countries Yearly Power Consumption",
     featured: false,
     downloadable: false,
     updated: "",
@@ -1257,12 +1257,12 @@ const aseanDemandDatasets: Dataset[] = [
   },
 ];
 
-const aseanSupplyDatasets: Dataset[] = [
+const otherCountrySupplyDatasets: Dataset[] = [
   {
-    id: "asean-capacity-country-yearly",
-    country: "ASEAN",
+    id: "other-countries-capacity-yearly",
+    country: "Other Countries",
     category: "Supply",
-    name: "ASEAN Country Yearly Installed Capacity",
+    name: "Other Country Yearly Installed Capacity",
     featured: false,
     downloadable: false,
     updated: "",
@@ -1286,12 +1286,12 @@ const aseanSupplyDatasets: Dataset[] = [
   },
 ];
 
-const aseanTransmissionDatasets: Dataset[] = [
+const otherCountryTransmissionDatasets: Dataset[] = [
   {
-    id: "asean-interconnection",
-    country: "ASEAN",
+    id: "other-countries-interconnection",
+    country: "Other Countries",
     category: "Transmission",
-    name: "ASEAN Interconnection Network",
+    name: "Other Country Interconnection Network",
     featured: false,
     downloadable: false,
     updated: "",
@@ -1315,12 +1315,12 @@ const aseanTransmissionDatasets: Dataset[] = [
   },
 ];
 
-const aseanREResourceDatasets: Dataset[] = [
+const otherCountryREResourceDatasets: Dataset[] = [
   {
-    id: "asean-solar-country-potential",
-    country: "ASEAN",
+    id: "other-countries-solar-country-potential",
+    country: "Other Countries",
     category: "RE Resource Potential",
-    name: "ASEAN Country Solar Potential",
+    name: "Other Countries Solar Potential",
     featured: false,
     downloadable: false,
     updated: "",
@@ -1344,12 +1344,12 @@ const aseanREResourceDatasets: Dataset[] = [
   },
 ];
 
-const aseanParametersDatasets: Dataset[] = [
+const otherCountryParametersDatasets: Dataset[] = [
   {
-    id: "asean-lng-price",
-    country: "ASEAN",
+    id: "other-countries-lng-price",
+    country: "Other Countries",
     category: "Parameters",
-    name: "ASEAN LNG Price",
+    name: "Other Country LNG Price",
     featured: false,
     downloadable: false,
     updated: "",
@@ -1528,8 +1528,8 @@ export const Countries: Country[] = [
     ],
   },
   {
-    id: "asean",
-    name: "Subset of ASEAN Countries",
+    id: "other",
+    name: "Other Countries",
     flag: "🌏",
     datasetCount: 5,
     categories: [
@@ -1537,31 +1537,31 @@ export const Countries: Country[] = [
         id: "demand",
         name: "Demand",
         icon: "TrendingUp",
-        datasets: aseanDemandDatasets,
+        datasets: otherCountryDemandDatasets,
       },
       {
         id: "supply",
         name: "Supply",
         icon: "Zap",
-        datasets: aseanSupplyDatasets,
+        datasets: otherCountrySupplyDatasets,
       },
       {
         id: "transmission",
         name: "Transmission",
         icon: "Network",
-        datasets: aseanTransmissionDatasets,
+        datasets: otherCountryTransmissionDatasets,
       },
       {
         id: "re-resource",
         name: "RE Resource Potential",
         icon: "Sun",
-        datasets: aseanREResourceDatasets,
+        datasets: otherCountryREResourceDatasets,
       },
       {
         id: "parameters",
         name: "Parameters",
         icon: "DollarSign",
-        datasets: aseanParametersDatasets,
+        datasets: otherCountryParametersDatasets,
       },
     ],
   },
@@ -1589,9 +1589,9 @@ export const powerDatasets: Dataset[] = [
   ...vietnamTransmissionDatasets,
   ...vietnamREResourceDatasets,
   ...vietnamParametersDatasets,
-  ...aseanDemandDatasets,
-  ...aseanSupplyDatasets,
-  ...aseanTransmissionDatasets,
-  ...aseanREResourceDatasets,
-  ...aseanParametersDatasets,
+  ...otherCountryDemandDatasets,
+  ...otherCountrySupplyDatasets,
+  ...otherCountryTransmissionDatasets,
+  ...otherCountryREResourceDatasets,
+  ...otherCountryParametersDatasets,
 ];
