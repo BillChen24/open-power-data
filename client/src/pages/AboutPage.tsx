@@ -3,13 +3,36 @@ import Footer from "@/components/Footer";
 import { Card } from "@/components/ui/card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import teamImage from "@assets/stock_images/modern_office_team_r_7103a229.jpg";
+import { desc } from "drizzle-orm";
+import { url } from "inspector";
 
 export default function AboutPage() {
-  const teamMembers = [
-    { name: "Dr. Sarah Chen", role: "Principal Investigator", initials: "SC" },
-    { name: "Dr. Michael Rodriguez", role: "Energy Systems Lead", initials: "MR" },
-    { name: "Dr. Priya Sharma", role: "Data Science Lead", initials: "PS" },
-    { name: "Dr. James Wilson", role: "Policy Advisor", initials: "JW" },
+  const funders = [
+    {
+      name: "The William and Flora Hewlett Foundation",
+      shortName: "Hewlett Foundation",
+      url: "https://hewlett.org/",
+      description:
+        "Established in 1966, the William and Flora Hewlett Foundation is a nonpartisan philanthropy created through the personal generosity of engineer and entrepreneur Bill Hewlett and his wife, Flora. It invests in creative thinkers and problem solvers who are working to ensure everyone has a meaningful opportunity to thrive.",
+      image_path:
+        "project_funder/The William and Flora Hewlett Foundation Logo.svg",
+    },
+    {
+      name: "The Rockefeller Brothers Fund",
+      shortName: "RBF",
+      url: "https://www.rbf.org",
+      description:
+        "Created in 1940, the Rockefeller Brothers Fund (RBF) is a private family foundation rooted in the Rockefeller tradition of philanthropy. It advances social change that contributes to a more just, sustainable, and peaceful world.",
+      image_path: "project_funder/The Rockefeller Brothers Fund Logo.png",
+    },
+    {
+      name: "Carnegie Corporation of New York",
+      shortName: "Carnegie",
+      url: "https://www.carnegie.org",
+      description:
+        "Established in 1911 by Andrew Carnegie to promote the advancement and diffusion of knowledge and understanding. Today the foundation works to reduce political polarization through philanthropic support for the issues that Carnegie considered most important: education, democracy, and peace.",
+      image_path: "project_funder/Carnegie Corporation of New York Logo.png",
+    },
   ];
 
   return (
@@ -26,7 +49,7 @@ export default function AboutPage() {
             <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-16 w-full">
               <h1 className="text-5xl font-bold mb-4">About Us</h1>
               <p className="text-xl text-muted-foreground max-w-2xl">
-                Advancing energy research through open data
+                Advancing energy transition through high-resolution open data
               </p>
             </div>
           </div>
@@ -36,15 +59,21 @@ export default function AboutPage() {
           <section className="mb-16">
             <h2 className="text-4xl font-semibold mb-6">Our Mission</h2>
             <p className="text-lg text-muted-foreground leading-relaxed mb-4">
-              The Open Power Data initiative was founded on the belief that transparent,
-              accessible energy data is essential for addressing global energy challenges.
-              We bring together researchers, data scientists, and energy professionals from
-              around the world to collect, curate, and share high-quality power system data.
+              The Open Regional Electricity Observatory (OREO), an initiative by
+              the Power Transformation Lab, is dedicated to the belief that
+              transparent and high-resolution energy data is the bedrock of a
+              sustainable future. We bridge the critical data gap by collecting,
+              curating, and sharing sub-national power system data—from
+              provincial to prefecture levels—across annual, monthly, and hourly
+              granularities.
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Our goal is to enable evidence-based decision-making in energy policy,
-              accelerate research into sustainable energy systems, and foster collaboration
-              across borders and disciplines.
+              Starting with pivotal regions like China and Southeast Asia, our
+              mission is to build a borderless platform that empowers
+              researchers, policymakers, and energy professionals. By providing
+              open access to detailed generation, consumption, and transmission
+              data, we aim to accelerate evidence-based decision-making and
+              foster global collaboration for the energy transition.
             </p>
           </section>
 
@@ -52,85 +81,101 @@ export default function AboutPage() {
             <h2 className="text-4xl font-semibold mb-6">What We Do</h2>
             <div className="space-y-4">
               <Card className="p-6">
-                <h3 className="text-xl font-semibold mb-2">Data Collection & Curation</h3>
+                <h3 className="text-xl font-semibold mb-2">
+                  Data Collection & Curation
+                </h3>
                 <p className="text-muted-foreground">
-                  We aggregate power system data from official sources, verify its accuracy,
-                  and standardize formats to ensure consistency and usability.
+                  We aggregate power system data from official sources, verify
+                  its accuracy, and standardize formats to ensure consistency
+                  and usability.
                 </p>
               </Card>
               <Card className="p-6">
                 <h3 className="text-xl font-semibold mb-2">Research Support</h3>
                 <p className="text-muted-foreground">
-                  We provide datasets, documentation, and technical support to researchers
-                  studying energy systems, climate change, and sustainable development.
+                  We provide datasets, documentation, and technical support to
+                  researchers studying energy systems, climate change, and
+                  sustainable development.
                 </p>
               </Card>
               <Card className="p-6">
-                <h3 className="text-xl font-semibold mb-2">Community Building</h3>
+                <h3 className="text-xl font-semibold mb-2">
+                  Community Building
+                </h3>
                 <p className="text-muted-foreground">
-                  We foster a global community of energy data users and contributors through
-                  workshops, conferences, and collaborative projects.
+                  We foster a global community of energy data users and
+                  contributors through workshops, conferences, and collaborative
+                  projects.
                 </p>
               </Card>
             </div>
           </section>
 
           <section className="mb-16">
-            <h2 className="text-4xl font-semibold mb-8">Our Team</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {teamMembers.map((member) => (
-                <Card key={member.name} className="p-6 hover-elevate" data-testid={`card-team-${member.initials}`}>
-                  <div className="flex items-center gap-4">
-                    <Avatar className="h-16 w-16">
-                      <AvatarImage src="" alt={member.name} />
-                      <AvatarFallback className="bg-primary text-primary-foreground text-lg">
-                        {member.initials}
-                      </AvatarFallback>
-                    </Avatar>
-                    <div>
-                      <h3 className="text-xl font-semibold" data-testid={`text-name-${member.initials}`}>
-                        {member.name}
-                      </h3>
-                      <p className="text-muted-foreground">{member.role}</p>
-                    </div>
-                  </div>
-                </Card>
-              ))}
+            {/* <div className="flex items-center gap-6 mb-6"> */}
+            <div className="mb-6 flex items-center">
+              <img
+                src="/project_funder/Power-Transformation-Lab-Final-Logo-7-inch.png"
+                alt="Power Transformation Lab logo"
+                className="h-16 w-auto"
+              />
             </div>
+            <h2 className="text-3xl font-semibold mb-6">
+              <a
+                href="https://pwrlab.org/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:underline"
+                aria-label="Power Transformation Lab website (opens in a new tab)"
+              >
+                Power Transformation Lab
+              </a>
+            </h2>
+
+            <p className="text-lg text-muted-foreground leading-relaxed">
+              The Power Transformation Lab at the University of California, San
+              Diego studies the engineering and institutional requirements of
+              deploying low-carbon energy at scale. We work across multiple
+              geographies and with academic, government, civil society, and
+              industry partners to advance research and solutions to climate and
+              environmental challenges.
+            </p>
           </section>
 
-          <section>
-            <h2 className="text-4xl font-semibold mb-6">Publications & Impact</h2>
-            <div className="space-y-4">
-              <div className="flex gap-4">
-                <div className="flex-shrink-0 w-2 bg-primary rounded-full" />
-                <div>
-                  <div className="font-semibold mb-1">2024</div>
-                  <p className="text-muted-foreground">
-                    Published comprehensive analysis of renewable energy integration across
-                    12 countries in <em>Nature Energy</em>
-                  </p>
-                </div>
-              </div>
-              <div className="flex gap-4">
-                <div className="flex-shrink-0 w-2 bg-primary rounded-full" />
-                <div>
-                  <div className="font-semibold mb-1">2023</div>
-                  <p className="text-muted-foreground">
-                    Released open-source tools for power system data analysis, adopted by
-                    50+ research institutions
-                  </p>
-                </div>
-              </div>
-              <div className="flex gap-4">
-                <div className="flex-shrink-0 w-2 bg-primary rounded-full" />
-                <div>
-                  <div className="font-semibold mb-1">2022</div>
-                  <p className="text-muted-foreground">
-                    Launched international collaboration network with partners in 15 countries
-                  </p>
-                </div>
-              </div>
+          <section className="mb-20">
+            <h2 className="text-4xl font-semibold mb-8">Project Funders</h2>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
+              {funders.map((funder) => (
+                <Card
+                  key={funder.shortName}
+                  className="p-6 w-[200px] h-[140px] flex items-center justify-center hover:shadow-md transition-shadow bg-white"
+                  data-testid={`card-funder-${funder.shortName
+                    .toLowerCase()
+                    .replace(/\s+/g, "-")}`}
+                >
+                  <a
+                    href={funder.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={`${funder.name} website (opens in a new tab)`}
+                    className="flex flex-col items-center gap-3 text-center"
+                  >
+                    {/* Logo */}
+                    <img
+                      src={`/${funder.image_path}`}
+                      alt={`${funder.name} logo`}
+                      className="h-12 w-auto object-contain"
+                      loading="lazy"
+                    />
+
+                    {/* Name (optional but good for accessibility) */}
+                    <p className="text-sm text-muted-foreground font-medium">
+                      {funder.name}
+                    </p>
+                  </a>
+                </Card>
+              ))}
             </div>
           </section>
         </div>

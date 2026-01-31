@@ -75,7 +75,10 @@ export default function ContactPage() {
               <h2 className="text-2xl font-semibold mb-6">Send us a Message</h2>
 
               <Form {...form}>
-                <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+                <form
+                  onSubmit={form.handleSubmit(onSubmit)}
+                  className="space-y-6"
+                >
                   <FormField
                     control={form.control}
                     name="name"
@@ -83,7 +86,11 @@ export default function ContactPage() {
                       <FormItem>
                         <FormLabel>Name</FormLabel>
                         <FormControl>
-                          <Input placeholder="Your name" {...field} data-testid="input-contact-name" />
+                          <Input
+                            placeholder="Your name"
+                            {...field}
+                            data-testid="input-contact-name"
+                          />
                         </FormControl>
                         <FormMessage />
                       </FormItem>
@@ -116,7 +123,11 @@ export default function ContactPage() {
                       <FormItem>
                         <FormLabel>Subject</FormLabel>
                         <FormControl>
-                          <Input placeholder="What is this about?" {...field} data-testid="input-contact-subject" />
+                          <Input
+                            placeholder="What is this about?"
+                            {...field}
+                            data-testid="input-contact-subject"
+                          />
                         </FormControl>
                         <FormMessage />
                       </FormItem>
@@ -158,7 +169,9 @@ export default function ContactPage() {
 
             <div className="space-y-6">
               <div>
-                <h2 className="text-2xl font-semibold mb-6">Contact Information</h2>
+                <h2 className="text-2xl font-semibold mb-6">
+                  Contact Information
+                </h2>
                 <div className="space-y-6">
                   <Card className="p-6">
                     <div className="flex items-start gap-4">
@@ -167,8 +180,9 @@ export default function ContactPage() {
                       </div>
                       <div>
                         <h3 className="font-semibold mb-1">Email</h3>
-                        <p className="text-muted-foreground">info@openpowerdata.org</p>
-                        <p className="text-muted-foreground">research@openpowerdata.org</p>
+                        <p className="text-muted-foreground">
+                          mrdavidson@ucsd.edu
+                        </p>
                       </div>
                     </div>
                   </Card>
@@ -181,11 +195,11 @@ export default function ContactPage() {
                       <div>
                         <h3 className="font-semibold mb-1">Office Location</h3>
                         <p className="text-muted-foreground">
-                          Energy Research Institute
+                          Power Transformation Lab
                           <br />
-                          123 University Avenue
+                          UC San Diego, 9500 Gilman Dr
                           <br />
-                          Cambridge, MA 02139
+                          La Jolla, CA 92093
                           <br />
                           United States
                         </p>
@@ -195,7 +209,7 @@ export default function ContactPage() {
                 </div>
               </div>
 
-              <Card className="p-6 bg-muted/30">
+              {/* <Card className="p-6 bg-muted/30">
                 <h3 className="text-xl font-semibold mb-4">Office Hours</h3>
                 <div className="space-y-2 text-sm">
                   <div className="flex justify-between">
@@ -207,7 +221,7 @@ export default function ContactPage() {
                     <span className="font-medium">Closed</span>
                   </div>
                 </div>
-              </Card>
+              </Card> */}
             </div>
           </div>
         </div>
