@@ -179,7 +179,14 @@ export default function DatasetPage() {
                 </span>
               </Link>
               <ChevronRight className="h-4 w-4" />
-              <span>{dataset.country}</span>
+              <Link
+                href={`/country/${dataset.country.toLowerCase()}`}
+                data-testid="link-breadcrumb-country"
+              >
+                <span className="hover:text-primary cursor-pointer">
+                  {dataset.country}
+                </span>
+              </Link>
               <ChevronRight className="h-4 w-4" />
               <span>{dataset.category}</span>
             </div>
@@ -438,7 +445,7 @@ export default function DatasetPage() {
                       dataset?.name
                     }". Open Power Data, ${new Date().getFullYear()}. Available at: https://openpowerdata.org/dataset/${
                       dataset?.id
-                    }`
+                    }`,
                 );
               }}
               data-testid="button-copy-citation"
