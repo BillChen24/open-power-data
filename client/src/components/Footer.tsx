@@ -84,7 +84,7 @@ export default function Footer() {
             <ul className="space-y-2 text-sm">
               <li>
                 <a
-                  href="mailto:info@openpowerdata.org"
+                  href="mailto:mrdavidson@ucsd.edu"
                   className="text-muted-foreground hover:text-primary flex items-center gap-2"
                   data-testid="link-email"
                 >
@@ -94,7 +94,7 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="https://github.com"
+                  href="https://github.com/power-lab"
                   className="text-muted-foreground hover:text-primary flex items-center gap-2"
                   data-testid="link-github"
                 >
