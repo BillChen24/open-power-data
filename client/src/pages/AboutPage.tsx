@@ -149,7 +149,7 @@ export default function AboutPage() {
               {funders.map((funder) => (
                 <Card
                   key={funder.shortName}
-                  className="p-6 w-[200px] h-[140px] flex items-center justify-center hover:shadow-md transition-shadow bg-white"
+                  className="p-10 w-[240px] h-[140px] flex items-center justify-center hover:shadow-md transition-shadow bg-white"
                   data-testid={`card-funder-${funder.shortName
                     .toLowerCase()
                     .replace(/\s+/g, "-")}`}
