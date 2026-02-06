@@ -356,19 +356,19 @@ Users should be aware that installed capacity data on PK Thinker is reportedly s
 
 const chinaTransmissionDatasets: Dataset[] = [
   {
-    id: "china-ehv-uhv-power-network",
+    id: "china-ehv-uhv-transmission-lines",
     country: "China",
     category: "Transmission",
-    name: "China EHV and UHV Power Network",
+    name: "China Mainland EHV and UHV Transmission Lines",
     featured: true,
     downloadable: true,
     updated: "2025-11-30",
     format: "CSV",
-    size: "15 KB",
+    size: "14 KB",
     license: "CC BY 4.0",
-    citation: "Author: Power Transformation Lab; Title: transmission_lines_ehv_uhv (CC BY 4.0).",
+    citation: "AuthAuthor: Power Transformation Lab; Title: cn_ehv_uhv_dc_uhv_ac_lines (CC BY 4.0).",
     about: "This dataset presents a comprehensive, systematically curated record of China’s operational extra-high voltage (EHV) and ultra-high voltage (UHV) transmission network, covering both AC and DC technologies. All information is derived exclusively from open-source materials and has been manually cross-validated across multiple independent sources.",
-    regionLevel: "Provincial and Inter-provincial",
+    regionLevel: "Interprovincial and Intraprovincial",
     frequency: "Annual",
     dataCoverage: "1990-2025",
     downloadUrl: "#",
@@ -438,20 +438,113 @@ If you'd like to require a complete methodology for this dataset, please specify
         length_km: 389
       },
     ],
-    figureLink: "/dataset_charts/china-ehv-uhv-power-network.svg"
+    figureLink: "/dataset_charts/cn_ehv_uhv_dc_uhv_ac_lines.png"
   },
   {
-    id: "china-guangdong-500kv-interprefecture-power-network",
+    id: "china-interprovincial-500kv-750kv-network",
     country: "China",
     category: "Transmission",
-    name: "China Guangdong 500 kV Inter-prefecture Power Network",
+    name: "China Mainland Interprovincial 500 kV and 750 kV Network",
+    featured: true,
+    downloadable: false,
+    updated: "2025-11-30",
+    format: "CSV",
+    size: "1 KB",
+    license: "CC BY 4.0",
+    citation: "Author: Power Transformation Lab; Title: cn_interprovincial_500kv_750kv_network (CC BY 4.0).",
+    about: "This dataset describes interprovincial 500 kV and 750 kV transmission network in Mainland China. All lines included are in operation or under construction. The dataset is intended for academic research, policy analysis, and industry studies, such as power flow analysis and grid structure assessment.",
+    regionLevel: "Interprovincial",
+    frequency: "Annual",
+    dataCoverage: "Not specified",
+    downloadUrl: "#",
+    methodology: `## Data Sources
+
+Data is compiled from publicly available sources, including official grid information, power-sector reports, OpenStreetMap, Google Satellite Imagery, and statistical publications. Manual cross-checking is performed to improve consistency and accuracy.
+
+## Limitations
+
+Capacity values are estimated and may differ from real-time operational limits. In this dataset, maximum transmission capacities are assumed to be 1,200 MW for 500 kV lines and 3,000 MW for 750 kV lines.`,
+    preview: [
+      {
+        province_a: "Beijing",
+        province_b: "Tianjin",
+        voltage: "500 kV",
+        capacity_mw: 3600,
+        circuits: 3
+      },
+      {
+        province_a: "Beijing",
+        province_b: "Hebei",
+        voltage: "500 kV",
+        capacity_mw: 25200,
+        circuits: 21
+      },
+      {
+        province_a: "Tianjin",
+        province_b: "Hebei",
+        voltage: "500 kV",
+        capacity_mw: 6000,
+        circuits: 5
+      },
+    ],
+    figureLink: "/dataset_charts/cn_interprovincial_500kv_750kv_network.png"
+  },
+  {
+    id: "china-interprovincial-capacity-500kv-above",
+    country: "China",
+    category: "Transmission",
+    name: "China Mainland Interprovincial Capacity (500 kV and Above)",
+    featured: true,
+    downloadable: true,
+    updated: "2025-11-30",
+    format: "CSV",
+    size: "2 KB",
+    license: "CC BY 4.0",
+    citation: "Author: Power Transformation Lab; Title: cn_interprovincial_capacity_500kv_above (CC BY 4.0).",
+    about: "This dataset describes interprovincial transmission capacity in mainland China for high-voltage DC lines (EHV/UHV) and AC lines rated 500 kV and above. The dataset is intended for academic research, policy analysis, and industry studies, such as power flow analysis and grid structure assessment.",
+    regionLevel: "Interprovincial",
+    frequency: "Annual",
+    dataCoverage: "Not specified",
+    downloadUrl: "#",
+    methodology: `## Data Sources
+
+Data is compiled from publicly available sources, including official grid information, power-sector reports, OpenStreetMap, Google Satellite Imagery, and statistical publications. Manual cross-checking is performed to improve consistency and accuracy.
+
+## Limitations
+
+Capacity values are estimated and may differ from real-time operational limits. For AC transmission lines, maximum capacities are assumed to be 1,200 MW for 500 kV lines, 3,000 MW for 750 kV lines, and 5,000 MW for 1,000 kV lines. For DC transmission lines, capacities are based on reported values.
+`,
+    preview: [
+      {
+        province_a: "Anhui",
+        province_b: "Jiangsu",
+        capacity_mw: 14800
+      },
+      {
+        province_a: "Anhui",
+        province_b: "Xinjiang",
+        capacity_mw: 12000
+      },
+      {
+        province_a: "Anhui",
+        province_b: "Zhejiang",
+        capacity_mw: 13600
+      },
+    ],
+    figureLink: "/dataset_charts/cn_interprovincial_capacity_500kv_above.png"
+  },
+  {
+    id: "china-guangdong-interprefecture-500kv-network",
+    country: "China",
+    category: "Transmission",
+    name: "China Guangdong Inter-prefecture 500 kV Network",
     featured: false,
     downloadable: false,
     updated: "2025-11-30",
     format: "CSV",
     size: "2 KB",
     license: "CC BY 4.0",
-    citation: "Author: Power Transformation Lab; Title: transmission_lines_500kv_guangdong (CC BY 4.0).",
+    citation: "Author: Power Transformation Lab; Title: cn_gd_inter_perfecture_500kv_network (CC BY 4.0).",
     about: "This dataset describes 500 kV AC transmission lines within Guangdong Province that connect 21 different prefecture-level cities. All lines included are in operation or under construction and form part of Guangdong’s internal high-voltage transmission network. The dataset is intended for academic research, policy analysis, and industry studies, such as regional power flow analysis and grid structure assessment.",
     regionLevel: "Inter-prefecture",
     frequency: "Annual",
@@ -463,37 +556,37 @@ Data is compiled from publicly available sources, including official grid inform
 
 ## Limitations
 
-Capacity values are estimated and may differ from real-time operational limits or actual dispatch constraints.
+Capacity values are estimated and may differ from real-time operational limits. In this dataset, maximum transmission capacity is assumed to be 1,200 MW for 500 kV lines.
 
 If you'd like to require a complete methodology for this dataset, please specify it in the request form.
 `,
     preview: [
       {
         province: "Guangdong",
+        prefecture_a: "Chaozhou",
+        prefecture_b: "to_prefecture",
         voltage: "500 kV",
-        from_prefecture: "Chaozhou",
-        to_prefecture: "Shantou",
         capacity_mw: 7200,
         circuits: 6
       },
       {
         province: "Guangdong",
+        prefecture_a: "Dongguan",
+        prefecture_b: "Guangzhou",
         voltage: "500 kV",
-        from_prefecture: "Dongguan",
-        to_prefecture: "Guangzhou",
         capacity_mw: 7200,
         circuits: 6
       },
       {
         province: "Guangdong",
+        prefecture_a: "Dongguan",
+        prefecture_b: "Huizhou",
         voltage: "500 kV",
-        from_prefecture: "Dongguan",
-        to_prefecture: "Huizhou",
         capacity_mw: 12000,
         circuits: 10
       },
     ],
-    figureLink: "/dataset_charts/china-guangdong-500-kv-Interprefecture-power-network.png"
+    figureLink: "/dataset_charts/cn_gd_inter_perfecture_500kv_network.png"
   },
   {
     id: "china-east-grid-simulated-hourly-electricity-flow-profiles",
@@ -561,7 +654,7 @@ If you'd like to require a complete methodology for this dataset, please specify
         hour: 3
       },
     ],
-    figureLink: "/dataset_charts/china-east-grid-simulated-hourly-electricity-flow-profiles.svg"
+    figureLink: "/dataset_charts/cn_east_grid_simulated_hourly_flow_profiles.svg"
   },
 ];
 
