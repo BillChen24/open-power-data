@@ -28,8 +28,12 @@ import {
   Image,
   Clock,
   Send,
+  ExternalLink,
+  BookOpen,
+  Cpu,
 } from "lucide-react";
 import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
 import { powerDatasets } from "@/lib/powerData";
 
 export default function DatasetPage() {
@@ -362,9 +366,93 @@ export default function DatasetPage() {
               <div>
                 <h2 className="text-2xl font-semibold mb-4">Methodology</h2>
                 <div className="prose prose-sm dark:prose-invert max-w-none text-muted-foreground">
-                  <ReactMarkdown>{dataset.methodology}</ReactMarkdown>
+                  <ReactMarkdown remarkPlugins={[remarkGfm]}>
+                    {dataset.methodology}
+                  </ReactMarkdown>
                 </div>
               </div>
+
+              {dataset.modelImplementations &&
+                dataset.modelImplementations.length > 0 && (
+                  <div>
+                    <h2 className="text-2xl font-semibold mb-4 flex items-center gap-2">
+                      <Cpu className="h-5 w-5 text-primary" />
+                      Model Implementations
+                    </h2>
+                    <div
+                      className="space-y-3"
+                      data-testid="section-model-implementations"
+                    >
+                      {dataset.modelImplementations.map((model, idx) => (
+                        <Card
+                          key={idx}
+                          className="p-4 hover-elevate"
+                          data-testid={`card-model-${idx}`}
+                        >
+                          <a
+                            href={model.url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="block"
+                          >
+                            <div className="flex items-start justify-between gap-3">
+                              <div className="min-w-0">
+                                <h4 className="text-sm font-medium mb-1">
+                                  {model.name}
+                                </h4>
+                                <p className="text-xs text-muted-foreground">
+                                  {model.description}
+                                </p>
+                              </div>
+                              <ExternalLink className="h-4 w-4 text-muted-foreground flex-shrink-0 mt-0.5" />
+                            </div>
+                          </a>
+                        </Card>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
+              {dataset.relevantReports &&
+                dataset.relevantReports.length > 0 && (
+                  <div>
+                    <h2 className="text-2xl font-semibold mb-4 flex items-center gap-2">
+                      <BookOpen className="h-5 w-5 text-primary" />
+                      Relevant Reports
+                    </h2>
+                    <div
+                      className="space-y-3"
+                      data-testid="section-relevant-reports"
+                    >
+                      {dataset.relevantReports.map((report, idx) => (
+                        <Card
+                          key={idx}
+                          className="p-4 hover-elevate"
+                          data-testid={`card-report-${idx}`}
+                        >
+                          <a
+                            href={report.url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="block"
+                          >
+                            <div className="flex items-start justify-between gap-3">
+                              <div className="min-w-0">
+                                <h4 className="text-sm font-medium mb-1">
+                                  {report.title}
+                                </h4>
+                                <p className="text-xs text-muted-foreground">
+                                  {report.description}
+                                </p>
+                              </div>
+                              <ExternalLink className="h-4 w-4 text-muted-foreground flex-shrink-0 mt-0.5" />
+                            </div>
+                          </a>
+                        </Card>
+                      ))}
+                    </div>
+                  </div>
+                )}
             </div>
 
             <div className="space-y-6">
