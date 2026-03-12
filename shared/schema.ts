@@ -48,6 +48,8 @@ export interface Dataset {
   downloadable: boolean;
   figureLink?: string;
   inPreparation?: boolean;
+  modelImplementations?: { name: string; url: string; description: string }[];
+  relevantReports?: { title: string; url: string; description: string }[];
 }
 
 export interface Country {
