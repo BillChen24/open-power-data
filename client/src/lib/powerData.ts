@@ -34,6 +34,14 @@ Users should be aware that the NBS may periodically revise historical data to im
       { province: "Beijing", year: 2024, demand_gWh: 138940 },
       { province: "Chongqing", year: 2024, demand_gWh: 161260 },
     ],
+    modelImplementations: [
+      { name: "Provincial Demand Forecasting Model", url: "https://github.com/oreo-lab/demand-forecast", description: "A time-series model for forecasting provincial electricity demand using historical data and socioeconomic indicators." },
+      { name: "Load Disaggregation Toolkit", url: "https://github.com/oreo-lab/load-disaggregation", description: "Tools for disaggregating aggregate demand data into sectoral components (residential, commercial, industrial)." },
+    ],
+    relevantReports: [
+      { title: "China Provincial Electricity Consumption Trends 2010–2023", url: "https://example.org/reports/china-consumption-trends", description: "Analysis of long-term demand growth patterns across Chinese provinces." },
+      { title: "Regional Demand Drivers in East China", url: "https://example.org/reports/east-china-demand", description: "Explores the key economic and demographic factors driving electricity demand in eastern provinces." },
+    ],
     figureLink: "/dataset_charts/china-provincial-annual-load.svg"
   },
   {
@@ -1180,27 +1188,74 @@ const vietnamDemandDatasets: Dataset[] = [
     id: "vietnam-demand-regional-yearly",
     country: "Vietnam",
     category: "Demand",
-    name: "Vietnam Regional Yearly Power Consumption",
+    name: "Vietnam Regional Annual Electricity Consumption",
     featured: false,
-    downloadable: false,
-    updated: "",
+    downloadable: true,
+    updated: "2026-02-15",
     format: "CSV",
-    size: "",
+    size: "2 KB",
     license: "CC BY 4.0",
-    citation: "",
-    about: "",
-    regionLevel: "",
-    frequency: "",
-    dataCoverage: "",
-    downloadUrl: "",
-    methodology: `Data Sources:\nLink:\nLimitations:`,
+    citation: "Author: Power Transformation Lab; Title: vn_regional_annual_consumption (CC BY 4.0).",
+    about: "This dataset contains Vietnam zonal annual electricity demand projections derived from regional load profiles, sourced from Vietnam's Eighth Power Development Plan (PDP8).",
+    regionLevel: "Zonal",
+    frequency: "Annual",
+    dataCoverage: "2030-2050",
+    downloadUrl: "#",
+    methodology: `## 1. Vietnam Regional Annual Electricity Consumption
+
+### Source
+
+Vietnam's Eighth Power Development Plan (PDP8, Decision No. 500/QD-TTg, May 2023; revised Decision 768/QD-TTg, April 2025), with demand projections derived from regional load profiles.
+
+### Methodology
+
+- Hourly demand profiles for 6 zones constructed from PDP8 load growth projections  
+- The model uses **36 representative days** (3 per month: 1 weekday, 1 weekend, 1 peak) Ã— 24 hours \= 864 model hours  
+- Each representative day carries a **sample weight** reflecting how many real hours it represents (sum \= 8,760 hours/year)  
+- Projections cover 5-year intervals: 2030, 2035, 2040, 2045, 2050
+
+### Demand Summary
+
+| Year | Total (TWh) |
+| :---- | :---- |
+| 2030 | 550.9 |
+| 2035 | 726.9 |
+| 2040 | 864.0 |
+| 2045 | 975.8 |
+| 2050 | 1,092.5 |
+
+### Zone Definitions
+
+| Zone | Code | Region | Provinces |
+| :---- | :---- | :---- | :---- |
+| 1 | BB | North (Bắc Bộ) | Ha Noi, Hai Phong, Quang Ninh, Hai Duong, Thai Binh, Nam Dinh, Ninh Binh, Hung Yen, Bac Ninh, Ha Nam, Bac Giang, Thai Nguyen, Lang Son, Cao Bang, Bac Kan, Tuyen Quang, Ha Giang, Phu Tho, Vinh Phuc, Lao Cai, Yen Bai, Son La, Lai Chau, Dien Bien, Hoa Binh (25 provinces) |
+| 2 | BTB | North Central (Bắc Trung Bộ) | Thanh Hoa, Nghe An, Ha Tinh, Quang Binh |
+| 3 | TTB | Central (Trung Trung Bộ) | Quang Tri, Thua Thien Hue, Da Nang, Quang Nam, Quang Ngai |
+| 4 | TN | Central Highlands (Tây Nguyên) | Kon Tum, Gia Lai, Dak Lak, Dak Nong |
+| 5 | NTB | South Central (Nam Trung Bộ) | Binh Dinh, Phu Yen, Khanh Hoa, Lam Dong, Ninh Thuan, Binh Thuan |
+| 6 | NB | South (Nam Bộ) | TP HCM, Dong Nai, Ba Ria-Vung Tau, Binh Duong, Binh Phuoc, Tay Ninh, Long An, Tien Giang, Ben Tre, Dong Thap, An Giang, Vinh Long, Tra Vinh, Can Tho, Hau Giang, Soc Trang, Kien Giang, Bac Lieu, Ca Mau (19 provinces) |
+
+### Regional Structure
+
+PDP8 defines three planning regions with the following demand shares (2030):
+
+| PDP8 Region | Share | Demand (TWh) | Constituent Zones |
+| :---- | :---- | :---- | :---- |
+| North | 43.7% | 241.0 | BB \\+ BTB (Zones 1-2) |
+| Central | 10.4% | 57.0 | TTB \\+ TN (Zones 3-4) |
+| South | 45.9% | 252.9 | NTB \\+ NB (Zones 5-6) |
+
+We decompose these 3 PDP8 regions into **6 model zones** per PDP8's subregional planning structure. The northern region splits into BB (northern core) and BTB (north-central coast), the central region separates TTB (coastal) from TN (highlands), and the southern region divides into NTB (south-central coast) and NB (southeast \\+ Mekong Delta). Provincial demand within each PDP8 region is allocated proportionally across its constituent zones.
+
+### Notes
+
+- Peak system demand (2030): 83.4 GW`,
     preview: [
-      {},
-      {},
-      {}
+      { zone: "BB", zone_number: 1, zone_description: "Zone 1 - North (Bắc Bộ)", year: 2030, demand_gWh: 207137.2 },
+      { zone: "BTB", zone_number: 2, zone_description: "Zone 2 - North Central (Bắc Trung Bộ)", year: 2030, demand_gWh: 33858.2 },
+      { zone: "TTB", zone_number: 3, zone_description: "Zone 3 - Central (Trung Trung Bộ)", year: 2030, demand_gWh: 36222 }
     ],
-    figureLink: "",
-    inPreparation: true,
+    figureLink: ""
   },
 ];
 
@@ -1211,25 +1266,86 @@ const vietnamSupplyDatasets: Dataset[] = [
     category: "Supply",
     name: "Vietnam Coal Power Generators",
     featured: false,
-    downloadable: false,
-    updated: "",
+    downloadable: true,
+    updated: "2026-02-17",
     format: "CSV",
-    size: "",
+    size: "3 KB",
     license: "CC BY 4.0",
-    citation: "",
-    about: "",
-    regionLevel: "",
-    frequency: "",
-    dataCoverage: "",
-    downloadUrl: "",
-    methodology: `Data Sources:\nLink:\nLimitations:`,
+    citation: "Author: Power Transformation Lab; Title: vn_coal_power_generators (CC BY 4.0).",
+    about: "This dataset contains Vietnam coal power plant data, sourced from Global Energy Monitor (GEM) .",
+    regionLevel: "Zonal",
+    frequency: "Annual",
+    dataCoverage: "Not specified",
+    downloadUrl: "#",
+    methodology: `## 2. Vietnam Coal Power Generators
+
+### Source
+
+Global Energy Monitor (GEM) Global Coal Plant Tracker, January 2024 snapshot, filtered to Vietnam.
+
+### Methodology
+
+1. Raw plant-level data from GEM coal plant tracker (74 individual units)  
+2. Units filtered to operating \\+ under-construction status; units with GEM status "risky" or "retired" excluded  
+3. Units aggregated to plant level (one entry per plant), preserving total capacity  
+4. Technology classifications: subcritical, supercritical, ultra-supercritical, CFB (circulating fluidized bed)  
+5. Fuel types: anthracite (domestic, northern Vietnam), bituminous (imported, southern Vietnam), lignite
+
+### Capacity Summary
+
+- **Total: 30.0 GW** (74 individual units → 33 plant entries)  
+- Plants with multiple combustion technologies are listed as separate entries
+
+### Data Fields
+
+- \`plant_name\`: Power plant name  
+- \`capacity_mw\`: Total installed capacity of the plant  
+- \`units\`: Number of individual generating units  
+- \`unit_capacity_mw\`: Average unit capacity  
+- \`status\`: "operating" = committed/existing  
+- \`technology\`: Combustion technology classification  
+- \`fuel\`: Primary fuel type
+
+### Reference
+
+- Global Energy Monitor, "Global Coal Plant Tracker", January 2024  
+- GEM methodology: https://globalenergymonitor.org/projects/global-coal-plant-tracker/`,
     preview: [
-      {},
-      {},
-      {}
+      {
+        type: "coal",
+        zone: "North",
+        plant_name: "Mong Duong power station",
+        capacity_mw: 2320,
+        status: "operating",
+        technology: "subcritical",
+        fuel: "anthracite",
+        units: 4,
+        unit_capacity_mw: 580,
+      },
+      {
+        type: "coal",
+        zone: "North",
+        plant_name: "Hai Duong Thermal Power Plant",
+        capacity_mw: 1200,
+        status: "operating",
+        technology: "unknown",
+        fuel: "anthracite",
+        units: 2,
+        unit_capacity_mw: 600,
+      },
+      {
+        type: "coal",
+        zone: "North",
+        plant_name: "Hai Phong Thermal Power Station",
+        capacity_mw: 1200,
+        status: "operating",
+        technology: "subcritical",
+        fuel: "anthracite",
+        units: 4,
+        unit_capacity_mw: 300,
+      },
     ],
-    figureLink: "",
-    inPreparation: true,
+    figureLink: ""
   },
 ];
 
@@ -1239,26 +1355,112 @@ const vietnamTransmissionDatasets: Dataset[] = [
     country: "Vietnam",
     category: "Transmission",
     name: "Vietnam 500 kV Power Network",
-    featured: false,
-    downloadable: false,
-    updated: "",
+    featured: true,
+    downloadable: true,
+    updated: "2026-02-17",
     format: "CSV",
-    size: "",
+    size: "2 KB",
     license: "CC BY 4.0",
-    citation: "",
-    about: "",
-    regionLevel: "",
-    frequency: "",
-    dataCoverage: "",
-    downloadUrl: "",
-    methodology: `Data Sources:\nLink:\nLimitations:`,
+    citation: "Author: Power Transformation Lab; Title: vn_500kv_power_network (CC BY 4.0).",
+    about: "This dataset contains Vietnam 500 kV power network lines (existing, operational by 2025), sourced from PDP8 Draft Table 4.",
+    regionLevel: "Interzonal and Intrazonal",
+    frequency: "Annual",
+    dataCoverage: "Not specified",
+    downloadUrl: "#",
+    methodology: `## 4. Vietnam 500 kV Power Network
+
+### Source
+
+PDP8 Draft Table 4, validated transmission line dataset.
+
+### Methodology
+
+- 47 validated 500 kV transmission line segments (operational by 2025)  
+- Filtered by voltage (500 kV) and status (Existing_2025) from a larger dataset containing 355 500 kV lines and 1,308 additional 220 kV lines  
+- 15 interzone lines crossing zone boundaries
+
+### Interzone Connections
+
+| Zone Pair | Lines |
+| :---- | ----: |
+| 1 ↔ 2 | 3 |
+| 2 ↔ 3 | 3 |
+| 3 ↔ 4 | 3 |
+| 4 ↔ 5 | 2 |
+| 4 ↔ 6 | 2 |
+| 5 ↔ 6 | 2 |
+
+### Data Fields
+
+- \`line_id\`: Unique line segment identifier  
+- \`substation_a/b\`: Endpoint substations`,
     preview: [
-      {},
-      {},
-      {}
+      { line_id: "T_500_01039", substation_a: "Hòa Bình", substation_b: "Nho Quan" },
+      { line_id: "T_500_01040", substation_a: "Nho Quan", substation_b: "Nghi Sơn" },
+      { line_id: "T_500_01041", substation_a: "Nghi Sơn", substation_b: "Hà Tĩnh" }
     ],
-    figureLink: "",
-    inPreparation: true,
+    figureLink: ""
+  },
+  {
+    id: "vietnam-500kv-substations",
+    country: "Vietnam",
+    category: "Transmission",
+    name: "Vietnam 500 kV Substations",
+    featured: true,
+    downloadable: true,
+    updated: "2026-02-17",
+    format: "CSV",
+    size: "4 KB",
+    license: "CC BY 4.0",
+    citation: "Author: Power Transformation Lab; Title: vn_500kv_substations (CC BY 4.0).",
+    about: "This dataset contains Vietnam 500 kV substations (existing, operational by 2025), sourced from the PDP8 transmission annex.",
+    regionLevel: "Zonal",
+    frequency: "Annual",
+    dataCoverage: "Not specified",
+    downloadUrl: "#",
+    methodology: `## 3. Vietnam 500 kV Substations
+
+### Source
+
+PDP8 transmission planning annex.
+
+### Methodology
+
+- 52 existing 500 kV substations extracted from the validated substation profile dataset  
+- Substations filtered by voltage rating (500 kV) and operational status (existing by 2025)  
+- Each substation includes province location and zone assignment
+
+### Zone Distribution
+
+| Zone | Substations |
+| :---- | :---- |
+| 1 (North) | 13 |
+| 2 (North Central) | 5 |
+| 3 (Central) | 4 |
+| 4 (Central Highlands) | 8 |
+| 5 (South Central) | 4 |
+| 6 (South) | 18 |
+| **Total** | **52** |
+
+### Data Fields
+
+- \`sub_id\`: Unique substation identifier  
+- \`name\`: Short substation name (Vietnamese)  
+- \`name_full\`: Full official name  
+- \`province\`: Province location  
+- \`zone\`: Model zone (1-6)  
+- \`voltage_kv\`: Voltage rating (all 500 kV)  
+- \`status\`: "existing" (operational)
+
+### Network-Referenced Substations
+
+The 500 kV power network (Section 4) references 10 additional substations as transmission line endpoints that are not included in the substations dataset: NĐ Nam Định (Nam Dinh), Bắc Ninh 2 (Bac Ninh), Cần Thơ (Can Tho), Củ Chi (TP HCM), Lào Cai (Lao Cai), Mỹ Phước (Binh Duong), Quỳnh Lưu (Nghe An), Sóc Trăng (Soc Trang), Thái Nguyên (Thai Nguyen), and Vĩnh Yên (Vinh Phuc).`,
+    preview: [
+      { sub_id: 1684, name: "Quảng Ninh", name_full: "Trạm biến áp 500kV Quảng Ninh", province: "Quang_Ninh", zone: 1, voltage_kv: 500, status: "existing" },
+      { sub_id: 1685, name: "NĐ Vũng Áng", name_full: "Trạm biến áp 500kV NĐ Vũng Áng", province: "Ha_Tinh", zone: 2, voltage_kv: 500, status: "existing" },
+      { sub_id: 1686, name: "Ia Blứ", name_full: "Trạm biến áp 500kV Ia Blứ", province: "Gia_Lai", zone: 4, voltage_kv: 500, status: "existing" }
+    ],
+    figureLink: ""
   },
 ];
 
@@ -1268,26 +1470,51 @@ const vietnamREResourceDatasets: Dataset[] = [
     country: "Vietnam",
     category: "RE Resource Potential",
     name: "Vietnam Wind Regional Monthly Profile",
-    featured: false,
-    downloadable: false,
-    updated: "",
+    featured: true,
+    downloadable: true,
+    updated: "2026-02-17",
     format: "CSV",
-    size: "",
+    size: "4 KB",
     license: "CC BY 4.0",
-    citation: "",
-    about: "",
-    regionLevel: "",
-    frequency: "",
-    dataCoverage: "",
-    downloadUrl: "",
-    methodology: `Data Sources:\nLink:\nLimitations:`,
+    citation: "Author: Power Transformation Lab; Title: vn_wind_regional_monthly_profile (CC BY 4.0).",
+    about: "This dataset contains Vietnam onshore wind capacity factors from Renewables.ninja, aggregated to model zones by capacity-weighted averaging.",
+    regionLevel: "Zonal",
+    frequency: "Monthly",
+    dataCoverage: "Not specified",
+    downloadUrl: "#",
+    methodology: `## 5. Vietnam Wind Regional Monthly Profile
+
+### Source
+
+Onshore wind capacity factors from Renewables.ninja, aggregated to model zones by capacity-weighted averaging.
+
+### Methodology
+
+1. Hourly CFs downloaded from Renewables.ninja for 71 existing/planned onshore wind farm locations  
+2. For each zone, CFs aggregated using capacity-weighted averages across all plants in that zone  
+3. Monthly averages computed from all hours in each calendar month
+
+### Zone Wind Resource Summary
+
+| Zone | Annual CF |
+| :---- | :---- |
+| BB | 20.4% |
+| BTB | 22.7% |
+| TTB | 19.5% |
+| TN | 15.8% |
+| NTB | 28.9% |
+| NB | 34.4% |
+
+### References
+
+- Renewables.ninja (ERA5 reanalysis)  
+- Build-out locations: GEM Global Wind Power Tracker, June 2024`,
     preview: [
-      {},
-      {},
-      {}
+      { zone: "BB", zone_description: "Zone 1 - North (Bắc Bộ)", month: 1, wind_type: "onshore", capacity_factor: 0.2111 },
+      { zone: "BB", zone_description: "Zone 1 - North (Bắc Bộ)", month: 2, wind_type: "onshore", capacity_factor: 0.2026 },
+      { zone: "BB", zone_description: "Zone 1 - North (Bắc Bộ)", month: 3, wind_type: "onshore", capacity_factor: 0.1173 }
     ],
-    figureLink: "",
-    inPreparation: true,
+    figureLink: ""
   },
 ];
 
@@ -1298,25 +1525,49 @@ const vietnamParametersDatasets: Dataset[] = [
     category: "Parameters",
     name: "Vietnam Coal Import Price",
     featured: false,
-    downloadable: false,
-    updated: "",
+    downloadable: true,
+    updated: "2026-02-15",
     format: "CSV",
-    size: "",
+    size: "6 KB",
     license: "CC BY 4.0",
-    citation: "",
-    about: "",
-    regionLevel: "",
-    frequency: "",
-    dataCoverage: "",
-    downloadUrl: "",
-    methodology: `Data Sources:\nLink:\nLimitations:`,
+    citation: "Author: Power Transformation Lab; Title: vn_coal_import_price (CC BY 4.0).",
+    about: "This dataset contains Newcastle FOB thermal coal benchmark, sourced from World Bank Commodity Price Data (Pink Sheet), via IndexMundi.",
+    regionLevel: "National",
+    frequency: "Monthly",
+    dataCoverage: "2019/01-2025/02",
+    downloadUrl: "#",
+    methodology: `## 6. Vietnam Coal Import Price
+
+### Source
+
+World Bank Commodity Price Data (Pink Sheet), via IndexMundi.
+
+### Methodology
+
+- Newcastle FOB thermal coal benchmark (Australia), 6,000 kcal/kg specification  
+- Monthly prices in USD/metric ton, 2019-2025  
+- Newcastle FOB is the standard Asia-Pacific benchmark for seaborne thermal coal  
+- Vietnam imports coal primarily from Australia (~50%) and Indonesia (~35%) for power generation
+
+### Notes
+
+- This is a **benchmark proxy**, not Vietnam-specific import prices  
+- Vietnam's actual CIF import prices are typically 5-15% higher than Newcastle FOB (includes freight/insurance)  
+- Indonesia HBA (Harga Batubara Acuan, 6,322 kcal/kg) is an alternative regional benchmark  
+- The model uses a fuel cost of $3.73/MMBTU (~$89/ton at 6,000 kcal/kg), consistent with the IEA 2017-2019 Newcastle FOB baseline
+
+### Reference
+
+- World Bank, "Commodity Markets Outlook" (Pink Sheet)  
+- IndexMundi: https://www.indexmundi.com/commodities/?commodity=coal-australian  
+- FRED: Global Price of Coal, Australia (PCOALAUUSDM)  
+- IEA, "Coal 2025 â€” Prices and Costs"`,
     preview: [
-      {},
-      {},
-      {}
+      { fuel_type: "coal", index_name: "Newcastle FOB | Thermal Coal | Australian Export Benchmark", calorific_grade: "6000K", price_usd_per_ton: 98.56, year: 2019, month: 1 },
+      { fuel_type: "coal", index_name: "Newcastle FOB | Thermal Coal | Australian Export Benchmark", calorific_grade: "6000K", price_usd_per_ton: 95.42, year: 2019, month: 2 },
+      { fuel_type: "coal", index_name: "Newcastle FOB | Thermal Coal | Australian Export Benchmark", calorific_grade: "6000K", price_usd_per_ton: 93.12, year: 2019, month: 3 }
     ],
-    figureLink: "",
-    inPreparation: true,
+    figureLink: ""
   },
 ];
 
@@ -1472,7 +1723,7 @@ export const Countries: Country[] = [
     id: "china",
     name: "China",
     flag: "🇨🇳",
-    datasetCount: 19,
+    datasetCount: 21,
     categories: [
       {
         id: "demand",
@@ -1586,7 +1837,7 @@ export const Countries: Country[] = [
     id: "vietnam",
     name: "Vietnam",
     flag: "🇻🇳",
-    datasetCount: 5,
+    datasetCount: 6,
     categories: [
       {
         id: "demand",
