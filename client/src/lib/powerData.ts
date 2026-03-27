@@ -39,10 +39,10 @@ Users should be aware that the NBS may periodically revise historical data to im
       { name: "Load Disaggregation Toolkit", url: "https://github.com/oreo-lab/load-disaggregation", description: "Tools for disaggregating aggregate demand data into sectoral components (residential, commercial, industrial)." },
     ],
     relevantReports: [
-      { title: "China Provincial Electricity Consumption Trends 2010–2023", url: "https://example.org/reports/china-consumption-trends", description: "Analysis of long-term demand growth patterns across Chinese provinces." },
+      { title: "China Provincial Electricity Consumption Trends 2010-2023", url: "https://example.org/reports/china-consumption-trends", description: "Analysis of long-term demand growth patterns across Chinese provinces." },
       { title: "Regional Demand Drivers in East China", url: "https://example.org/reports/east-china-demand", description: "Explores the key economic and demographic factors driving electricity demand in eastern provinces." },
     ],
-    figureLink: "/dataset_charts/china-provincial-annual-load.svg"
+    figureLink: "/dataset_charts/cn_prov_annual_consumption.svg"
   },
   {
     id: "china-demand-provincial-monthly",
@@ -76,7 +76,7 @@ Users should be aware that electricity consumption data on Dianchacha is reporte
       { province: "Beijing", year: 2025, month: 6, demand_gWh: 12132 },
       { province: "Chongqing", year: 2025, month: 6, demand_gWh: 14283 },
     ],
-    figureLink: "/dataset_charts/china-provincial-monthly-load.svg"
+    figureLink: "/dataset_charts/cn_prov_monthly_consumption.svg"
   },
   {
     id: "china-demand-provincial-hourly-simulated",
@@ -115,7 +115,7 @@ If you'd like to require a complete methodology for this dataset, please specify
       { province: "Anhui", year: 2022, month: 1, day: 1, hour: 2, load_mw: 31288.18473 },
       { province: "Anhui", year: 2022, month: 1, day: 1, hour: 3, load_mw: 30282.50421 },
     ],
-    figureLink: "/dataset_charts/china-provincial-hourly-load.svg"
+    figureLink: "/dataset_charts/cn_prov_simulated_hourly_load_profiles.svg"
   },
 ];
 
@@ -152,7 +152,7 @@ Users should be aware that data collected by GEM on various types of generators 
       { type: "coal", province: "Anhui", plant_name: "Anhui Bengbu power station", unit_name: "Phase II Unit 4", capacity_mw: 660, status: "operating", start_year: 2018, technology: "ultra-supercritical", fuel: "bituminous", captive: null, chp: null, capacity_factor: 0.55, heat_rate_btu_per_kwh: 8272, emission_factor_kg_co2_per_tj: 94600 },
       { type: "coal", province: "Anhui", plant_name: "Anhui Bengbu power station", unit_name: "Phase I Unit 1", capacity_mw: 630, status: "operating", start_year: 2008, technology: "supercritical", fuel: "bituminous", captive: null, chp: null, capacity_factor: 0.55, heat_rate_btu_per_kwh: 9249.9, emission_factor_kg_co2_per_tj: 94600 },
     ],
-    figureLink: "/dataset_charts/china-generators-by-tech.svg"
+    figureLink: "/dataset_charts/cn_generators_by_tech.svg"
   },
   {
     id: "china-prov-annual-generator-tech",
@@ -186,7 +186,7 @@ Users should be aware that the NBS may periodically revise historical data to im
       { technology: "hydro", province: "Beijing", year: 2024, generation_gWh: 944 },
       { technology: "hydro", province: "Chongqing", year: 2024, generation_gWh: 21840 },
     ],
-    figureLink: "/dataset_charts/china-prov-annual-generation-by-tech.svg"
+    figureLink: "/dataset_charts/cn_prov_annual_generation_by_tech.svg"
   },
   {
     id: "china-prov-monthly-generator-tech",
@@ -197,7 +197,7 @@ Users should be aware that the NBS may periodically revise historical data to im
     downloadable: true,
     updated: "2025-09-30",
     format: "CSV",
-    size: "1.1 MB",
+    size: "694 KB",
     license: "CC BY 4.0",
     citation: "Data Source: National Bureau of Statistics of China; Compiled and Licensed by: Power Transformation Lab (CC BY 4.0).",
     about: "This dataset contains China provincial monthly electricity generation data, including total, thermal, hydro, nuclear, solar and wind data. The data is collected from the National Bureau of Statistics of China (NBS). The data is updated every six months, typically in March and September each year.",
@@ -220,7 +220,7 @@ Users should be aware that the NBS may periodically revise historical data to im
       { technology: "hydro", province: "Beijing", year: 2025, month: 8, generation_gwh: 110},
       { technology: "hydro", province: "Chongqing", year: 2025, month: 8, generation_gwh: 1960},
     ],
-    figureLink: "/dataset_charts/china-prov-monthly-generation-by-tech.svg"
+    figureLink: "/dataset_charts/cn_prov_monthly_generation_by_tech.svg"
   },
   {
     id: "china-prov-annual-capacity-tech",
@@ -231,7 +231,7 @@ Users should be aware that the NBS may periodically revise historical data to im
     downloadable: false,
     updated: "2025-06-30",
     format: "CSV",
-    size: "49 KB",
+    size: "46 KB",
     license: "CC BY 4.0",
     citation: "Data Source: China Electricity Council; Reposted by: Dianchacha; Compiled and Licensed by: Power Transformation Lab (CC BY 4.0).",
     about: "This dataset contains China provincial annual installed capacity data in the power industry, including thermal, hydro, nuclear, solar and wind data. The data is collected from Dianchacha. The data is updated annually, typically in June each year.",
@@ -250,11 +250,11 @@ The data is collected from Dianchacha, a platform that provides electricity-rela
 Users should be aware that installed capacity data on Dianchacha is reportedly sourced from the China Electricity Council and republished by the platform. As a result, there may be risks of data errors, omissions, or delays introduced during the reposting process. For research or analytical use, it is recommended to cross-validate the data with official or independent sources.
 `,
     preview: [
-      { technology: "hydro", province: "All Provinces", year: 2024, cumulative_capacity_gw: 435.95 },
       { technology: "hydro", province: "Anhui", year: 2024, cumulative_capacity_gw: 6.19 },
       { technology: "hydro", province: "Beijing", year: 2024, cumulative_capacity_gw: 1.01 },
+      { technology: "hydro", province: "Chongqing", year: 2024, cumulative_capacity_gw: 9.18 }
     ],
-    figureLink: "/dataset_charts/china-prov-annual-capacity-by-tech.svg"
+    figureLink: "/dataset_charts/cn_prov_annual_capacity_by_tech.svg"
   },
   {
     id: "china-prov-annual-solar-capacity-by-type",
@@ -265,7 +265,7 @@ Users should be aware that installed capacity data on Dianchacha is reportedly s
     downloadable: true,
     updated: "2025-06-30",
     format: "CSV",
-    size: "114 KB",
+    size: "94 KB",
     license: "CC BY 4.0",
     citation: "Data Source: National Energy Administration of China; Compiled and Licensed by: Power Transformation Lab (CC BY 4.0).",
     about: "This dataset contains China provincial annual installed capacity data by solar PV type, including new and cumulative, distributed and centralized, and residential and non-residential solar PV data. The data is collected from the National Energy Administration of China (NEA). The data is updated annually, typically in June each year.",
@@ -284,11 +284,11 @@ The data is collected from the National Energy Administration of China (NEA). Th
 Users should be aware that the solar PV installed capacity data released by the NEA is sourced from the National Renewable Energy Center and the China Electricity Council. For research or analytical purposes, it is recommended to cross-validate this information with additional sources.
 `,
     preview: [
-      { province: "All Provinces", year: 2024, pv_type: "New Residential PV", capacity_gw: 29.55 },
-      { province: "All Provinces", year: 2024, pv_type: "New Non-Residential PV", capacity_gw: 88.63 },
-      { province: "All Provinces", year: 2024, pv_type: "New Installed Capacity", capacity_gw: 277.57 },
+      { province: "Anhui", year: 2024, pv_type: "New Residential PV", capacity_gw: 4.188 },
+      { province: "Anhui", year: 2024, pv_type: "New Non-Residential PV", capacity_gw: 5.134 },
+      { province: "Anhui", year: 2024, pv_type: "New Installed Capacity", capacity_gw: 10.882 }
     ],
-    figureLink: "/dataset_charts/china-prov-annual-solar-pv-capacity-by-type.svg"
+    figureLink: "/dataset_charts/cn_prov_annual_solar_pv_capacity_by_type.svg"
   },
   {
     id: "china-prov-monthly-solar-capacity",
@@ -299,7 +299,7 @@ Users should be aware that the solar PV installed capacity data released by the 
     downloadable: false,
     updated: "2025-09-30",
     format: "CSV",
-    size: "29 KB",
+    size: "23 KB",
     license: "CC BY 4.0",
     citation: "Data Source: China Electricity Council; Reposted by: PK Thinker; Compiled and Licensed by: Power Transformation Lab (CC BY 4.0).",
     about: "This dataset contains China provincial monthly solar PV installed capacity data. The data is collected from PK Thinker. The data is updated every six months, typically in March and September each year.",
@@ -319,11 +319,11 @@ The data is collected from PK Thinker, a platform that provides electricity-rela
 Users should be aware that installed capacity data on PK Thinker is reportedly sourced from the China Electricity Council and republished by the platform. As a result, there may be risks of data errors, omissions, or delays introduced during the reposting process. For research or analytical use, it is recommended to cross-validate the data with official or independent sources.
 `,
     preview: [
-      { province: "All Provinces", year: 2025, month: 7, cumulative_capacity_gw: 1109.6 },
       { province: "Anhui", year: 2025, month: 7, cumulative_capacity_gw: 53.96 },
       { province: "Beijing", year: 2025, month: 7, cumulative_capacity_gw: 1.86 },
+      { province: "Chongqing", year: 2025, month: 7, cumulative_capacity_gw: 5.14 },
     ],
-    figureLink: "/dataset_charts/china-prov-monthly-solar-pv-capacity.svg"
+    figureLink: "/dataset_charts/cn_prov_monthly_solar_pv_capacity.svg"
   },
   {
     id: "china-prov-monthly-wind-capacity",
@@ -334,7 +334,7 @@ Users should be aware that installed capacity data on PK Thinker is reportedly s
     downloadable: false,
     updated: "2025-09-30",
     format: "CSV",
-    size: "29 KB",
+    size: "23 KB",
     license: "CC BY 4.0",
     citation: "Data Source: China Electricity Council; Reposted by: PK Thinker; Compiled and Licensed by: Power Transformation Lab (CC BY 4.0).",
     about: "This dataset contains China provincial monthly wind power installed capacity data. The data is collected from PK Thinker. The data is updated every six months, typically in March and September each year.",
@@ -354,11 +354,11 @@ The data is collected from PK Thinker, a platform that provides electricity-rela
 Users should be aware that installed capacity data on PK Thinker is reportedly sourced from the China Electricity Council and republished by the platform. As a result, there may be risks of data errors, omissions, or delays introduced during the reposting process. For research or analytical use, it is recommended to cross-validate the data with official or independent sources.
 `,
     preview: [
-      { province: "All Provinces", year: 2025, month: 7, cumulative_capacity_gw: 574.86 },
       { province: "Anhui", year: 2025, month: 7, cumulative_capacity_gw: 10.39 },
       { province: "Beijing", year: 2025, month: 7, cumulative_capacity_gw: 0.23 },
+      { province: "Chongqing", year: 2025, month: 7, cumulative_capacity_gw: 2.87 }
     ],
-    figureLink: "/dataset_charts/china-prov-monthly-wind-capacity.svg"
+    figureLink: "/dataset_charts/cn_prov_monthly_wind_capacity.svg"
   },
 ];
 
@@ -372,7 +372,7 @@ const chinaTransmissionDatasets: Dataset[] = [
     downloadable: true,
     updated: "2025-11-30",
     format: "CSV",
-    size: "14 KB",
+    size: "16 KB",
     license: "CC BY 4.0",
     citation: "AuthAuthor: Power Transformation Lab; Title: cn_ehv_uhv_dc_uhv_ac_lines (CC BY 4.0).",
     about: "This dataset presents a comprehensive, systematically curated record of China’s operational extra-high voltage (EHV) and ultra-high voltage (UHV) transmission network, covering both AC and DC technologies. All information is derived exclusively from open-source materials and has been manually cross-validated across multiple independent sources.",
@@ -397,56 +397,11 @@ This dataset is the result of multi-source data integration and manual verificat
 If you'd like to require a complete methodology for this dataset, please specify it in the request form.
 `,
     preview: [
-      {
-        type: "DC",
-        voltage: "±1100 kV",
-        name: "Ji-Quan HVDC",
-        name_local: "吉泉直流",
-        name_full: "Zhundong - Southern Anhui ±1100 kV UHVDC",
-        name_full_local: "准东-皖南±1100千伏特高压直流输电工程",
-        province_1: "Xinjiang",
-        province_2: "Anhui",
-        province_3: null,
-        province_4: null,
-        commissioning_date: "2019-07-01",
-        rated_capacity_mw: 12000,
-        rated_capacity_source: "Reported",
-        length_km: 3324
-      },
-      {
-        type: "DC",
-        voltage: "±800 kV (multi terminal)",
-        name: "Lu=Gao-hao HVDC (Gao-Zhao Section)",
-        name_local: "禄高肇直流（高肇段）",
-        name_full: "Luquan (Yunnan) - Gaopo (Guizhou) - Zhaoqing (Guangdong) Three-terminal HVDC (Gao-Zhao Section)",
-        name_full_local: "云南禄劝换流站-贵州高坡换流站-广东肇庆换流站三端直流（高肇段）",
-        province_1: "Guizhou",
-        province_2: "Guangdong",
-        province_3: null,
-        province_4: null,
-        commissioning_date: "2004-09-24",
-        rated_capacity_mw: 3000,
-        rated_capacity_source: "Reported",
-        length_km: 1277
-      },
-      {
-        type: "DC",
-        voltage: "±800 kV (multi terminal)",
-        name: "Lu-Gao-Zhao HVDC (Lu-Gao Section)",
-        name_local: "禄高肇直流（禄高段）",
-        name_full: "Luquan (Yunnan) - Gaopo (Guizhou) - Zhaoqing (Guangdong) Three-terminal HVDC (Lu-Gao Section)",
-        name_full_local: "云南禄劝换流站-贵州高坡换流站-广东肇庆换流站三端直流（禄高段）",
-        province_1: "Yunnan",
-        province_2: "Guizhou",
-        province_3: null,
-        province_4: null,
-        commissioning_date: "2020-06-11",
-        rated_capacity_mw: 3000,
-        rated_capacity_source: "Reported",
-        length_km: 389
-      },
+      { line_type: "DC", voltage: "±1100 kV", name: "Ji-Quan HVDC", name_local: "吉泉直流", name_full: "Zhundong - Southern Anhui ±1100 kV UHVDC", name_full_local: "准东-皖南±1100千伏特高压直流输电工程", commissioning_date: "2019-07-01", rated_capacity_mw: 12000, rated_capacity_source: "Reported", length_km: 3324, province_a: "Xinjiang", province_b: "Anhui" },
+      { line_type: "DC", voltage: "±800 kV (multi terminal)", name: "Lu-Gao-Zhao HVDC (Gao-Zhao Section)", name_local: "禄高肇直流（高肇段）", name_full: "Luquan (Yunnan) - Gaopo (Guizhou) - Zhaoqing (Guangdong) Three-terminal HVDC (Gao-Zhao Section)", name_full_local: "云南禄劝换流站-贵州高坡换流站-广东肇庆换流站三端直流（高肇段）", commissioning_date: "2004-09-24", rated_capacity_mw: 3000, rated_capacity_source: "Reported", length_km: 1277, province_a: "Guizhou", province_b: "Guangdong" },
+      { line_type: "DC", voltage: "±800 kV (multi terminal)", name: "Lu-Gao-Zhao HVDC (Lu-Gao Section)", name_local: "禄高肇直流（禄高段）", name_full: "Luquan (Yunnan) - Gaopo (Guizhou) - Zhaoqing (Guangdong) Three-terminal HVDC (Lu-Gao Section)", name_full_local: "云南禄劝换流站-贵州高坡换流站-广东肇庆换流站三端直流（禄高段）", commissioning_date: "2020-06-11", rated_capacity_mw: 3000, rated_capacity_source: "Reported", length_km: 389, province_a: "Yunnan", province_b: "Guizhou" }
     ],
-    figureLink: "/dataset_charts/cn_ehv_uhv_dc_uhv_ac_lines.png"
+    figureLink: "/dataset_charts/cn_ehv_uhv_dc_uhv_ac_lines.svg"
   },
   {
     id: "china-interprovincial-500kv-750kv-network",
@@ -495,7 +450,7 @@ Capacity values are estimated and may differ from real-time operational limits. 
         circuits: 5
       },
     ],
-    figureLink: "/dataset_charts/cn_interprovincial_500kv_750kv_network.png"
+    figureLink: "/dataset_charts/cn_interprovincial_500kv_750kv_network.svg"
   },
   {
     id: "china-interprovincial-capacity-500kv-above",
@@ -506,7 +461,7 @@ Capacity values are estimated and may differ from real-time operational limits. 
     downloadable: true,
     updated: "2025-11-30",
     format: "CSV",
-    size: "2 KB",
+    size: "3 KB",
     license: "CC BY 4.0",
     citation: "Author: Power Transformation Lab; Title: cn_interprovincial_capacity_500kv_above (CC BY 4.0).",
     about: "This dataset describes interprovincial transmission capacity in mainland China for high-voltage DC lines (EHV/UHV) and AC lines rated 500 kV and above. The dataset is intended for academic research, policy analysis, and industry studies, such as power flow analysis and grid structure assessment.",
@@ -523,23 +478,11 @@ Data is compiled from publicly available sources, including official grid inform
 Capacity values are estimated and may differ from real-time operational limits. For AC transmission lines, maximum capacities are assumed to be 1,200 MW for 500 kV lines, 3,000 MW for 750 kV lines, and 5,000 MW for 1,000 kV lines. For DC transmission lines, capacities are based on reported values.
 `,
     preview: [
-      {
-        province_a: "Anhui",
-        province_b: "Jiangsu",
-        capacity_mw: 14800
-      },
-      {
-        province_a: "Anhui",
-        province_b: "Xinjiang",
-        capacity_mw: 12000
-      },
-      {
-        province_a: "Anhui",
-        province_b: "Zhejiang",
-        capacity_mw: 13600
-      },
+      { province_a: "Anhui", province_b: "Jiangsu", voltage: "500 kV and above", capacity_mw: 14800 },
+      { province_a: "Anhui", province_b: "Xinjiang", voltage: "500 kV and above", capacity_mw: 12000 },
+      { province_a: "Anhui", province_b: "Zhejiang", voltage: "500 kV and above", capacity_mw: 13600 }
     ],
-    figureLink: "/dataset_charts/cn_interprovincial_capacity_500kv_above.png"
+    figureLink: "/dataset_charts/cn_interprovincial_capacity_500kv_above.svg"
   },
   {
     id: "china-guangdong-interprefecture-500kv-network",
@@ -569,32 +512,11 @@ Capacity values are estimated and may differ from real-time operational limits. 
 If you'd like to require a complete methodology for this dataset, please specify it in the request form.
 `,
     preview: [
-      {
-        province: "Guangdong",
-        prefecture_a: "Chaozhou",
-        prefecture_b: "to_prefecture",
-        voltage: "500 kV",
-        capacity_mw: 7200,
-        circuits: 6
-      },
-      {
-        province: "Guangdong",
-        prefecture_a: "Dongguan",
-        prefecture_b: "Guangzhou",
-        voltage: "500 kV",
-        capacity_mw: 7200,
-        circuits: 6
-      },
-      {
-        province: "Guangdong",
-        prefecture_a: "Dongguan",
-        prefecture_b: "Huizhou",
-        voltage: "500 kV",
-        capacity_mw: 12000,
-        circuits: 10
-      },
+      { province: "Guangdong", prefecture_a: "Chaozhou", prefecture_b: "Shantou", voltage: "500 kV", capacity_mw: 7200, circuits: 6 },
+      { province: "Guangdong", prefecture_a: "Dongguan", prefecture_b: "Guangzhou", voltage: "500 kV", capacity_mw: 7200, circuits: 6 },
+      { province: "Guangdong", prefecture_a: "Dongguan", prefecture_b: "Huizhou", voltage: "500 kV", capacity_mw: 12000, circuits: 10 }
     ],
-    figureLink: "/dataset_charts/cn_gd_inter_perfecture_500kv_network.png"
+    figureLink: "/dataset_charts/cn_gd_inter_prefecture_500kv_network.svg"
   },
   {
     id: "china-east-grid-simulated-hourly-electricity-flow-profiles",
@@ -834,7 +756,7 @@ Users should be aware that the coal price indices currently available do not rea
         day: 17
       },
     ],
-    figureLink: "/dataset_charts/china-coal-price-indices.svg"
+    figureLink: "/dataset_charts/cn_coal_price_indices.svg"
   },
   {
     id: "china-gas-price-index",
@@ -1039,88 +961,185 @@ const indiaParametersDatasets: Dataset[] = [
 // Indonesia datasets
 const indonesiaDemandDatasets: Dataset[] = [
   {
-    id: "indonesia-demand-regional-yearly",
+    id: "id_prov_historical_consumption",
     country: "Indonesia",
     category: "Demand",
-    name: "Indonesia Regional Yearly Power Consumption",
+    name: "Indonesia Provincial Historical Electricity Consumption",
+    featured: false,
+    downloadable: true,
+    updated: "2026-03-17",
+    format: "CSV",
+    size: "7 KB",
+    license: "CC BY 4.0",
+    citation: "Author: Power Transformation Lab; Title: id_prov_historical_consumption (CC BY 4.0).",
+    about: "This dataset contains historical provincial electricity consumption in Indonesia by year, expressed in GWh.",
+    regionLevel: "Provincial",
+    frequency: "Annual",
+    dataCoverage: "2015-2024",
+    downloadUrl: "#",
+    methodology: "",
+    preview: [
+      { province: "Aceh", year: 2015, demand_gwh: 2119 },
+      { province: "Aceh", year: 2016, demand_gwh: 2330 },
+      { province: "Aceh", year: 2017, demand_gwh: 2409 }
+    ],
+    figureLink: "/dataset_charts/id_prov_historical_consumption.svg"
+  },
+  {
+    id: "id_prov_projected_demand",
+    country: "Indonesia",
+    category: "Demand",
+    name: "Indonesia Provincial Projected Electricity Demand",
     featured: false,
     downloadable: false,
-    updated: "",
+    updated: "2026-03-17",
     format: "CSV",
-    size: "",
+    size: "8 KB",
     license: "CC BY 4.0",
-    citation: "",
-    about: "",
-    regionLevel: "",
-    frequency: "",
-    dataCoverage: "",
+    citation: "Author: Power Transformation Lab; Title: id_prov_projected_demand (CC BY 4.0).",
+    about: "This dataset contains projected provincial electricity demand in Indonesia by year, expressed in GWh.",
+    regionLevel: "Provincial",
+    frequency: "Annual",
+    dataCoverage: "2025-2034",
     downloadUrl: "",
-    methodology: `Data Sources:\nLink:\nLimitations:`,
+    methodology: "",
     preview: [
-      {},
-      {},
-      {}
+      { province: "Aceh", year: 2025, demand_gwh: 3844 },
+      { province: "Aceh", year: 2026, demand_gwh: 3964 },
+      { province: "Aceh", year: 2027, demand_gwh: 4110 }
     ],
-    figureLink: "",
-    inPreparation: true,
-  },
+    figureLink: "/dataset_charts/id_prov_projected_demand.svg"
+  }
 ];
 
 const indonesiaSupplyDatasets: Dataset[] = [
   {
-    id: "indonesia-generator-coal",
+    id: "id_generators_by_tech",
     country: "Indonesia",
     category: "Supply",
-    name: "Indonesia Coal Power Generators",
+    name: "Indonesia Power Generators by Technology",
     featured: false,
     downloadable: false,
-    updated: "",
+    updated: "2026-03-17",
     format: "CSV",
-    size: "",
+    size: "60 KB",
     license: "CC BY 4.0",
-    citation: "",
-    about: "",
-    regionLevel: "",
-    frequency: "",
-    dataCoverage: "",
+    citation: "Author: Power Transformation Lab; Title: id_generators_by_tech (CC BY 4.0).",
+    about: "This dataset contains power plant records by province, with plant names, installed capacity, operational status, start year, generation technology, and fuel type.",
+    regionLevel: "Provincial",
+    frequency: "Annual",
+    dataCoverage: "Not specified",
     downloadUrl: "",
-    methodology: `Data Sources:\nLink:\nLimitations:`,
+    methodology: "",
     preview: [
-      {},
-      {},
-      {}
+      { province: "Jakarta", plant_name: "pltgu_muara_karang_blok_1__2_", capacity_mw: 1074, status: "operating", start_year: null, technology: "ccgt", fuel: "gas" },
+      { province: "Jakarta", plant_name: "pltu_muara_karan_4_5_", capacity_mw: 324, status: "operating", start_year: null, technology: "coal", fuel: "coal" },
+      { province: "Jakarta", plant_name: "pltgu_muara_karang_blok_3_gt", capacity_mw: 300, status: "operating", start_year: null, technology: "ccgt", fuel: "gas" }
     ],
-    figureLink: "",
-    inPreparation: true, 
+    figureLink: "/dataset_charts/id_generators_by_tech.svg"
   },
 ];
 
 const indonesiaTransmissionDatasets: Dataset[] = [
   {
-    id: "indonesia-network-500kv",
+    id: "id_JawaBali_network",
     country: "Indonesia",
     category: "Transmission",
-    name: "Indonesia 500 kV Power Network",
-    featured: false,
-    downloadable: false,
-    updated: "",
+    name: "Indonesia JawaBali Power Network",
+    featured: true,
+    downloadable: true,
+    updated: "2026-03-06",
     format: "CSV",
-    size: "",
+    size: "476 bytes",
     license: "CC BY 4.0",
-    citation: "",
-    about: "",
-    regionLevel: "",
-    frequency: "",
-    dataCoverage: "",
-    downloadUrl: "",
-    methodology: `Data Sources:\nLink:\nLimitations:`,
+    citation: "Author: Power Transformation Lab; Title: id_JawaBali_network (CC BY 4.0).",
+    about: "This dataset contains inter-provincial transmission links in the Jawa-Bali power system, including connected province pairs, line voltage levels, and transfer capacity in MW.",
+    regionLevel: "Intra-island",
+    frequency: "Annual",
+    dataCoverage: "Not specified",
+    downloadUrl: "#",
+    methodology: "",
     preview: [
-      {},
-      {},
-      {}
+      { province_a: "Jakarta", province_b: "Banten", voltage: "150 kV", capacity_mw: 3359.41 },
+      { province_a: "Jakarta", province_b: "West Java", voltage: "150 kV", capacity_mw: 832.51 },
+      { province_a: "Jakarta", province_b: "West Java", voltage: "500 kV", capacity_mw: 6166.77 }
     ],
-    figureLink: "",
-    inPreparation: true,
+    figureLink: "/dataset_charts/id_JawaBali_network.svg"
+  },
+  {
+    id: "id_Kalimantan_network",
+    country: "Indonesia",
+    category: "Transmission",
+    name: "Indonesia Kalimantan Power Network",
+    featured: true,
+    downloadable: true,
+    updated: "2026-03-06",
+    format: "CSV",
+    size: "331 bytes",
+    license: "CC BY 4.0",
+    citation: "Author: Power Transformation Lab; Title: id_Kalimantan_network (CC BY 4.0).",
+    about: "This dataset contains inter-provincial transmission links in the Kalimantan power system, with province-to-province connections, voltage classes, and line capacity values.",
+    regionLevel: "Intra-island",
+    frequency: "Annual",
+    dataCoverage: "Not specified",
+    downloadUrl: "#",
+    methodology: "",
+    preview: [
+      { province_a: "West Kalimantan", province_b: "Central Kalimantan", voltage: "150 kV", capacity_mw: 105.29 },
+      { province_a: "South Kalimantan", province_b: "Central Kalimantan", voltage: "150 kV", capacity_mw: 342.39 },
+      { province_a: "South Kalimantan", province_b: "East Kalimantan", voltage: "150 kV", capacity_mw: 249.14 }
+    ],
+    figureLink: "/dataset_charts/id_Kalimantan_network.svg"
+  },
+  {
+    id: "id_Sulawesi_network",
+    country: "Indonesia",
+    category: "Transmission",
+    name: "Indonesia Sulawesi Power Network",
+    featured: true,
+    downloadable: true,
+    updated: "2026-03-06",
+    format: "CSV",
+    size: "353 bytes",
+    license: "CC BY 4.0",
+    citation: "Author: Power Transformation Lab; Title: id_Sulawesi_network (CC BY 4.0).",
+    about: "This dataset contains inter-provincial transmission links in the Sulawesi power system, reporting endpoint provinces, voltage levels, and transmission capacity in MW.",
+    regionLevel: "Intra-island",
+    frequency: "Annual",
+    dataCoverage: "Not specified",
+    downloadUrl: "#",
+    methodology: "",
+    preview: [
+      { province_a: "North Sulawesi", province_b: "Gorontalo", voltage: "150 kV", capacity_mw: 301.46 },
+      { province_a: "Gorontalo", province_b: "Central Sulawesi", voltage: "150 kV", capacity_mw: 203.04 },
+      { province_a: "Central Sulawesi", province_b: "South Sulawesi", voltage: "275 kV", capacity_mw: 879.06 }
+    ],
+    figureLink: "/dataset_charts/id_Sulawesi_network.svg"
+  },
+  {
+    id: "id_Sumatera_network",
+    country: "Indonesia",
+    category: "Transmission",
+    name: "Indonesia Sumatera Power Network",
+    featured: true,
+    downloadable: true,
+    updated: "2026-03-06",
+    format: "CSV",
+    size: "666 bytes",
+    license: "CC BY 4.0",
+    citation: "Author: Power Transformation Lab; Title: id_Sumatera_network (CC BY 4.0).",
+    about: "This dataset contains inter-provincial transmission links in the Sumatera power system, including connected provinces, line voltages, and capacity for each network segment.",
+    regionLevel: "Intra-island",
+    frequency: "Annual",
+    dataCoverage: "Not specified",
+    downloadUrl: "#",
+    methodology: "",
+    preview: [
+      { province_a: "Aceh", province_b: "North Sumatra", voltage: "275 kV", capacity_mw: 322.83 },
+      { province_a: "Aceh", province_b: "North Sumatra", voltage: "150 kV", capacity_mw: 288.15 },
+      { province_a: "North Sumatra", province_b: "Riau", voltage: "500 kV", capacity_mw: 994.48 }
+    ],
+    figureLink: "/dataset_charts/id_Sumatera_network.svg"
   },
 ];
 
@@ -1193,7 +1212,7 @@ const vietnamDemandDatasets: Dataset[] = [
     downloadable: true,
     updated: "2026-02-15",
     format: "CSV",
-    size: "2 KB",
+    size: "1 KB",
     license: "CC BY 4.0",
     citation: "Author: Power Transformation Lab; Title: vn_regional_annual_consumption (CC BY 4.0).",
     about: "This dataset contains Vietnam zonal annual electricity demand projections derived from regional load profiles, sourced from Vietnam's Eighth Power Development Plan (PDP8).",
@@ -1251,11 +1270,11 @@ We decompose these 3 PDP8 regions into **6 model zones** per PDP8's subregional 
 
 - Peak system demand (2030): 83.4 GW`,
     preview: [
-      { zone: "BB", zone_number: 1, zone_description: "Zone 1 - North (Bắc Bộ)", year: 2030, demand_gWh: 207137.2 },
-      { zone: "BTB", zone_number: 2, zone_description: "Zone 2 - North Central (Bắc Trung Bộ)", year: 2030, demand_gWh: 33858.2 },
-      { zone: "TTB", zone_number: 3, zone_description: "Zone 3 - Central (Trung Trung Bộ)", year: 2030, demand_gWh: 36222 }
+      { zone: "BB", zone_number: 1, zone_en: "North", zone_vn: "Bắc Bộ", year: 2030, demand_gwh: 207137.2 },
+      { zone: "BTB", zone_number: 2, zone_en: "North Central", zone_vn: "Bắc Trung Bộ", year: 2030, demand_gwh: 33858.2 },
+      { zone: "TTB", zone_number: 3, zone_en: "Central", zone_vn: "Trung Trung Bộ", year: 2030, demand_gwh: 36222 }
     ],
-    figureLink: ""
+    figureLink: "/dataset_charts/vn_regional_annual_consumption.svg"
   },
 ];
 
@@ -1266,7 +1285,7 @@ const vietnamSupplyDatasets: Dataset[] = [
     category: "Supply",
     name: "Vietnam Coal Power Generators",
     featured: false,
-    downloadable: true,
+    downloadable: false,
     updated: "2026-02-17",
     format: "CSV",
     size: "3 KB",
@@ -1311,41 +1330,11 @@ Global Energy Monitor (GEM) Global Coal Plant Tracker, January 2024 snapshot, fi
 - Global Energy Monitor, "Global Coal Plant Tracker", January 2024  
 - GEM methodology: https://globalenergymonitor.org/projects/global-coal-plant-tracker/`,
     preview: [
-      {
-        type: "coal",
-        zone: "North",
-        plant_name: "Mong Duong power station",
-        capacity_mw: 2320,
-        status: "operating",
-        technology: "subcritical",
-        fuel: "anthracite",
-        units: 4,
-        unit_capacity_mw: 580,
-      },
-      {
-        type: "coal",
-        zone: "North",
-        plant_name: "Hai Duong Thermal Power Plant",
-        capacity_mw: 1200,
-        status: "operating",
-        technology: "unknown",
-        fuel: "anthracite",
-        units: 2,
-        unit_capacity_mw: 600,
-      },
-      {
-        type: "coal",
-        zone: "North",
-        plant_name: "Hai Phong Thermal Power Station",
-        capacity_mw: 1200,
-        status: "operating",
-        technology: "subcritical",
-        fuel: "anthracite",
-        units: 4,
-        unit_capacity_mw: 300,
-      },
+      { type: "coal", zone_en: "North", plant_name: "Mong Duong power station", capacity_mw: 2320, status: "operating", technology: "subcritical", fuel: "anthracite", units: 4, unit_capacity_mw: 580 },
+      { type: "coal", zone_en: "North", plant_name: "Hai Duong Thermal Power Plant", capacity_mw: 1200, status: "operating", technology: "unknown", fuel: "anthracite", units: 2, unit_capacity_mw: 600 },
+      { type: "coal", zone_en: "North", plant_name: "Hai Phong Thermal Power Station", capacity_mw: 1200, status: "operating", technology: "subcritical", fuel: "anthracite", units: 4, unit_capacity_mw: 300 },
     ],
-    figureLink: ""
+    figureLink: "/dataset_charts/vn_coal_power_generators.svg"
   },
 ];
 
@@ -1359,7 +1348,7 @@ const vietnamTransmissionDatasets: Dataset[] = [
     downloadable: true,
     updated: "2026-02-17",
     format: "CSV",
-    size: "2 KB",
+    size: "3 KB",
     license: "CC BY 4.0",
     citation: "Author: Power Transformation Lab; Title: vn_500kv_power_network (CC BY 4.0).",
     about: "This dataset contains Vietnam 500 kV power network lines (existing, operational by 2025), sourced from PDP8 Draft Table 4.",
@@ -1395,11 +1384,11 @@ PDP8 Draft Table 4, validated transmission line dataset.
 - \`line_id\`: Unique line segment identifier  
 - \`substation_a/b\`: Endpoint substations`,
     preview: [
-      { line_id: "T_500_01039", substation_a: "Hòa Bình", substation_b: "Nho Quan" },
-      { line_id: "T_500_01040", substation_a: "Nho Quan", substation_b: "Nghi Sơn" },
-      { line_id: "T_500_01041", substation_a: "Nghi Sơn", substation_b: "Hà Tĩnh" }
+      { line_id: "T_500_01039", substation_a: "Hòa Bình", substation_b: "Nho Quan", province_a: "Hoa Binh", province_b: "Ninh Binh", voltage: "500 kV", count: 1 },
+      { line_id: "T_500_01040", substation_a: "Nho Quan", substation_b: "Nghi Sơn", province_a: "Ninh Binh", province_b: "Thanh Hoa", voltage: "500 kV", count: 1 },
+      { line_id: "T_500_01041", substation_a: "Nghi Sơn", substation_b: "Hà Tĩnh", province_a: "Thanh Hoa", province_b: "Ha Tinh", voltage: "500 kV", count: 1 }
     ],
-    figureLink: ""
+    figureLink: "/dataset_charts/vn_500kv_power_network.svg"
   },
   {
     id: "vietnam-500kv-substations",
@@ -1456,11 +1445,11 @@ PDP8 transmission planning annex.
 
 The 500 kV power network (Section 4) references 10 additional substations as transmission line endpoints that are not included in the substations dataset: NĐ Nam Định (Nam Dinh), Bắc Ninh 2 (Bac Ninh), Cần Thơ (Can Tho), Củ Chi (TP HCM), Lào Cai (Lao Cai), Mỹ Phước (Binh Duong), Quỳnh Lưu (Nghe An), Sóc Trăng (Soc Trang), Thái Nguyên (Thai Nguyen), and Vĩnh Yên (Vinh Phuc).`,
     preview: [
-      { sub_id: 1684, name: "Quảng Ninh", name_full: "Trạm biến áp 500kV Quảng Ninh", province: "Quang_Ninh", zone: 1, voltage_kv: 500, status: "existing" },
-      { sub_id: 1685, name: "NĐ Vũng Áng", name_full: "Trạm biến áp 500kV NĐ Vũng Áng", province: "Ha_Tinh", zone: 2, voltage_kv: 500, status: "existing" },
-      { sub_id: 1686, name: "Ia Blứ", name_full: "Trạm biến áp 500kV Ia Blứ", province: "Gia_Lai", zone: 4, voltage_kv: 500, status: "existing" }
+      { sub_id: 1684, name: "Quảng Ninh", name_full: "Trạm biến áp 500kV Quảng Ninh", province: "Quang Ninh", zone_number: 1, voltage: "500 kV", status: "existing", count: 1 },
+      { sub_id: 1685, name: "NĐ Vũng Áng", name_full: "Trạm biến áp 500kV NĐ Vũng Áng", province: "Ha Tinh", zone_number: 2, voltage: "500 kV", status: "existing", count: 1 },
+      { sub_id: 1686, name: "Ia Blứ", name_full: "Trạm biến áp 500kV Ia Blứ", province: "Gia Lai", zone_number: 4, voltage: "500 kV", status: "existing", count: 1 }
     ],
-    figureLink: ""
+    figureLink: "/dataset_charts/vn_500kv_substations.svg"
   },
 ];
 
@@ -1471,10 +1460,10 @@ const vietnamREResourceDatasets: Dataset[] = [
     category: "RE Resource Potential",
     name: "Vietnam Wind Regional Monthly Profile",
     featured: true,
-    downloadable: true,
+    downloadable: false,
     updated: "2026-02-17",
     format: "CSV",
-    size: "4 KB",
+    size: "3 KB",
     license: "CC BY 4.0",
     citation: "Author: Power Transformation Lab; Title: vn_wind_regional_monthly_profile (CC BY 4.0).",
     about: "This dataset contains Vietnam onshore wind capacity factors from Renewables.ninja, aggregated to model zones by capacity-weighted averaging.",
@@ -1510,11 +1499,11 @@ Onshore wind capacity factors from Renewables.ninja, aggregated to model zones b
 - Renewables.ninja (ERA5 reanalysis)  
 - Build-out locations: GEM Global Wind Power Tracker, June 2024`,
     preview: [
-      { zone: "BB", zone_description: "Zone 1 - North (Bắc Bộ)", month: 1, wind_type: "onshore", capacity_factor: 0.2111 },
-      { zone: "BB", zone_description: "Zone 1 - North (Bắc Bộ)", month: 2, wind_type: "onshore", capacity_factor: 0.2026 },
-      { zone: "BB", zone_description: "Zone 1 - North (Bắc Bộ)", month: 3, wind_type: "onshore", capacity_factor: 0.1173 }
+      { zone: "BB", zone_en: "North", zone_vn: "Bắc Bộ", month: 1, wind_type: "onshore", capacity_factor: 0.2111 },
+      { zone: "BB", zone_en: "North", zone_vn: "Bắc Bộ", month: 2, wind_type: "onshore", capacity_factor: 0.2026 },
+      { zone: "BB", zone_en: "North", zone_vn: "Bắc Bộ", month: 3, wind_type: "onshore", capacity_factor: 0.1173 }
     ],
-    figureLink: ""
+    figureLink: "/dataset_charts/vn_wind_regional_monthly_profile.svg"
   },
 ];
 
@@ -1567,7 +1556,7 @@ World Bank Commodity Price Data (Pink Sheet), via IndexMundi.
       { fuel_type: "coal", index_name: "Newcastle FOB | Thermal Coal | Australian Export Benchmark", calorific_grade: "6000K", price_usd_per_ton: 95.42, year: 2019, month: 2 },
       { fuel_type: "coal", index_name: "Newcastle FOB | Thermal Coal | Australian Export Benchmark", calorific_grade: "6000K", price_usd_per_ton: 93.12, year: 2019, month: 3 }
     ],
-    figureLink: ""
+    figureLink: "/dataset_charts/vn_coal_import_price.svg"
   },
 ];
 
@@ -1799,7 +1788,7 @@ export const Countries: Country[] = [
     id: "indonesia",
     name: "Indonesia",
     flag: "🇮🇩",
-    datasetCount: 5,
+    datasetCount: 9,
     categories: [
       {
         id: "demand",
