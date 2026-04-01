@@ -35,12 +35,16 @@ Users should be aware that the NBS may periodically revise historical data to im
       { province: "Chongqing", year: 2024, demand_gWh: 161260 },
     ],
     modelImplementations: [
-      { name: "Provincial Demand Forecasting Model", url: "https://github.com/oreo-lab/demand-forecast", description: "A time-series model for forecasting provincial electricity demand using historical data and socioeconomic indicators." },
-      { name: "Load Disaggregation Toolkit", url: "https://github.com/oreo-lab/load-disaggregation", description: "Tools for disaggregating aggregate demand data into sectoral components (residential, commercial, industrial)." },
+      { model_id: "M1", name: "UCED Model", url: "https://github.com/Power-Lab/JEPO_ResourceAdequacy_2026" },
+      { model_id: "M2", name: "RESPO Model", url: "https://github.com/mrziheng/RESPO" },
+      { model_id: "M3", name: "Renewable Energy Pathways Model", url: "https://github.com/Power-Lab/AdvAppliedEnergy_Pathways_2025" },
     ],
     relevantReports: [
-      { title: "China Provincial Electricity Consumption Trends 2010-2023", url: "https://example.org/reports/china-consumption-trends", description: "Analysis of long-term demand growth patterns across Chinese provinces." },
-      { title: "Regional Demand Drivers in East China", url: "https://example.org/reports/east-china-demand", description: "Explores the key economic and demographic factors driving electricity demand in eastern provinces." },
+      { report_id: "R1", title: "Resource adequacy under institutional constraints and the low-carbon energy transition in China - ScienceDirect", url: "https://www.sciencedirect.com/science/article/pii/S030142152600042X#da0010" },
+      { report_id: "R2", title: "North China and Northeast China Interprovincial Electricity Trade Brief", url: "https://emtracker.org/research/north-china-and-northeast-china-interprovincial-electricity-trade-brief/" },
+      { report_id: "R3", title: "Spatially resolved land and grid model of carbon neutrality in China | PNAS", url: "https://www.pnas.org/doi/10.1073/pnas.2306517121#data-availability" },
+      { report_id: "R4", title: "Ratcheting up wind and solar targets for decarbonizing the power sector in China and beyond", url: "https://www.cell.com/cell-reports-sustainability/fulltext/S2949-7906(25)00085-0?_returnURL=https%3A%2F%2Flinkinghub.elsevier.com%2Fretrieve%2Fpii%2FS2949790625000850%3Fshowall%3Dtrue" },
+      { report_id: "R5", title: "Reaching carbon neutrality in China: Temporal and subnational limitations of renewable energy scale-up", url: "https://www.sciencedirect.com/science/article/pii/S2666792425000320?via%3Dihub" },
     ],
     figureLink: "/dataset_charts/cn_prov_annual_consumption.svg"
   },
@@ -75,6 +79,18 @@ Users should be aware that electricity consumption data on Dianchacha is reporte
       { province: "Anhui", year: 2025, month: 6, demand_gWh: 30467 },
       { province: "Beijing", year: 2025, month: 6, demand_gWh: 12132 },
       { province: "Chongqing", year: 2025, month: 6, demand_gWh: 14283 },
+    ],
+    modelImplementations: [
+      { model_id: "M1", name: "UCED Model", url: "https://github.com/Power-Lab/JEPO_ResourceAdequacy_2026" },
+      { model_id: "M2", name: "RESPO Model", url: "https://github.com/mrziheng/RESPO" },
+      { model_id: "M3", name: "Renewable Energy Pathways Model", url: "https://github.com/Power-Lab/AdvAppliedEnergy_Pathways_2025" },
+    ],
+    relevantReports: [
+      { report_id: "R1", title: "Resource adequacy under institutional constraints and the low-carbon energy transition in China - ScienceDirect", url: "https://www.sciencedirect.com/science/article/pii/S030142152600042X#da0010" },
+      { report_id: "R2", title: "North China and Northeast China Interprovincial Electricity Trade Brief", url: "https://emtracker.org/research/north-china-and-northeast-china-interprovincial-electricity-trade-brief/" },
+      { report_id: "R3", title: "Spatially resolved land and grid model of carbon neutrality in China | PNAS", url: "https://www.pnas.org/doi/10.1073/pnas.2306517121#data-availability" },
+      { report_id: "R4", title: "Ratcheting up wind and solar targets for decarbonizing the power sector in China and beyond", url: "https://www.cell.com/cell-reports-sustainability/fulltext/S2949-7906(25)00085-0?_returnURL=https%3A%2F%2Flinkinghub.elsevier.com%2Fretrieve%2Fpii%2FS2949790625000850%3Fshowall%3Dtrue" },
+      { report_id: "R5", title: "Reaching carbon neutrality in China: Temporal and subnational limitations of renewable energy scale-up", url: "https://www.sciencedirect.com/science/article/pii/S2666792425000320?via%3Dihub" },
     ],
     figureLink: "/dataset_charts/cn_prov_monthly_consumption.svg"
   },
@@ -115,6 +131,18 @@ If you'd like to require a complete methodology for this dataset, please specify
       { province: "Anhui", year: 2022, month: 1, day: 1, hour: 2, load_mw: 31288.18473 },
       { province: "Anhui", year: 2022, month: 1, day: 1, hour: 3, load_mw: 30282.50421 },
     ],
+    modelImplementations: [
+      { model_id: "M1", name: "UCED Model", url: "https://github.com/Power-Lab/JEPO_ResourceAdequacy_2026" },
+      { model_id: "M2", name: "RESPO Model", url: "https://github.com/mrziheng/RESPO" },
+      { model_id: "M3", name: "Renewable Energy Pathways Model", url: "https://github.com/Power-Lab/AdvAppliedEnergy_Pathways_2025" },
+    ],
+    relevantReports: [
+      { report_id: "R1", title: "Resource adequacy under institutional constraints and the low-carbon energy transition in China - ScienceDirect", url: "https://www.sciencedirect.com/science/article/pii/S030142152600042X#da0010" },
+      { report_id: "R2", title: "North China and Northeast China Interprovincial Electricity Trade Brief", url: "https://emtracker.org/research/north-china-and-northeast-china-interprovincial-electricity-trade-brief/" },
+      { report_id: "R3", title: "Spatially resolved land and grid model of carbon neutrality in China | PNAS", url: "https://www.pnas.org/doi/10.1073/pnas.2306517121#data-availability" },
+      { report_id: "R4", title: "Ratcheting up wind and solar targets for decarbonizing the power sector in China and beyond", url: "https://www.cell.com/cell-reports-sustainability/fulltext/S2949-7906(25)00085-0?_returnURL=https%3A%2F%2Flinkinghub.elsevier.com%2Fretrieve%2Fpii%2FS2949790625000850%3Fshowall%3Dtrue" },
+      { report_id: "R5", title: "Reaching carbon neutrality in China: Temporal and subnational limitations of renewable energy scale-up", url: "https://www.sciencedirect.com/science/article/pii/S2666792425000320?via%3Dihub" },
+    ],
     figureLink: "/dataset_charts/cn_prov_simulated_hourly_load_profiles.svg"
   },
 ];
@@ -152,6 +180,18 @@ Users should be aware that data collected by GEM on various types of generators 
       { type: "coal", province: "Anhui", plant_name: "Anhui Bengbu power station", unit_name: "Phase II Unit 4", capacity_mw: 660, status: "operating", start_year: 2018, technology: "ultra-supercritical", fuel: "bituminous", captive: null, chp: null, capacity_factor: 0.55, heat_rate_btu_per_kwh: 8272, emission_factor_kg_co2_per_tj: 94600 },
       { type: "coal", province: "Anhui", plant_name: "Anhui Bengbu power station", unit_name: "Phase I Unit 1", capacity_mw: 630, status: "operating", start_year: 2008, technology: "supercritical", fuel: "bituminous", captive: null, chp: null, capacity_factor: 0.55, heat_rate_btu_per_kwh: 9249.9, emission_factor_kg_co2_per_tj: 94600 },
     ],
+    modelImplementations: [
+      { model_id: "M1", name: "UCED Model", url: "https://github.com/Power-Lab/JEPO_ResourceAdequacy_2026" },
+      { model_id: "M2", name: "RESPO Model", url: "https://github.com/mrziheng/RESPO" },
+      { model_id: "M3", name: "Renewable Energy Pathways Model", url: "https://github.com/Power-Lab/AdvAppliedEnergy_Pathways_2025" },
+    ],
+    relevantReports: [
+      { report_id: "R1", title: "Resource adequacy under institutional constraints and the low-carbon energy transition in China - ScienceDirect", url: "https://www.sciencedirect.com/science/article/pii/S030142152600042X#da0010" },
+      { report_id: "R2", title: "North China and Northeast China Interprovincial Electricity Trade Brief", url: "https://emtracker.org/research/north-china-and-northeast-china-interprovincial-electricity-trade-brief/" },
+      { report_id: "R3", title: "Spatially resolved land and grid model of carbon neutrality in China | PNAS", url: "https://www.pnas.org/doi/10.1073/pnas.2306517121#data-availability" },
+      { report_id: "R4", title: "Ratcheting up wind and solar targets for decarbonizing the power sector in China and beyond", url: "https://www.cell.com/cell-reports-sustainability/fulltext/S2949-7906(25)00085-0?_returnURL=https%3A%2F%2Flinkinghub.elsevier.com%2Fretrieve%2Fpii%2FS2949790625000850%3Fshowall%3Dtrue" },
+      { report_id: "R5", title: "Reaching carbon neutrality in China: Temporal and subnational limitations of renewable energy scale-up", url: "https://www.sciencedirect.com/science/article/pii/S2666792425000320?via%3Dihub" },
+    ],
     figureLink: "/dataset_charts/cn_generators_by_tech.svg"
   },
   {
@@ -185,6 +225,18 @@ Users should be aware that the NBS may periodically revise historical data to im
       { technology: "hydro", province: "Anhui", year: 2024, generation_gWh: 9452 },
       { technology: "hydro", province: "Beijing", year: 2024, generation_gWh: 944 },
       { technology: "hydro", province: "Chongqing", year: 2024, generation_gWh: 21840 },
+    ],
+    modelImplementations: [
+      { model_id: "M1", name: "UCED Model", url: "https://github.com/Power-Lab/JEPO_ResourceAdequacy_2026" },
+      { model_id: "M2", name: "RESPO Model", url: "https://github.com/mrziheng/RESPO" },
+      { model_id: "M3", name: "Renewable Energy Pathways Model", url: "https://github.com/Power-Lab/AdvAppliedEnergy_Pathways_2025" },
+    ],
+    relevantReports: [
+      { report_id: "R1", title: "Resource adequacy under institutional constraints and the low-carbon energy transition in China - ScienceDirect", url: "https://www.sciencedirect.com/science/article/pii/S030142152600042X#da0010" },
+      { report_id: "R2", title: "North China and Northeast China Interprovincial Electricity Trade Brief", url: "https://emtracker.org/research/north-china-and-northeast-china-interprovincial-electricity-trade-brief/" },
+      { report_id: "R3", title: "Spatially resolved land and grid model of carbon neutrality in China | PNAS", url: "https://www.pnas.org/doi/10.1073/pnas.2306517121#data-availability" },
+      { report_id: "R4", title: "Ratcheting up wind and solar targets for decarbonizing the power sector in China and beyond", url: "https://www.cell.com/cell-reports-sustainability/fulltext/S2949-7906(25)00085-0?_returnURL=https%3A%2F%2Flinkinghub.elsevier.com%2Fretrieve%2Fpii%2FS2949790625000850%3Fshowall%3Dtrue" },
+      { report_id: "R5", title: "Reaching carbon neutrality in China: Temporal and subnational limitations of renewable energy scale-up", url: "https://www.sciencedirect.com/science/article/pii/S2666792425000320?via%3Dihub" },
     ],
     figureLink: "/dataset_charts/cn_prov_annual_generation_by_tech.svg"
   },
@@ -220,6 +272,18 @@ Users should be aware that the NBS may periodically revise historical data to im
       { technology: "hydro", province: "Beijing", year: 2025, month: 8, generation_gwh: 110},
       { technology: "hydro", province: "Chongqing", year: 2025, month: 8, generation_gwh: 1960},
     ],
+    modelImplementations: [
+      { model_id: "M1", name: "UCED Model", url: "https://github.com/Power-Lab/JEPO_ResourceAdequacy_2026" },
+      { model_id: "M2", name: "RESPO Model", url: "https://github.com/mrziheng/RESPO" },
+      { model_id: "M3", name: "Renewable Energy Pathways Model", url: "https://github.com/Power-Lab/AdvAppliedEnergy_Pathways_2025" },
+    ],
+    relevantReports: [
+      { report_id: "R1", title: "Resource adequacy under institutional constraints and the low-carbon energy transition in China - ScienceDirect", url: "https://www.sciencedirect.com/science/article/pii/S030142152600042X#da0010" },
+      { report_id: "R2", title: "North China and Northeast China Interprovincial Electricity Trade Brief", url: "https://emtracker.org/research/north-china-and-northeast-china-interprovincial-electricity-trade-brief/" },
+      { report_id: "R3", title: "Spatially resolved land and grid model of carbon neutrality in China | PNAS", url: "https://www.pnas.org/doi/10.1073/pnas.2306517121#data-availability" },
+      { report_id: "R4", title: "Ratcheting up wind and solar targets for decarbonizing the power sector in China and beyond", url: "https://www.cell.com/cell-reports-sustainability/fulltext/S2949-7906(25)00085-0?_returnURL=https%3A%2F%2Flinkinghub.elsevier.com%2Fretrieve%2Fpii%2FS2949790625000850%3Fshowall%3Dtrue" },
+      { report_id: "R5", title: "Reaching carbon neutrality in China: Temporal and subnational limitations of renewable energy scale-up", url: "https://www.sciencedirect.com/science/article/pii/S2666792425000320?via%3Dihub" },
+    ],
     figureLink: "/dataset_charts/cn_prov_monthly_generation_by_tech.svg"
   },
   {
@@ -254,6 +318,16 @@ Users should be aware that installed capacity data on Dianchacha is reportedly s
       { technology: "hydro", province: "Beijing", year: 2024, cumulative_capacity_gw: 1.01 },
       { technology: "hydro", province: "Chongqing", year: 2024, cumulative_capacity_gw: 9.18 }
     ],
+    modelImplementations: [
+      { model_id: "M1", name: "UCED Model", url: "https://github.com/Power-Lab/JEPO_ResourceAdequacy_2026" },
+      { model_id: "M2", name: "RESPO Model", url: "https://github.com/mrziheng/RESPO" },
+      { model_id: "M3", name: "Renewable Energy Pathways Model", url: "https://github.com/Power-Lab/AdvAppliedEnergy_Pathways_2025" },
+    ],
+    relevantReports: [
+      { report_id: "R3", title: "Spatially resolved land and grid model of carbon neutrality in China | PNAS", url: "https://www.pnas.org/doi/10.1073/pnas.2306517121#data-availability" },
+      { report_id: "R4", title: "Ratcheting up wind and solar targets for decarbonizing the power sector in China and beyond", url: "https://www.cell.com/cell-reports-sustainability/fulltext/S2949-7906(25)00085-0?_returnURL=https%3A%2F%2Flinkinghub.elsevier.com%2Fretrieve%2Fpii%2FS2949790625000850%3Fshowall%3Dtrue" },
+      { report_id: "R5", title: "Reaching carbon neutrality in China: Temporal and subnational limitations of renewable energy scale-up", url: "https://www.sciencedirect.com/science/article/pii/S2666792425000320?via%3Dihub" },
+    ],
     figureLink: "/dataset_charts/cn_prov_annual_capacity_by_tech.svg"
   },
   {
@@ -287,6 +361,16 @@ Users should be aware that the solar PV installed capacity data released by the 
       { province: "Anhui", year: 2024, pv_type: "New Residential PV", capacity_gw: 4.188 },
       { province: "Anhui", year: 2024, pv_type: "New Non-Residential PV", capacity_gw: 5.134 },
       { province: "Anhui", year: 2024, pv_type: "New Installed Capacity", capacity_gw: 10.882 }
+    ],
+    modelImplementations: [
+      { model_id: "M1", name: "UCED Model", url: "https://github.com/Power-Lab/JEPO_ResourceAdequacy_2026" },
+      { model_id: "M2", name: "RESPO Model", url: "https://github.com/mrziheng/RESPO" },
+      { model_id: "M3", name: "Renewable Energy Pathways Model", url: "https://github.com/Power-Lab/AdvAppliedEnergy_Pathways_2025" },
+    ],
+    relevantReports: [
+      { report_id: "R3", title: "Spatially resolved land and grid model of carbon neutrality in China | PNAS", url: "https://www.pnas.org/doi/10.1073/pnas.2306517121#data-availability" },
+      { report_id: "R4", title: "Ratcheting up wind and solar targets for decarbonizing the power sector in China and beyond", url: "https://www.cell.com/cell-reports-sustainability/fulltext/S2949-7906(25)00085-0?_returnURL=https%3A%2F%2Flinkinghub.elsevier.com%2Fretrieve%2Fpii%2FS2949790625000850%3Fshowall%3Dtrue" },
+      { report_id: "R5", title: "Reaching carbon neutrality in China: Temporal and subnational limitations of renewable energy scale-up", url: "https://www.sciencedirect.com/science/article/pii/S2666792425000320?via%3Dihub" },
     ],
     figureLink: "/dataset_charts/cn_prov_annual_solar_pv_capacity_by_type.svg"
   },
@@ -323,6 +407,16 @@ Users should be aware that installed capacity data on PK Thinker is reportedly s
       { province: "Beijing", year: 2025, month: 7, cumulative_capacity_gw: 1.86 },
       { province: "Chongqing", year: 2025, month: 7, cumulative_capacity_gw: 5.14 },
     ],
+    modelImplementations: [
+      { model_id: "M1", name: "UCED Model", url: "https://github.com/Power-Lab/JEPO_ResourceAdequacy_2026" },
+      { model_id: "M2", name: "RESPO Model", url: "https://github.com/mrziheng/RESPO" },
+      { model_id: "M3", name: "Renewable Energy Pathways Model", url: "https://github.com/Power-Lab/AdvAppliedEnergy_Pathways_2025" },
+    ],
+    relevantReports: [
+      { report_id: "R3", title: "Spatially resolved land and grid model of carbon neutrality in China | PNAS", url: "https://www.pnas.org/doi/10.1073/pnas.2306517121#data-availability" },
+      { report_id: "R4", title: "Ratcheting up wind and solar targets for decarbonizing the power sector in China and beyond", url: "https://www.cell.com/cell-reports-sustainability/fulltext/S2949-7906(25)00085-0?_returnURL=https%3A%2F%2Flinkinghub.elsevier.com%2Fretrieve%2Fpii%2FS2949790625000850%3Fshowall%3Dtrue" },
+      { report_id: "R5", title: "Reaching carbon neutrality in China: Temporal and subnational limitations of renewable energy scale-up", url: "https://www.sciencedirect.com/science/article/pii/S2666792425000320?via%3Dihub" },
+    ],
     figureLink: "/dataset_charts/cn_prov_monthly_solar_pv_capacity.svg"
   },
   {
@@ -357,6 +451,16 @@ Users should be aware that installed capacity data on PK Thinker is reportedly s
       { province: "Anhui", year: 2025, month: 7, cumulative_capacity_gw: 10.39 },
       { province: "Beijing", year: 2025, month: 7, cumulative_capacity_gw: 0.23 },
       { province: "Chongqing", year: 2025, month: 7, cumulative_capacity_gw: 2.87 }
+    ],
+    modelImplementations: [
+      { model_id: "M1", name: "UCED Model", url: "https://github.com/Power-Lab/JEPO_ResourceAdequacy_2026" },
+      { model_id: "M2", name: "RESPO Model", url: "https://github.com/mrziheng/RESPO" },
+      { model_id: "M3", name: "Renewable Energy Pathways Model", url: "https://github.com/Power-Lab/AdvAppliedEnergy_Pathways_2025" },
+    ],
+    relevantReports: [
+      { report_id: "R3", title: "Spatially resolved land and grid model of carbon neutrality in China | PNAS", url: "https://www.pnas.org/doi/10.1073/pnas.2306517121#data-availability" },
+      { report_id: "R4", title: "Ratcheting up wind and solar targets for decarbonizing the power sector in China and beyond", url: "https://www.cell.com/cell-reports-sustainability/fulltext/S2949-7906(25)00085-0?_returnURL=https%3A%2F%2Flinkinghub.elsevier.com%2Fretrieve%2Fpii%2FS2949790625000850%3Fshowall%3Dtrue" },
+      { report_id: "R5", title: "Reaching carbon neutrality in China: Temporal and subnational limitations of renewable energy scale-up", url: "https://www.sciencedirect.com/science/article/pii/S2666792425000320?via%3Dihub" },
     ],
     figureLink: "/dataset_charts/cn_prov_monthly_wind_capacity.svg"
   },
@@ -400,6 +504,18 @@ If you'd like to require a complete methodology for this dataset, please specify
       { line_type: "DC", voltage: "±1100 kV", name: "Ji-Quan HVDC", name_local: "吉泉直流", name_full: "Zhundong - Southern Anhui ±1100 kV UHVDC", name_full_local: "准东-皖南±1100千伏特高压直流输电工程", commissioning_date: "2019-07-01", rated_capacity_mw: 12000, rated_capacity_source: "Reported", length_km: 3324, province_a: "Xinjiang", province_b: "Anhui" },
       { line_type: "DC", voltage: "±800 kV (multi terminal)", name: "Lu-Gao-Zhao HVDC (Gao-Zhao Section)", name_local: "禄高肇直流（高肇段）", name_full: "Luquan (Yunnan) - Gaopo (Guizhou) - Zhaoqing (Guangdong) Three-terminal HVDC (Gao-Zhao Section)", name_full_local: "云南禄劝换流站-贵州高坡换流站-广东肇庆换流站三端直流（高肇段）", commissioning_date: "2004-09-24", rated_capacity_mw: 3000, rated_capacity_source: "Reported", length_km: 1277, province_a: "Guizhou", province_b: "Guangdong" },
       { line_type: "DC", voltage: "±800 kV (multi terminal)", name: "Lu-Gao-Zhao HVDC (Lu-Gao Section)", name_local: "禄高肇直流（禄高段）", name_full: "Luquan (Yunnan) - Gaopo (Guizhou) - Zhaoqing (Guangdong) Three-terminal HVDC (Lu-Gao Section)", name_full_local: "云南禄劝换流站-贵州高坡换流站-广东肇庆换流站三端直流（禄高段）", commissioning_date: "2020-06-11", rated_capacity_mw: 3000, rated_capacity_source: "Reported", length_km: 389, province_a: "Yunnan", province_b: "Guizhou" }
+    ],
+    modelImplementations: [
+      { model_id: "M1", name: "UCED Model", url: "https://github.com/Power-Lab/JEPO_ResourceAdequacy_2026" },
+      { model_id: "M2", name: "RESPO Model", url: "https://github.com/mrziheng/RESPO" },
+      { model_id: "M3", name: "Renewable Energy Pathways Model", url: "https://github.com/Power-Lab/AdvAppliedEnergy_Pathways_2025" },
+    ],
+    relevantReports: [
+      { report_id: "R1", title: "Resource adequacy under institutional constraints and the low-carbon energy transition in China - ScienceDirect", url: "https://www.sciencedirect.com/science/article/pii/S030142152600042X#da0010" },
+      { report_id: "R2", title: "North China and Northeast China Interprovincial Electricity Trade Brief", url: "https://emtracker.org/research/north-china-and-northeast-china-interprovincial-electricity-trade-brief/" },
+      { report_id: "R3", title: "Spatially resolved land and grid model of carbon neutrality in China | PNAS", url: "https://www.pnas.org/doi/10.1073/pnas.2306517121#data-availability" },
+      { report_id: "R4", title: "Ratcheting up wind and solar targets for decarbonizing the power sector in China and beyond", url: "https://www.cell.com/cell-reports-sustainability/fulltext/S2949-7906(25)00085-0?_returnURL=https%3A%2F%2Flinkinghub.elsevier.com%2Fretrieve%2Fpii%2FS2949790625000850%3Fshowall%3Dtrue" },
+      { report_id: "R5", title: "Reaching carbon neutrality in China: Temporal and subnational limitations of renewable energy scale-up", url: "https://www.sciencedirect.com/science/article/pii/S2666792425000320?via%3Dihub" },
     ],
     figureLink: "/dataset_charts/cn_ehv_uhv_dc_uhv_ac_lines.svg"
   },
@@ -450,6 +566,18 @@ Capacity values are estimated and may differ from real-time operational limits. 
         circuits: 5
       },
     ],
+    modelImplementations: [
+      { model_id: "M1", name: "UCED Model", url: "https://github.com/Power-Lab/JEPO_ResourceAdequacy_2026" },
+      { model_id: "M2", name: "RESPO Model", url: "https://github.com/mrziheng/RESPO" },
+      { model_id: "M3", name: "Renewable Energy Pathways Model", url: "https://github.com/Power-Lab/AdvAppliedEnergy_Pathways_2025" },
+    ],
+    relevantReports: [
+      { report_id: "R1", title: "Resource adequacy under institutional constraints and the low-carbon energy transition in China - ScienceDirect", url: "https://www.sciencedirect.com/science/article/pii/S030142152600042X#da0010" },
+      { report_id: "R2", title: "North China and Northeast China Interprovincial Electricity Trade Brief", url: "https://emtracker.org/research/north-china-and-northeast-china-interprovincial-electricity-trade-brief/" },
+      { report_id: "R3", title: "Spatially resolved land and grid model of carbon neutrality in China | PNAS", url: "https://www.pnas.org/doi/10.1073/pnas.2306517121#data-availability" },
+      { report_id: "R4", title: "Ratcheting up wind and solar targets for decarbonizing the power sector in China and beyond", url: "https://www.cell.com/cell-reports-sustainability/fulltext/S2949-7906(25)00085-0?_returnURL=https%3A%2F%2Flinkinghub.elsevier.com%2Fretrieve%2Fpii%2FS2949790625000850%3Fshowall%3Dtrue" },
+      { report_id: "R5", title: "Reaching carbon neutrality in China: Temporal and subnational limitations of renewable energy scale-up", url: "https://www.sciencedirect.com/science/article/pii/S2666792425000320?via%3Dihub" },
+    ],
     figureLink: "/dataset_charts/cn_interprovincial_500kv_750kv_network.svg"
   },
   {
@@ -481,6 +609,18 @@ Capacity values are estimated and may differ from real-time operational limits. 
       { province_a: "Anhui", province_b: "Jiangsu", voltage: "500 kV and above", capacity_mw: 14800 },
       { province_a: "Anhui", province_b: "Xinjiang", voltage: "500 kV and above", capacity_mw: 12000 },
       { province_a: "Anhui", province_b: "Zhejiang", voltage: "500 kV and above", capacity_mw: 13600 }
+    ],
+    modelImplementations: [
+      { model_id: "M1", name: "UCED Model", url: "https://github.com/Power-Lab/JEPO_ResourceAdequacy_2026" },
+      { model_id: "M2", name: "RESPO Model", url: "https://github.com/mrziheng/RESPO" },
+      { model_id: "M3", name: "Renewable Energy Pathways Model", url: "https://github.com/Power-Lab/AdvAppliedEnergy_Pathways_2025" },
+    ],
+    relevantReports: [
+      { report_id: "R1", title: "Resource adequacy under institutional constraints and the low-carbon energy transition in China - ScienceDirect", url: "https://www.sciencedirect.com/science/article/pii/S030142152600042X#da0010" },
+      { report_id: "R2", title: "North China and Northeast China Interprovincial Electricity Trade Brief", url: "https://emtracker.org/research/north-china-and-northeast-china-interprovincial-electricity-trade-brief/" },
+      { report_id: "R3", title: "Spatially resolved land and grid model of carbon neutrality in China | PNAS", url: "https://www.pnas.org/doi/10.1073/pnas.2306517121#data-availability" },
+      { report_id: "R4", title: "Ratcheting up wind and solar targets for decarbonizing the power sector in China and beyond", url: "https://www.cell.com/cell-reports-sustainability/fulltext/S2949-7906(25)00085-0?_returnURL=https%3A%2F%2Flinkinghub.elsevier.com%2Fretrieve%2Fpii%2FS2949790625000850%3Fshowall%3Dtrue" },
+      { report_id: "R5", title: "Reaching carbon neutrality in China: Temporal and subnational limitations of renewable energy scale-up", url: "https://www.sciencedirect.com/science/article/pii/S2666792425000320?via%3Dihub" },
     ],
     figureLink: "/dataset_charts/cn_interprovincial_capacity_500kv_above.svg"
   },
@@ -516,6 +656,13 @@ If you'd like to require a complete methodology for this dataset, please specify
       { province: "Guangdong", prefecture_a: "Dongguan", prefecture_b: "Guangzhou", voltage: "500 kV", capacity_mw: 7200, circuits: 6 },
       { province: "Guangdong", prefecture_a: "Dongguan", prefecture_b: "Huizhou", voltage: "500 kV", capacity_mw: 12000, circuits: 10 }
     ],
+    modelImplementations: [
+      { model_id: "M1", name: "UCED Model", url: "https://github.com/Power-Lab/JEPO_ResourceAdequacy_2026" },
+      { model_id: "M2", name: "RESPO Model", url: "https://github.com/mrziheng/RESPO" },
+      { model_id: "M3", name: "Renewable Energy Pathways Model", url: "https://github.com/Power-Lab/AdvAppliedEnergy_Pathways_2025" },
+    ],
+    relevantReports: [
+          ],
     figureLink: "/dataset_charts/cn_gd_inter_prefecture_500kv_network.svg"
   },
   {
@@ -584,6 +731,13 @@ If you'd like to require a complete methodology for this dataset, please specify
         hour: 3
       },
     ],
+    modelImplementations: [
+      { model_id: "M1", name: "UCED Model", url: "https://github.com/Power-Lab/JEPO_ResourceAdequacy_2026" },
+      { model_id: "M2", name: "RESPO Model", url: "https://github.com/mrziheng/RESPO" },
+      { model_id: "M3", name: "Renewable Energy Pathways Model", url: "https://github.com/Power-Lab/AdvAppliedEnergy_Pathways_2025" },
+    ],
+    relevantReports: [
+      ],
     figureLink: "/dataset_charts/cn_east_grid_simulated_hourly_flow_profiles.svg"
   },
 ];
@@ -756,6 +910,15 @@ Users should be aware that the coal price indices currently available do not rea
         day: 17
       },
     ],
+    modelImplementations: [
+      { model_id: "M1", name: "UCED Model", url: "https://github.com/Power-Lab/JEPO_ResourceAdequacy_2026" },
+      { model_id: "M2", name: "RESPO Model", url: "https://github.com/mrziheng/RESPO" },
+      { model_id: "M3", name: "Renewable Energy Pathways Model", url: "https://github.com/Power-Lab/AdvAppliedEnergy_Pathways_2025" },
+    ],
+    relevantReports: [
+      { report_id: "R1", title: "Resource adequacy under institutional constraints and the low-carbon energy transition in China - ScienceDirect", url: "https://www.sciencedirect.com/science/article/pii/S030142152600042X#da0010" },
+      { report_id: "R2", title: "North China and Northeast China Interprovincial Electricity Trade Brief", url: "https://emtracker.org/research/north-china-and-northeast-china-interprovincial-electricity-trade-brief/" },
+      ],
     figureLink: "/dataset_charts/cn_coal_price_indices.svg"
   },
   {
@@ -983,6 +1146,12 @@ const indonesiaDemandDatasets: Dataset[] = [
       { province: "Aceh", year: 2016, demand_gwh: 2330 },
       { province: "Aceh", year: 2017, demand_gwh: 2409 }
     ],
+    modelImplementations: [
+      { model_id: "M4", name: "Captive Indonesia Capacity Expansion Model", url: "https://github.com/Power-Lab/captive-indonesia-2025" },
+    ],
+    relevantReports: [
+      { report_id: "R6", title: "Advancing Low-Carbon Industry Transition: Decarbonizing Industrial Captive Generation in Indonesia", url: "https://zenodo.org/records/17345968" },
+    ],
     figureLink: "/dataset_charts/id_prov_historical_consumption.svg"
   },
   {
@@ -1007,6 +1176,12 @@ const indonesiaDemandDatasets: Dataset[] = [
       { province: "Aceh", year: 2025, demand_gwh: 3844 },
       { province: "Aceh", year: 2026, demand_gwh: 3964 },
       { province: "Aceh", year: 2027, demand_gwh: 4110 }
+    ],
+    modelImplementations: [
+      { model_id: "M4", name: "Captive Indonesia Capacity Expansion Model", url: "https://github.com/Power-Lab/captive-indonesia-2025" },
+    ],
+    relevantReports: [
+      { report_id: "R6", title: "Advancing Low-Carbon Industry Transition: Decarbonizing Industrial Captive Generation in Indonesia", url: "https://zenodo.org/records/17345968" },
     ],
     figureLink: "/dataset_charts/id_prov_projected_demand.svg"
   }
@@ -1036,6 +1211,12 @@ const indonesiaSupplyDatasets: Dataset[] = [
       { province: "Jakarta", plant_name: "pltu_muara_karan_4_5_", capacity_mw: 324, status: "operating", start_year: null, technology: "coal", fuel: "coal" },
       { province: "Jakarta", plant_name: "pltgu_muara_karang_blok_3_gt", capacity_mw: 300, status: "operating", start_year: null, technology: "ccgt", fuel: "gas" }
     ],
+    modelImplementations: [
+      { model_id: "M4", name: "Captive Indonesia Capacity Expansion Model", url: "https://github.com/Power-Lab/captive-indonesia-2025" },
+    ],
+    relevantReports: [
+      { report_id: "R6", title: "Advancing Low-Carbon Industry Transition: Decarbonizing Industrial Captive Generation in Indonesia", url: "https://zenodo.org/records/17345968" },
+    ],
     figureLink: "/dataset_charts/id_generators_by_tech.svg"
   },
 ];
@@ -1064,6 +1245,12 @@ const indonesiaTransmissionDatasets: Dataset[] = [
       { province_a: "Jakarta", province_b: "West Java", voltage: "150 kV", capacity_mw: 832.51 },
       { province_a: "Jakarta", province_b: "West Java", voltage: "500 kV", capacity_mw: 6166.77 }
     ],
+    modelImplementations: [
+      { model_id: "M4", name: "Captive Indonesia Capacity Expansion Model", url: "https://github.com/Power-Lab/captive-indonesia-2025" },
+    ],
+    relevantReports: [
+      { report_id: "R6", title: "Advancing Low-Carbon Industry Transition: Decarbonizing Industrial Captive Generation in Indonesia", url: "https://zenodo.org/records/17345968" },
+    ],
     figureLink: "/dataset_charts/id_JawaBali_network.svg"
   },
   {
@@ -1088,6 +1275,12 @@ const indonesiaTransmissionDatasets: Dataset[] = [
       { province_a: "West Kalimantan", province_b: "Central Kalimantan", voltage: "150 kV", capacity_mw: 105.29 },
       { province_a: "South Kalimantan", province_b: "Central Kalimantan", voltage: "150 kV", capacity_mw: 342.39 },
       { province_a: "South Kalimantan", province_b: "East Kalimantan", voltage: "150 kV", capacity_mw: 249.14 }
+    ],
+    modelImplementations: [
+      { model_id: "M4", name: "Captive Indonesia Capacity Expansion Model", url: "https://github.com/Power-Lab/captive-indonesia-2025" },
+    ],
+    relevantReports: [
+      { report_id: "R6", title: "Advancing Low-Carbon Industry Transition: Decarbonizing Industrial Captive Generation in Indonesia", url: "https://zenodo.org/records/17345968" },
     ],
     figureLink: "/dataset_charts/id_Kalimantan_network.svg"
   },
@@ -1114,6 +1307,12 @@ const indonesiaTransmissionDatasets: Dataset[] = [
       { province_a: "Gorontalo", province_b: "Central Sulawesi", voltage: "150 kV", capacity_mw: 203.04 },
       { province_a: "Central Sulawesi", province_b: "South Sulawesi", voltage: "275 kV", capacity_mw: 879.06 }
     ],
+    modelImplementations: [
+      { model_id: "M4", name: "Captive Indonesia Capacity Expansion Model", url: "https://github.com/Power-Lab/captive-indonesia-2025" },
+    ],
+    relevantReports: [
+      { report_id: "R6", title: "Advancing Low-Carbon Industry Transition: Decarbonizing Industrial Captive Generation in Indonesia", url: "https://zenodo.org/records/17345968" },
+    ],
     figureLink: "/dataset_charts/id_Sulawesi_network.svg"
   },
   {
@@ -1138,6 +1337,12 @@ const indonesiaTransmissionDatasets: Dataset[] = [
       { province_a: "Aceh", province_b: "North Sumatra", voltage: "275 kV", capacity_mw: 322.83 },
       { province_a: "Aceh", province_b: "North Sumatra", voltage: "150 kV", capacity_mw: 288.15 },
       { province_a: "North Sumatra", province_b: "Riau", voltage: "500 kV", capacity_mw: 994.48 }
+    ],
+    modelImplementations: [
+      { model_id: "M4", name: "Captive Indonesia Capacity Expansion Model", url: "https://github.com/Power-Lab/captive-indonesia-2025" },
+    ],
+    relevantReports: [
+      { report_id: "R6", title: "Advancing Low-Carbon Industry Transition: Decarbonizing Industrial Captive Generation in Indonesia", url: "https://zenodo.org/records/17345968" },
     ],
     figureLink: "/dataset_charts/id_Sumatera_network.svg"
   },
@@ -1274,6 +1479,12 @@ We decompose these 3 PDP8 regions into **6 model zones** per PDP8's subregional 
       { zone: "BTB", zone_number: 2, zone_en: "North Central", zone_vn: "Bắc Trung Bộ", year: 2030, demand_gwh: 33858.2 },
       { zone: "TTB", zone_number: 3, zone_en: "Central", zone_vn: "Trung Trung Bộ", year: 2030, demand_gwh: 36222 }
     ],
+    modelImplementations: [
+      { model_id: "M5", name: "Vietnam Power Capacity Expansion Model", url: "" }
+    ],
+    relevantReports: [
+      { report_id: "R7", title: "Policy Brief - Vietnam 2035 Power - Nov 2025 - UCSD Power Lab.pdf", url: "https://drive.google.com/file/d/1IJeenNwuhSGLyOuSck65YCpzck9NBrho/view" }
+    ],
     figureLink: "/dataset_charts/vn_regional_annual_consumption.svg"
   },
 ];
@@ -1334,6 +1545,12 @@ Global Energy Monitor (GEM) Global Coal Plant Tracker, January 2024 snapshot, fi
       { type: "coal", zone_en: "North", plant_name: "Hai Duong Thermal Power Plant", capacity_mw: 1200, status: "operating", technology: "unknown", fuel: "anthracite", units: 2, unit_capacity_mw: 600 },
       { type: "coal", zone_en: "North", plant_name: "Hai Phong Thermal Power Station", capacity_mw: 1200, status: "operating", technology: "subcritical", fuel: "anthracite", units: 4, unit_capacity_mw: 300 },
     ],
+    modelImplementations: [
+      { model_id: "M5", name: "Vietnam Power Capacity Expansion Model", url: "" }
+    ],
+    relevantReports: [
+      { report_id: "R7", title: "Policy Brief - Vietnam 2035 Power - Nov 2025 - UCSD Power Lab.pdf", url: "https://drive.google.com/file/d/1IJeenNwuhSGLyOuSck65YCpzck9NBrho/view" }
+    ],
     figureLink: "/dataset_charts/vn_coal_power_generators.svg"
   },
 ];
@@ -1387,6 +1604,12 @@ PDP8 Draft Table 4, validated transmission line dataset.
       { line_id: "T_500_01039", substation_a: "Hòa Bình", substation_b: "Nho Quan", province_a: "Hoa Binh", province_b: "Ninh Binh", voltage: "500 kV", count: 1 },
       { line_id: "T_500_01040", substation_a: "Nho Quan", substation_b: "Nghi Sơn", province_a: "Ninh Binh", province_b: "Thanh Hoa", voltage: "500 kV", count: 1 },
       { line_id: "T_500_01041", substation_a: "Nghi Sơn", substation_b: "Hà Tĩnh", province_a: "Thanh Hoa", province_b: "Ha Tinh", voltage: "500 kV", count: 1 }
+    ],
+    modelImplementations: [
+      { model_id: "M5", name: "Vietnam Power Capacity Expansion Model", url: "" }
+    ],
+    relevantReports: [
+      { report_id: "R7", title: "Policy Brief - Vietnam 2035 Power - Nov 2025 - UCSD Power Lab.pdf", url: "https://drive.google.com/file/d/1IJeenNwuhSGLyOuSck65YCpzck9NBrho/view" }
     ],
     figureLink: "/dataset_charts/vn_500kv_power_network.svg"
   },
@@ -1449,6 +1672,12 @@ The 500 kV power network (Section 4) references 10 additional substations as tra
       { sub_id: 1685, name: "NĐ Vũng Áng", name_full: "Trạm biến áp 500kV NĐ Vũng Áng", province: "Ha Tinh", zone_number: 2, voltage: "500 kV", status: "existing", count: 1 },
       { sub_id: 1686, name: "Ia Blứ", name_full: "Trạm biến áp 500kV Ia Blứ", province: "Gia Lai", zone_number: 4, voltage: "500 kV", status: "existing", count: 1 }
     ],
+    modelImplementations: [
+      { model_id: "M5", name: "Vietnam Power Capacity Expansion Model", url: "" }
+    ],
+    relevantReports: [
+      { report_id: "R7", title: "Policy Brief - Vietnam 2035 Power - Nov 2025 - UCSD Power Lab.pdf", url: "https://drive.google.com/file/d/1IJeenNwuhSGLyOuSck65YCpzck9NBrho/view" }
+    ],
     figureLink: "/dataset_charts/vn_500kv_substations.svg"
   },
 ];
@@ -1503,6 +1732,12 @@ Onshore wind capacity factors from Renewables.ninja, aggregated to model zones b
       { zone: "BB", zone_en: "North", zone_vn: "Bắc Bộ", month: 2, wind_type: "onshore", capacity_factor: 0.2026 },
       { zone: "BB", zone_en: "North", zone_vn: "Bắc Bộ", month: 3, wind_type: "onshore", capacity_factor: 0.1173 }
     ],
+    modelImplementations: [
+      { model_id: "M5", name: "Vietnam Power Capacity Expansion Model", url: "" }
+    ],
+    relevantReports: [
+      { report_id: "R7", title: "Policy Brief - Vietnam 2035 Power - Nov 2025 - UCSD Power Lab.pdf", url: "https://drive.google.com/file/d/1IJeenNwuhSGLyOuSck65YCpzck9NBrho/view" }
+    ],
     figureLink: "/dataset_charts/vn_wind_regional_monthly_profile.svg"
   },
 ];
@@ -1555,6 +1790,12 @@ World Bank Commodity Price Data (Pink Sheet), via IndexMundi.
       { fuel_type: "coal", index_name: "Newcastle FOB | Thermal Coal | Australian Export Benchmark", calorific_grade: "6000K", price_usd_per_ton: 98.56, year: 2019, month: 1 },
       { fuel_type: "coal", index_name: "Newcastle FOB | Thermal Coal | Australian Export Benchmark", calorific_grade: "6000K", price_usd_per_ton: 95.42, year: 2019, month: 2 },
       { fuel_type: "coal", index_name: "Newcastle FOB | Thermal Coal | Australian Export Benchmark", calorific_grade: "6000K", price_usd_per_ton: 93.12, year: 2019, month: 3 }
+    ],
+    modelImplementations: [
+      { model_id: "M5", name: "Vietnam Power Capacity Expansion Model", url: "" }
+    ],
+    relevantReports: [
+      { report_id: "R7", title: "Policy Brief - Vietnam 2035 Power - Nov 2025 - UCSD Power Lab.pdf", url: "https://drive.google.com/file/d/1IJeenNwuhSGLyOuSck65YCpzck9NBrho/view" }
     ],
     figureLink: "/dataset_charts/vn_coal_import_price.svg"
   },
@@ -1900,7 +2141,6 @@ export const Countries: Country[] = [
   },
 ];
 
-//todo: remove mock functionality
 export const powerDatasets: Dataset[] = [
   ...chinaDemandDatasets,
   ...chinaSupplyDatasets,
