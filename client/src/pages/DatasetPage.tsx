@@ -372,87 +372,81 @@ export default function DatasetPage() {
                 </div>
               </div>
 
-              {dataset.modelImplementations &&
-                dataset.modelImplementations.length > 0 && (
-                  <div>
-                    <h2 className="text-2xl font-semibold mb-4 flex items-center gap-2">
-                      <Cpu className="h-5 w-5 text-primary" />
-                      Model Implementations
-                    </h2>
-                    <div
-                      className="space-y-3"
-                      data-testid="section-model-implementations"
-                    >
-                      {dataset.modelImplementations.map((model, idx) => (
-                        <Card
-                          key={idx}
-                          className="p-4 hover-elevate"
-                          data-testid={`card-model-${idx}`}
-                        >
+              {dataset.modelImplementations?.length ? (
+                <div>
+                  <h2 className="text-2xl font-semibold mb-4 flex items-center gap-2">
+                    Model Implementations
+                  </h2>
+                  <ul
+                    className="list-none space-y-3 text-sm"
+                    data-testid="section-model-implementations"
+                  >
+                    {dataset.modelImplementations.map((model, idx) => (
+                      <li
+                        key={idx}
+                        className="leading-snug flex items-start gap-2"
+                        data-testid={`model-item-${idx}`}
+                      >
+                        <span className="text-lg leading-none text-muted-foreground select-none">•</span>
+                        <div className="space-y-1">
                           <a
-                            href={model.url}
+                            href={model.url || "#"}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="block"
+                            className="text-primary hover:underline inline-flex items-center gap-1"
                           >
-                            <div className="flex items-start justify-between gap-3">
-                              <div className="min-w-0">
-                                <h4 className="text-sm font-medium mb-1">
-                                  {model.name}
-                                </h4>
-                                <p className="text-xs text-muted-foreground">
-                                  {model.description}
-                                </p>
-                              </div>
-                              <ExternalLink className="h-4 w-4 text-muted-foreground flex-shrink-0 mt-0.5" />
-                            </div>
+                            <ExternalLink className="h-3.5 w-3.5" />
+                            <span className="font-medium">{model.name}</span>
                           </a>
-                        </Card>
-                      ))}
-                    </div>
-                  </div>
-                )}
+                          {model.description && (
+                            <div className="text-muted-foreground text-xs">
+                              {model.description}
+                            </div>
+                          )}
+                        </div>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ) : null}
 
-              {dataset.relevantReports &&
-                dataset.relevantReports.length > 0 && (
-                  <div>
-                    <h2 className="text-2xl font-semibold mb-4 flex items-center gap-2">
-                      <BookOpen className="h-5 w-5 text-primary" />
-                      Relevant Reports
-                    </h2>
-                    <div
-                      className="space-y-3"
-                      data-testid="section-relevant-reports"
-                    >
-                      {dataset.relevantReports.map((report, idx) => (
-                        <Card
-                          key={idx}
-                          className="p-4 hover-elevate"
-                          data-testid={`card-report-${idx}`}
-                        >
+              {dataset.relevantReports?.length ? (
+                <div>
+                  <h2 className="text-2xl font-semibold mb-4 flex items-center gap-2">
+                    Relevant Reports
+                  </h2>
+                  <ul
+                    className="list-none space-y-3 text-sm"
+                    data-testid="section-relevant-reports"
+                  >
+                    {dataset.relevantReports.map((report, idx) => (
+                      <li
+                        key={idx}
+                        className="leading-snug flex items-start gap-2"
+                        data-testid={`report-item-${idx}`}
+                      >
+                        <span className="text-lg leading-none text-muted-foreground select-none">•</span>
+                        <div className="space-y-1">
                           <a
-                            href={report.url}
+                            href={report.url || "#"}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="block"
+                            className="text-primary hover:underline inline-flex items-center gap-1"
                           >
-                            <div className="flex items-start justify-between gap-3">
-                              <div className="min-w-0">
-                                <h4 className="text-sm font-medium mb-1">
-                                  {report.title}
-                                </h4>
-                                <p className="text-xs text-muted-foreground">
-                                  {report.description}
-                                </p>
-                              </div>
-                              <ExternalLink className="h-4 w-4 text-muted-foreground flex-shrink-0 mt-0.5" />
-                            </div>
+                            <ExternalLink className="h-3.5 w-3.5" />
+                            <span className="font-medium">{report.title}</span>
                           </a>
-                        </Card>
-                      ))}
-                    </div>
-                  </div>
-                )}
+                          {report.description && (
+                            <div className="text-muted-foreground text-xs">
+                              {report.description}
+                            </div>
+                          )}
+                        </div>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ) : null}
             </div>
 
             <div className="space-y-6">
