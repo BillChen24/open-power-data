@@ -1,4 +1,5 @@
 import type { Country, DataCategory, Dataset } from "@shared/schema";
+import { c, l } from "node_modules/vite/dist/node/types.d-aGj9QkWt";
 
 //todo: remove mock functionality - China datasets
 const chinaDemandDatasets: Dataset[] = [
@@ -1975,7 +1976,7 @@ export const Countries: Country[] = [
     id: "china",
     name: "China",
     flag: "🇨🇳",
-    datasetCount: 21,
+    datasetCount: chinaDemandDatasets.length + chinaSupplyDatasets.length + chinaTransmissionDatasets.length + chinaREResourceDatasets.length + chinaParametersDatasets.length,
     categories: [
       {
         id: "demand",
@@ -2009,49 +2010,49 @@ export const Countries: Country[] = [
       },
     ],
   },
-  {
-    id: "india",
-    name: "India",
-    flag: "🇮🇳",
-    datasetCount: 6,
-    categories: [
-      {
-        id: "demand",
-        name: "Demand",
-        icon: "TrendingUp",
-        datasets: indiaDemandDatasets,
-      },
-      {
-        id: "supply",
-        name: "Supply",
-        icon: "Zap",
-        datasets: indiaSupplyDatasets,
-      },
-      {
-        id: "transmission",
-        name: "Transmission",
-        icon: "Network",
-        datasets: indiaTransmissionDatasets,
-      },
-      {
-        id: "re-resource",
-        name: "RE Resource Potential",
-        icon: "Sun",
-        datasets: indiaREResourceDatasets,
-      },
-      {
-        id: "parameters",
-        name: "Parameters",
-        icon: "DollarSign",
-        datasets: indiaParametersDatasets,
-      },
-    ],
-  },
+  // {
+  //   id: "india",
+  //   name: "India",
+  //   flag: "🇮🇳",
+  //   datasetCount: 6,
+  //   categories: [
+  //     {
+  //       id: "demand",
+  //       name: "Demand",
+  //       icon: "TrendingUp",
+  //       datasets: indiaDemandDatasets,
+  //     },
+  //     {
+  //       id: "supply",
+  //       name: "Supply",
+  //       icon: "Zap",
+  //       datasets: indiaSupplyDatasets,
+  //     },
+  //     {
+  //       id: "transmission",
+  //       name: "Transmission",
+  //       icon: "Network",
+  //       datasets: indiaTransmissionDatasets,
+  //     },
+  //     {
+  //       id: "re-resource",
+  //       name: "RE Resource Potential",
+  //       icon: "Sun",
+  //       datasets: indiaREResourceDatasets,
+  //     },
+  //     {
+  //       id: "parameters",
+  //       name: "Parameters",
+  //       icon: "DollarSign",
+  //       datasets: indiaParametersDatasets,
+  //     },
+  //   ],
+  // },
   {
     id: "indonesia",
     name: "Indonesia",
     flag: "🇮🇩",
-    datasetCount: 9,
+    datasetCount: indonesiaDemandDatasets.length + indonesiaSupplyDatasets.length + indonesiaTransmissionDatasets.length + indonesiaREResourceDatasets.length + indonesiaParametersDatasets.length,
     categories: [
       {
         id: "demand",
@@ -2089,7 +2090,7 @@ export const Countries: Country[] = [
     id: "vietnam",
     name: "Vietnam",
     flag: "🇻🇳",
-    datasetCount: 6,
+    datasetCount: vietnamDemandDatasets.length + vietnamSupplyDatasets.length + vietnamTransmissionDatasets.length + vietnamREResourceDatasets.length + vietnamParametersDatasets.length,
     categories: [
       {
         id: "demand",
@@ -2127,7 +2128,7 @@ export const Countries: Country[] = [
     id: "other",
     name: "Other Countries",
     flag: "🌏",
-    datasetCount: 5,
+    datasetCount: otherCountryDemandDatasets.length + otherCountrySupplyDatasets.length + otherCountryTransmissionDatasets.length + otherCountryREResourceDatasets.length + otherCountryParametersDatasets.length,
     categories: [
       {
         id: "demand",

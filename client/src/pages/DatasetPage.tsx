@@ -31,6 +31,7 @@ import {
   ExternalLink,
   BookOpen,
   Cpu,
+  FileText,
 } from "lucide-react";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
@@ -215,14 +216,28 @@ export default function DatasetPage() {
               </div>
 
               {dataset.downloadable !== false ? (
-                <Button
-                  size="lg"
-                  className="whitespace-nowrap"
-                  data-testid="button-download"
-                >
-                  <Download className="mr-2 h-5 w-5" />
-                  Download Dataset
-                </Button>
+                dataset.downloadUrl ? (
+                  <Button
+                    asChild
+                    size="lg"
+                    className="whitespace-nowrap"
+                    data-testid="button-download"
+                  >
+                    <a href={dataset.downloadUrl} download>
+                      <Download className="mr-2 h-5 w-5" />
+                      Download Dataset
+                    </a>
+                  </Button>
+                ) : (
+                  <Button
+                    size="lg"
+                    className="whitespace-nowrap"
+                    data-testid="button-download"
+                  >
+                    <Download className="mr-2 h-5 w-5" />
+                    Download Dataset
+                  </Button>
+                )
               ) : (
                 <Button
                   size="lg"
@@ -363,14 +378,48 @@ export default function DatasetPage() {
                 </AccordionItem>
               </Accordion> */}
 
-              <div>
+              {/* <div>
                 <h2 className="text-2xl font-semibold mb-4">Methodology</h2>
                 <div className="prose prose-sm dark:prose-invert max-w-none text-muted-foreground">
                   <ReactMarkdown remarkPlugins={[remarkGfm]}>
                     {dataset.methodology}
                   </ReactMarkdown>
                 </div>
-              </div>
+              </div> */}
+              {dataset.methodologyUrl && (
+                <div>
+                  <h2 className="text-2xl font-semibold mb-4">Methodology</h2>
+                  <Card
+                    className="p-4 hover-elevate"
+                    data-testid="card-methodology"
+                  >
+                    <a
+                      href={dataset.methodologyUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center justify-between gap-4"
+                    >
+                      <div className="flex items-center gap-3">
+                        <div className="p-2 rounded-md bg-primary/10">
+                          <FileText className="h-5 w-5 text-primary" />
+                        </div>
+                        <div>
+                          <div className="text-sm font-medium">
+                            Full Methodology Document
+                          </div>
+                          <div className="text-xs text-muted-foreground">
+                            Opens as PDF in a new tab
+                          </div>
+                        </div>
+                      </div>
+                      <div className="flex items-center gap-1.5 text-sm font-medium text-primary whitespace-nowrap">
+                        View PDF
+                        <ExternalLink className="h-4 w-4" />
+                      </div>
+                    </a>
+                  </Card>
+                </div>
+              )}
 
               {dataset.modelImplementations?.length ? (
                 <div>
@@ -387,7 +436,9 @@ export default function DatasetPage() {
                         className="leading-snug flex items-start gap-2"
                         data-testid={`model-item-${idx}`}
                       >
-                        <span className="text-lg leading-none text-muted-foreground select-none">•</span>
+                        <span className="text-lg leading-none text-muted-foreground select-none">
+                          •
+                        </span>
                         <div className="space-y-1">
                           <a
                             href={model.url || "#"}
@@ -425,7 +476,9 @@ export default function DatasetPage() {
                         className="leading-snug flex items-start gap-2"
                         data-testid={`report-item-${idx}`}
                       >
-                        <span className="text-lg leading-none text-muted-foreground select-none">•</span>
+                        <span className="text-lg leading-none text-muted-foreground select-none">
+                          •
+                        </span>
                         <div className="space-y-1">
                           <a
                             href={report.url || "#"}
