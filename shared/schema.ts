@@ -38,6 +38,7 @@ export interface Dataset {
   license: string;
   downloadUrl: string;
   methodology: string;
+  methodologyUrl?: string;
   about: string;
   preview?: any[];
   citation?: string;

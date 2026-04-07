@@ -18,7 +18,8 @@ const chinaDemandDatasets: Dataset[] = [
     regionLevel: "Provincial",
     frequency: "Annual",
     dataCoverage: "1995-2024",
-    downloadUrl: "#",
+    downloadUrl: "https://drive.google.com/uc?export=download&id=1JQ6JW0BaA6D5KkVT1G75PfMH8y10SeJz",
+    methodologyUrl: "https://drive.google.com/file/d/1ySVk9Oi29bdIjyewcWDGKuZhZE4Ij9Si/view?usp=drive_link",
     methodology: `## Data Sources
 
 The data is collected from the National Bureau of Statistics of China (NBS). The NBS is the primary source of national and selected provincial official statistical data in China. According to the NBS, provincial annual electricity consumption data is sourced from the China Electricity Council (CEC).
@@ -65,6 +66,7 @@ Users should be aware that the NBS may periodically revise historical data to im
     frequency: "Monthly",
     dataCoverage: "2020/02-2025/06",
     downloadUrl: "#",
+    methodologyUrl: "https://drive.google.com/file/d/1ySVk9Oi29bdIjyewcWDGKuZhZE4Ij9Si/view?usp=drive_link",
     methodology: `## Data Sources
 
 The data is collected from Dianchacha, a platform that provides electricity-related data for China, including installed capacity, electricity generation, consumption, and transmission. Publicly available data on Dianchacha is primarily reported at annual and monthly frequencies. According to the platform, electricity consumption data is mainly sourced from the State Grid of China.
@@ -111,6 +113,7 @@ Users should be aware that electricity consumption data on Dianchacha is reporte
     frequency: "Hourly",
     dataCoverage: "2022",
     downloadUrl: "#",
+    methodologyUrl: "https://drive.google.com/file/d/1nEKYAkXl17uXhoF4atPvyHNTkvYy-pQh/view?usp=drive_link",
     methodology: `We developed a script to generate a simulated hourly electricity load profile (24 hours * days in month) for one or more Chinese provinces, given:
 
 - A target monthly total electricity consumption (province-level, per month)
@@ -160,11 +163,12 @@ const chinaSupplyDatasets: Dataset[] = [
     size: "3.3 MB",
     license: "CC BY 4.0",
     citation: "Data Source: Global Energy Monitor; Compiled and Licensed by: Power Transformation Lab (CC BY 4.0).",
-    about: "This dataset contains data on China’s coal, gas, hydro, nuclear, solar and wind power generators. The data is collected from Global Energy Monitor (GEM). The data is updated every six months, typically in March and September each year.",
+    about: "This dataset contains data on China's coal, gas, hydro, nuclear, solar and wind power generators. The data is collected from Global Energy Monitor (GEM). The data is updated every six months, typically in March and September each year.",
     regionLevel: "Provincial",
     frequency: "Annual",
     dataCoverage: "1941-2025",
     downloadUrl: "#",
+    methodologyUrl: "https://drive.google.com/file/d/1ySVk9Oi29bdIjyewcWDGKuZhZE4Ij9Si/view?usp=drive_link",
     methodology: `## Data Sources
 
 The data is collected from Global Energy Monitor (GEM). GEM develops and analyzes data on energy infrastructure, resources, and energy use, and provides open access to information that supports efforts toward a sustainable energy future.
@@ -210,7 +214,8 @@ Users should be aware that data collected by GEM on various types of generators 
     regionLevel: "Provincial",
     frequency: "Annual",
     dataCoverage: "1991-2024",
-    downloadUrl: "#",
+    downloadUrl: "https://drive.google.com/uc?export=download&id=1TFlXSlrk5iIrAQvTkcwtreItTD3HGWw5",
+    methodologyUrl: "https://drive.google.com/file/d/1ySVk9Oi29bdIjyewcWDGKuZhZE4Ij9Si/view?usp=drive_link",
     methodology: `## Data Sources
 
 The data is collected from the National Bureau of Statistics of China (NBS). The NBS is the primary source of national and selected provincial official statistical data in China.
@@ -256,7 +261,8 @@ Users should be aware that the NBS may periodically revise historical data to im
     regionLevel: "Provincial",
     frequency: "Monthly",
     dataCoverage: "1993/02-2025/08",
-    downloadUrl: "#",
+    downloadUrl: "https://drive.google.com/uc?export=download&id=1E_BVz5Iqr82YlBRg0HZhIbsG_3A8rcjM",
+    methodologyUrl: "https://drive.google.com/file/d/1ySVk9Oi29bdIjyewcWDGKuZhZE4Ij9Si/view?usp=drive_link",
     methodology: `## Data Sources
 
 The data is collected from the National Bureau of Statistics of China (NBS). The NBS is the primary source of national and selected provincial official statistical data in China.
@@ -303,6 +309,7 @@ Users should be aware that the NBS may periodically revise historical data to im
     frequency: "Annual",
     dataCoverage: "1991-2024",
     downloadUrl: "#",
+    methodologyUrl: "https://drive.google.com/file/d/1ySVk9Oi29bdIjyewcWDGKuZhZE4Ij9Si/view?usp=drive_link",
     methodology: `## Data Sources
 
 The data is collected from Dianchacha, a platform that provides electricity-related data for China, including installed capacity, electricity generation, consumption, and transmission. Publicly available data on Dianchacha is primarily reported at annual and monthly frequencies. According to the platform, installed capacity data is mainly sourced from the China Electricity Council (CEC).
@@ -346,7 +353,8 @@ Users should be aware that installed capacity data on Dianchacha is reportedly s
     regionLevel: "Provincial",
     frequency: "Annual",
     dataCoverage: "2018-2024",
-    downloadUrl: "#",
+    downloadUrl: "https://drive.google.com/uc?export=download&id=1rVBX6MUseLvM5DJBoMvesAJsfcY8PNFD",
+    methodologyUrl: "https://drive.google.com/file/d/1ySVk9Oi29bdIjyewcWDGKuZhZE4Ij9Si/view?usp=drive_link",
     methodology: `## Data Sources
 
 The data is collected from the National Energy Administration of China (NEA). The NEA is China’s primary energy regulator, responsible for overseeing the national energy supply system. It compiles and publishes authoritative national statistics on energy production, consumption, and installed capacity. The detailed solar PV installed capacity data released by the NEA is sourced from the National Renewable Energy Center and the China Electricity Council.
@@ -391,6 +399,7 @@ Users should be aware that the solar PV installed capacity data released by the 
     frequency: "Monthly",
     dataCoverage: "2022/05-2025/07",
     downloadUrl: "#",
+    methodologyUrl: "https://drive.google.com/file/d/1ySVk9Oi29bdIjyewcWDGKuZhZE4Ij9Si/view?usp=drive_link",
     methodology: `## Data Sources
 
 The data is collected from PK Thinker, a platform that provides electricity-related data for China, including installed capacity, electricity generation, consumption, and transmission. Publicly available data on PK Thinker is primarily reported at a monthly frequency, and the main data source is the China Electricity Council (CEC).
@@ -436,6 +445,7 @@ Users should be aware that installed capacity data on PK Thinker is reportedly s
     frequency: "Monthly",
     dataCoverage: "2022/05-2025/07",
     downloadUrl: "#",
+    methodologyUrl: "https://drive.google.com/file/d/1ySVk9Oi29bdIjyewcWDGKuZhZE4Ij9Si/view?usp=drive_link",
     methodology: `## Data Sources
 
 The data is collected from PK Thinker, a platform that provides electricity-related data for China, including installed capacity, electricity generation, consumption, and transmission. Publicly available data on PK Thinker is primarily reported at a monthly frequency, and the main data source is the China Electricity Council (CEC).
@@ -483,7 +493,8 @@ const chinaTransmissionDatasets: Dataset[] = [
     regionLevel: "Interprovincial and Intraprovincial",
     frequency: "Annual",
     dataCoverage: "1990-2025",
-    downloadUrl: "#",
+    downloadUrl: "https://drive.google.com/uc?export=download&id=1fXW_tAfjPwvPoCNaXMjBqpAF4nwDmGMe",
+    methodologyUrl: "https://drive.google.com/file/d/1RapnlVpnqbCBaPKXjwBWZ3pDs6xXWp4Z/view?usp=drive_link",
     methodology: `## Data Sources
 
 The dataset is compiled exclusively from open and publicly accessible sources, including but not limited to:
@@ -536,6 +547,7 @@ If you'd like to require a complete methodology for this dataset, please specify
     frequency: "Annual",
     dataCoverage: "Not specified",
     downloadUrl: "#",
+    methodologyUrl: "https://drive.google.com/file/d/1RapnlVpnqbCBaPKXjwBWZ3pDs6xXWp4Z/view?usp=drive_link",
     methodology: `## Data Sources
 
 Data is compiled from publicly available sources, including official grid information, power-sector reports, OpenStreetMap, Google Satellite Imagery, and statistical publications. Manual cross-checking is performed to improve consistency and accuracy.
@@ -596,7 +608,8 @@ Capacity values are estimated and may differ from real-time operational limits. 
     regionLevel: "Interprovincial",
     frequency: "Annual",
     dataCoverage: "Not specified",
-    downloadUrl: "#",
+    downloadUrl: "https://drive.google.com/uc?export=download&id=17ynarlOCEAZq_RFb3Ig13ewaE1VoCvmF",
+    methodologyUrl: "https://drive.google.com/file/d/1RapnlVpnqbCBaPKXjwBWZ3pDs6xXWp4Z/view?usp=drive_link",
     methodology: `## Data Sources
 
 Data is compiled from publicly available sources, including official grid information, power-sector reports, OpenStreetMap, Google Satellite Imagery, and statistical publications. Manual cross-checking is performed to improve consistency and accuracy.
@@ -641,6 +654,7 @@ Capacity values are estimated and may differ from real-time operational limits. 
     frequency: "Annual",
     dataCoverage: "Not specified",
     downloadUrl: "#",
+    methodologyUrl: "https://drive.google.com/file/d/1WArM2P8-bG_w3qNf5VaFNEQvmMVUlzKC/view?usp=sharing",
     methodology: `## Data Sources
 
 Data is compiled from publicly available sources, including official grid information, power-sector reports, OpenStreetMap, Google Satellite Imagery, and statistical publications. Manual cross-checking is performed to improve consistency and accuracy.
@@ -682,6 +696,7 @@ If you'd like to require a complete methodology for this dataset, please specify
     frequency: "Hourly",
     dataCoverage: "2022",
     downloadUrl: "",
+    methodologyUrl: "https://drive.google.com/file/d/124ullKs_c_cmkK-FWeFSAEliF-LJ6y4l/view?usp=drive_link",
     methodology: `We developed a toolkit for constructing hourly electricity flow profiles between Chinese provinces using time-of-use (TOU) schedules, monthly export totals, load shapes, and network constraints.
 
 This toolkit computes an hourly time series of interprovincial electricity transmission based on:
@@ -867,6 +882,7 @@ const chinaParametersDatasets: Dataset[] = [
     frequency: "Weekly",
     dataCoverage: "2007/11-2024/05",
     downloadUrl: "",
+    methodologyUrl: "https://drive.google.com/file/d/1ySVk9Oi29bdIjyewcWDGKuZhZE4Ij9Si/view?usp=drive_link",
     methodology: `## Data Sources
 
 The data is collected from publicly available sources, including the China Coal Transport and Distribution Association (CCTD) and the China Coal Economic Research Association (CCERA).
@@ -874,7 +890,7 @@ The data is collected from publicly available sources, including the China Coal 
 CCTD is an industry association voluntarily joined by coal producers and distributors nationwide. It regularly publishes coal price indices, including the BSPI (Bohai-Rim Steam Coal Price Index).  
 **CCTD:** https://www.cctd.com.cn/
 
-CCERA is a comprehensive social organization in the economic field of China’s coal industry. It regularly compiles and releases coal price indices, including the CCI (China Coal Index).  
+CCERA is a comprehensive social organization in the economic field of China's coal industry. It regularly compiles and releases coal price indices, including the CCI (China Coal Index).  
 **CCERA:** https://ccera.com.cn/web/172/list.html
 
 ## Limitations
@@ -1139,7 +1155,7 @@ const indonesiaDemandDatasets: Dataset[] = [
     regionLevel: "Provincial",
     frequency: "Annual",
     dataCoverage: "2015-2024",
-    downloadUrl: "#",
+    downloadUrl: "https://drive.google.com/uc?export=download&id=1aH2UYmTbhG8ncO9EczldxZKehEinTdPu",
     methodology: "",
     preview: [
       { province: "Aceh", year: 2015, demand_gwh: 2119 },
@@ -1238,7 +1254,7 @@ const indonesiaTransmissionDatasets: Dataset[] = [
     regionLevel: "Intra-island",
     frequency: "Annual",
     dataCoverage: "Not specified",
-    downloadUrl: "#",
+    downloadUrl: "https://drive.google.com/uc?export=download&id=1G4Rg32e9-MQcd4pLMOesRNUkgCCMJ_sO",
     methodology: "",
     preview: [
       { province_a: "Jakarta", province_b: "Banten", voltage: "150 kV", capacity_mw: 3359.41 },
@@ -1269,7 +1285,7 @@ const indonesiaTransmissionDatasets: Dataset[] = [
     regionLevel: "Intra-island",
     frequency: "Annual",
     dataCoverage: "Not specified",
-    downloadUrl: "#",
+    downloadUrl: "https://drive.google.com/uc?export=download&id=1yUCS30UEBmXYJ0lnvZpkfswI9Fd48Zgr",
     methodology: "",
     preview: [
       { province_a: "West Kalimantan", province_b: "Central Kalimantan", voltage: "150 kV", capacity_mw: 105.29 },
@@ -1300,7 +1316,7 @@ const indonesiaTransmissionDatasets: Dataset[] = [
     regionLevel: "Intra-island",
     frequency: "Annual",
     dataCoverage: "Not specified",
-    downloadUrl: "#",
+    downloadUrl: "https://drive.google.com/uc?export=download&id=1BjPL2HVlX76lcWCGoimjCqYqcushAWAu",
     methodology: "",
     preview: [
       { province_a: "North Sulawesi", province_b: "Gorontalo", voltage: "150 kV", capacity_mw: 301.46 },
@@ -1331,7 +1347,7 @@ const indonesiaTransmissionDatasets: Dataset[] = [
     regionLevel: "Intra-island",
     frequency: "Annual",
     dataCoverage: "Not specified",
-    downloadUrl: "#",
+    downloadUrl: "https://drive.google.com/uc?export=download&id=1G4Rg32e9-MQcd4pLMOesRNUkgCCMJ_sO",
     methodology: "",
     preview: [
       { province_a: "Aceh", province_b: "North Sumatra", voltage: "275 kV", capacity_mw: 322.83 },
@@ -1424,7 +1440,8 @@ const vietnamDemandDatasets: Dataset[] = [
     regionLevel: "Zonal",
     frequency: "Annual",
     dataCoverage: "2030-2050",
-    downloadUrl: "#",
+    downloadUrl: "https://drive.google.com/uc?export=download&id=1G4Rg32e9-MQcd4pLMOesRNUkgCCMJ_sO",
+    methodologyUrl: "https://drive.google.com/file/d/1StuTWrjxOMI7dYsPEINl3nZKIeUJ1ut5/view?usp=drive_link",
     methodology: `## 1. Vietnam Regional Annual Electricity Consumption
 
 ### Source
@@ -1507,6 +1524,7 @@ const vietnamSupplyDatasets: Dataset[] = [
     frequency: "Annual",
     dataCoverage: "Not specified",
     downloadUrl: "#",
+    methodologyUrl: "https://drive.google.com/file/d/1StuTWrjxOMI7dYsPEINl3nZKIeUJ1ut5/view?usp=drive_link",
     methodology: `## 2. Vietnam Coal Power Generators
 
 ### Source
@@ -1572,7 +1590,8 @@ const vietnamTransmissionDatasets: Dataset[] = [
     regionLevel: "Interzonal and Intrazonal",
     frequency: "Annual",
     dataCoverage: "Not specified",
-    downloadUrl: "#",
+    downloadUrl: "https://drive.google.com/uc?export=download&id=1dwFKoVtJC9G6KEV5PJeqtrdWstdsy6Lb",
+    methodologyUrl: "https://drive.google.com/file/d/1StuTWrjxOMI7dYsPEINl3nZKIeUJ1ut5/view?usp=drive_link",
     methodology: `## 4. Vietnam 500 kV Power Network
 
 ### Source
@@ -1629,7 +1648,8 @@ PDP8 Draft Table 4, validated transmission line dataset.
     regionLevel: "Zonal",
     frequency: "Annual",
     dataCoverage: "Not specified",
-    downloadUrl: "#",
+    downloadUrl: "https://drive.google.com/uc?export=download&id=1toFhfv0Krp7MwLqiqUOuS-m0EyKnq5vG",
+    methodologyUrl: "https://drive.google.com/file/d/1StuTWrjxOMI7dYsPEINl3nZKIeUJ1ut5/view?usp=drive_link",
     methodology: `## 3. Vietnam 500 kV Substations
 
 ### Source
@@ -1700,6 +1720,7 @@ const vietnamREResourceDatasets: Dataset[] = [
     frequency: "Monthly",
     dataCoverage: "Not specified",
     downloadUrl: "#",
+    methodologyUrl: "https://drive.google.com/file/d/1StuTWrjxOMI7dYsPEINl3nZKIeUJ1ut5/view?usp=drive_link",
     methodology: `## 5. Vietnam Wind Regional Monthly Profile
 
 ### Source
@@ -1759,7 +1780,8 @@ const vietnamParametersDatasets: Dataset[] = [
     regionLevel: "National",
     frequency: "Monthly",
     dataCoverage: "2019/01-2025/02",
-    downloadUrl: "#",
+    downloadUrl: "https://drive.google.com/uc?export=download&id=1xQFJTVbmqXN3sOtcj4FWZxhD5FmEAuRe",
+    methodologyUrl: "https://drive.google.com/file/d/1StuTWrjxOMI7dYsPEINl3nZKIeUJ1ut5/view?usp=drive_link",
     methodology: `## 6. Vietnam Coal Import Price
 
 ### Source
@@ -2147,11 +2169,11 @@ export const powerDatasets: Dataset[] = [
   ...chinaTransmissionDatasets,
   ...chinaREResourceDatasets,
   ...chinaParametersDatasets,
-  ...indiaDemandDatasets,
-  ...indiaSupplyDatasets,
-  ...indiaTransmissionDatasets,
-  ...indiaREResourceDatasets,
-  ...indiaParametersDatasets,
+  // ...indiaDemandDatasets,
+  // ...indiaSupplyDatasets,
+  // ...indiaTransmissionDatasets,
+  // ...indiaREResourceDatasets,
+  // ...indiaParametersDatasets,
   ...indonesiaDemandDatasets,
   ...indonesiaSupplyDatasets,
   ...indonesiaTransmissionDatasets,
