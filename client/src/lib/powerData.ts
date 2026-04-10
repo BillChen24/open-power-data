@@ -1141,10 +1141,10 @@ const indiaParametersDatasets: Dataset[] = [
 // Indonesia datasets
 const indonesiaDemandDatasets: Dataset[] = [
   {
-    id: "id_prov_historical_consumption",
+    id: "id_prov_annual_consumption",
     country: "Indonesia",
     category: "Demand",
-    name: "Indonesia Provincial Historical Electricity Consumption",
+    name: "Indonesia Provincial Annual Electricity Consumption",
     featured: false,
     downloadable: true,
     updated: "2026-03-17",
@@ -1152,11 +1152,12 @@ const indonesiaDemandDatasets: Dataset[] = [
     size: "7 KB",
     license: "CC BY 4.0",
     citation: "Author: Power Transformation Lab; Title: id_prov_historical_consumption (CC BY 4.0).",
-    about: "This dataset contains historical provincial electricity consumption in Indonesia by year, expressed in GWh.",
+    about: "This dataset contains annual provincial electricity consumption in Indonesia by year, expressed in GWh.",
     regionLevel: "Provincial",
     frequency: "Annual",
     dataCoverage: "2015-2024",
     downloadUrl: "https://drive.google.com/uc?export=download&id=1aH2UYmTbhG8ncO9EczldxZKehEinTdPu",
+    methodologyUrl: "https://drive.google.com/file/d/1zMOrnp08TV3EV16Dtx_k1Kkz4L4YB9FZ/view?usp=drive_link",
     methodology: "",
     preview: [
       { province: "Aceh", year: 2015, demand_gwh: 2119 },
@@ -1172,10 +1173,10 @@ const indonesiaDemandDatasets: Dataset[] = [
     figureLink: "/dataset_charts/id_prov_historical_consumption.svg"
   },
   {
-    id: "id_prov_projected_demand",
+    id: "id_prov_annual_projections",
     country: "Indonesia",
     category: "Demand",
-    name: "Indonesia Provincial Projected Electricity Demand",
+    name: "Indonesia Provincial Annual Electricity Projections",
     featured: false,
     downloadable: false,
     updated: "2026-03-17",
@@ -1183,11 +1184,12 @@ const indonesiaDemandDatasets: Dataset[] = [
     size: "8 KB",
     license: "CC BY 4.0",
     citation: "Author: Power Transformation Lab; Title: id_prov_projected_demand (CC BY 4.0).",
-    about: "This dataset contains projected provincial electricity demand in Indonesia by year, expressed in GWh.",
+    about: "This dataset contains annual provincial electricity projections in Indonesia by year, expressed in GWh.",
     regionLevel: "Provincial",
     frequency: "Annual",
     dataCoverage: "2025-2034",
     downloadUrl: "",
+    methodologyUrl: "https://drive.google.com/file/d/1zMOrnp08TV3EV16Dtx_k1Kkz4L4YB9FZ/view?usp=drive_link",
     methodology: "",
     preview: [
       { province: "Aceh", year: 2025, demand_gwh: 3844 },
@@ -1222,6 +1224,7 @@ const indonesiaSupplyDatasets: Dataset[] = [
     frequency: "Annual",
     dataCoverage: "Not specified",
     downloadUrl: "",
+    methodologyUrl: "https://drive.google.com/file/d/1zMOrnp08TV3EV16Dtx_k1Kkz4L4YB9FZ/view?usp=drive_link",
     methodology: "",
     preview: [
       { province: "Jakarta", plant_name: "pltgu_muara_karang_blok_1__2_", capacity_mw: 1074, status: "operating", start_year: null, technology: "ccgt", fuel: "gas" },
@@ -1256,6 +1259,7 @@ const indonesiaTransmissionDatasets: Dataset[] = [
     frequency: "Annual",
     dataCoverage: "Not specified",
     downloadUrl: "https://drive.google.com/uc?export=download&id=1G4Rg32e9-MQcd4pLMOesRNUkgCCMJ_sO",
+    methodologyUrl: "https://drive.google.com/file/d/1zMOrnp08TV3EV16Dtx_k1Kkz4L4YB9FZ/view?usp=drive_link",
     methodology: "",
     preview: [
       { province_a: "Jakarta", province_b: "Banten", voltage: "150 kV", capacity_mw: 3359.41 },
@@ -1287,6 +1291,7 @@ const indonesiaTransmissionDatasets: Dataset[] = [
     frequency: "Annual",
     dataCoverage: "Not specified",
     downloadUrl: "https://drive.google.com/uc?export=download&id=1yUCS30UEBmXYJ0lnvZpkfswI9Fd48Zgr",
+    methodologyUrl: "https://drive.google.com/file/d/1zMOrnp08TV3EV16Dtx_k1Kkz4L4YB9FZ/view?usp=drive_link",
     methodology: "",
     preview: [
       { province_a: "West Kalimantan", province_b: "Central Kalimantan", voltage: "150 kV", capacity_mw: 105.29 },
@@ -1318,6 +1323,7 @@ const indonesiaTransmissionDatasets: Dataset[] = [
     frequency: "Annual",
     dataCoverage: "Not specified",
     downloadUrl: "https://drive.google.com/uc?export=download&id=1BjPL2HVlX76lcWCGoimjCqYqcushAWAu",
+    methodologyUrl: "https://drive.google.com/file/d/1zMOrnp08TV3EV16Dtx_k1Kkz4L4YB9FZ/view?usp=drive_link",
     methodology: "",
     preview: [
       { province_a: "North Sulawesi", province_b: "Gorontalo", voltage: "150 kV", capacity_mw: 301.46 },
@@ -1349,6 +1355,7 @@ const indonesiaTransmissionDatasets: Dataset[] = [
     frequency: "Annual",
     dataCoverage: "Not specified",
     downloadUrl: "https://drive.google.com/uc?export=download&id=1G4Rg32e9-MQcd4pLMOesRNUkgCCMJ_sO",
+    methodologyUrl: "https://drive.google.com/file/d/1zMOrnp08TV3EV16Dtx_k1Kkz4L4YB9FZ/view?usp=drive_link",
     methodology: "",
     preview: [
       { province_a: "Aceh", province_b: "North Sumatra", voltage: "275 kV", capacity_mw: 322.83 },
