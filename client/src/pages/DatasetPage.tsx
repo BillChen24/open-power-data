@@ -42,6 +42,10 @@ export default function DatasetPage() {
   const [citationOpen, setCitationOpen] = useState(false);
   const dataset = powerDatasets.find((d) => d.id === params?.id);
   const requestFormRef = useRef<HTMLDivElement>(null);
+  const getDatasetPageUrl = (id: string) =>
+    `https://open-power-data.onrender.com/dataset/${id}`;
+  const citationText =
+    dataset.citation?.replace("[URL]", getDatasetPageUrl(dataset.id)) ?? "";
   const scrollToRequestForm = () => {
     requestFormRef.current?.scrollIntoView({ behavior: "smooth" });
   };
@@ -563,24 +567,26 @@ export default function DatasetPage() {
               className="bg-muted p-4 rounded-lg font-mono text-sm"
               data-testid="text-citation-content"
             >
-              {dataset?.citation ||
+              {/* {dataset?.citation ||
                 `Open Power Data Initiative. "${
                   dataset?.name
                 }". Open Power Data, ${new Date().getFullYear()}. Available at: https://openpowerdata.org/dataset/${
                   dataset?.id
-                }`}
+                }`} */}
+              {citationText}
             </div>
             <Button
               variant="outline"
               className="mt-4 w-full"
               onClick={() => {
                 navigator.clipboard.writeText(
-                  dataset?.citation ||
-                    `Open Power Data Initiative. "${
-                      dataset?.name
-                    }". Open Power Data, ${new Date().getFullYear()}. Available at: https://openpowerdata.org/dataset/${
-                      dataset?.id
-                    }`,
+                  // dataset?.citation ||
+                  //   `Open Power Data Initiative. "${
+                  //     dataset?.name
+                  //   }". Open Power Data, ${new Date().getFullYear()}. Available at: https://openpowerdata.org/dataset/${
+                  //     dataset?.id
+                  //   }`,
+                  citationText,
                 );
               }}
               data-testid="button-copy-citation"
