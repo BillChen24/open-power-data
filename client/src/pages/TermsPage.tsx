@@ -13,16 +13,16 @@ export default function TermsPage() {
 
           <div className="prose prose-neutral dark:prose-invert max-w-none space-y-6">
             <p className="text-lg text-muted-foreground">
-              Last updated: January 2026
+              Last updated: May 2026
             </p>
 
             <section className="space-y-4">
               <h2 className="text-2xl font-semibold">1. Acceptance of Terms</h2>
               <p className="text-muted-foreground">
-                By accessing and using the Open Regional Electricity Observatory
-                (OREO) website and its services, you agree to be bound by these
-                Terms of Use. If you do not agree to these terms, please refrain
-                from using our platform.
+                By accessing and using the Open Power Data (name pending)
+                website and its services, you agree to be bound by these Terms
+                of Use. If you do not agree to these terms, please refrain from
+                using our platform.
               </p>
             </section>
 
@@ -51,12 +51,12 @@ export default function TermsPage() {
                 3. Intellectual Property
               </h2>
               <p className="text-muted-foreground">
-                The OREO name, logo, website design, and the Power
-                Transformation Lab branding are protected by intellectual
-                property rights. While datasets are governed by our License
-                Agreement (CC BY 4.0), you may not use our branding, logos, or
-                trademarks for promotional purposes without prior written
-                permission.
+                The Open Power Data (name pending) name, logo, website design,
+                and the Power Transformation Lab branding are protected by
+                intellectual property rights. While datasets are governed by our
+                License Agreement (CC BY 4.0), you may not use our branding,
+                logos, or trademarks for promotional purposes without prior
+                written permission.
               </p>
             </section>
 

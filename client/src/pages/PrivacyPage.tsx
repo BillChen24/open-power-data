@@ -13,7 +13,7 @@ export default function PrivacyPage() {
 
           <div className="prose prose-neutral dark:prose-invert max-w-none space-y-6">
             <p className="text-lg text-muted-foreground">
-              Last updated: January 2026
+              Last updated: May 2026
             </p>
 
             <section className="space-y-4">
@@ -22,8 +22,7 @@ export default function PrivacyPage() {
               </h2>
               <p className="text-muted-foreground">
                 We collect minimal information necessary to operate and improve
-                the Open Regional Electricity Observatory (OREO). This may
-                include:
+                the Open Power Data (name pending). This may include:
               </p>
               <ul className="list-disc list-inside text-muted-foreground space-y-2">
                 <li>

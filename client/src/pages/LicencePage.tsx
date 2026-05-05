@@ -13,18 +13,18 @@ export default function LicencePage() {
 
           <div className="prose prose-neutral dark:prose-invert max-w-none space-y-6">
             <p className="text-lg text-muted-foreground">
-              Last updated: January 2026
+              Last updated: May 2026
             </p>
 
             <section className="space-y-4">
               <h2 className="text-2xl font-semibold">1. Data Usage Rights</h2>
               <p className="text-muted-foreground">
-                All datasets provided through the Open Regional Electricity
-                Observatory (OREO) are made available under the Creative Commons
-                Attribution 4.0 International License (CC BY 4.0), unless
-                otherwise specified. You are free to copy, redistribute, and
-                adapt the material for any purpose, including commercial use,
-                provided that you give appropriate credit.
+                All datasets provided through the Open Power Data (name pending)
+                are made available under the Creative Commons Attribution 4.0
+                International License (CC BY 4.0), unless otherwise specified.
+                You are free to copy, redistribute, and adapt the material for
+                any purpose, including commercial use, provided that you give
+                appropriate credit.
               </p>
             </section>
 
@@ -33,11 +33,11 @@ export default function LicencePage() {
                 2. Attribution Requirements
               </h2>
               <p className="text-muted-foreground">
-                When using data from OREO, you must provide appropriate credit
-                by acknowledging the Power Transformation Lab and the Open
-                Regional Electricity Observatory (OREO) as the source. For
-                specific datasets, please follow the mandatory citation format
-                provided on each dataset's individual page.
+                When using data from Open Power Data (name pending), you must
+                provide appropriate credit by acknowledging the Power
+                Transformation Lab and the Open Power Data (name pending) as the
+                source. For specific datasets, please follow the mandatory
+                citation format provided on each dataset's individual page.
               </p>
             </section>
 
@@ -60,7 +60,7 @@ export default function LicencePage() {
                 4. Limitations of Liability
               </h2>
               <p className="text-muted-foreground">
-                In no event shall the Power Transformation Lab or its
+                IIn no event shall the Power Transformation Lab or its
                 contributors be liable for any claims, damages, or other
                 liabilities arising from the use of, or inability to use, the
                 data provided on this platform.
