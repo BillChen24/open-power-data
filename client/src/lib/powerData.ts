@@ -44,7 +44,7 @@ Users should be aware that the NBS may periodically revise historical data to im
     relevantReports: [
       { report_id: "R1", title: "Resource adequacy under institutional constraints and the low-carbon energy transition in China - ScienceDirect", url: "https://www.sciencedirect.com/science/article/pii/S030142152600042X#da0010" },
       { report_id: "R2", title: "North China and Northeast China Interprovincial Electricity Trade Brief", url: "https://emtracker.org/research/north-china-and-northeast-china-interprovincial-electricity-trade-brief/" },
-      { report_id: "R3", title: "Spatially resolved land and grid model of carbon neutrality in China | PNAS", url: "https://www.pnas.org/doi/10.1073/pnas.2306517121#data-availability" },
+      { report_id: "R3", title: "Spatially resolved land and grid model of carbon neutrality in China | PNAS", url: "https://www.pnas.org/doi/10.1073/pnas.2306517121" },
       { report_id: "R4", title: "Ratcheting up wind and solar targets for decarbonizing the power sector in China and beyond", url: "https://www.cell.com/cell-reports-sustainability/fulltext/S2949-7906(25)00085-0?_returnURL=https%3A%2F%2Flinkinghub.elsevier.com%2Fretrieve%2Fpii%2FS2949790625000850%3Fshowall%3Dtrue" },
       { report_id: "R5", title: "Reaching carbon neutrality in China: Temporal and subnational limitations of renewable energy scale-up", url: "https://www.sciencedirect.com/science/article/pii/S2666792425000320?via%3Dihub" },
     ],
@@ -91,7 +91,7 @@ Users should be aware that electricity consumption data on Dianchacha is reporte
     relevantReports: [
       { report_id: "R1", title: "Resource adequacy under institutional constraints and the low-carbon energy transition in China - ScienceDirect", url: "https://www.sciencedirect.com/science/article/pii/S030142152600042X#da0010" },
       { report_id: "R2", title: "North China and Northeast China Interprovincial Electricity Trade Brief", url: "https://emtracker.org/research/north-china-and-northeast-china-interprovincial-electricity-trade-brief/" },
-      { report_id: "R3", title: "Spatially resolved land and grid model of carbon neutrality in China | PNAS", url: "https://www.pnas.org/doi/10.1073/pnas.2306517121#data-availability" },
+      { report_id: "R3", title: "Spatially resolved land and grid model of carbon neutrality in China | PNAS", url: "https://www.pnas.org/doi/10.1073/pnas.2306517121" },
       { report_id: "R4", title: "Ratcheting up wind and solar targets for decarbonizing the power sector in China and beyond", url: "https://www.cell.com/cell-reports-sustainability/fulltext/S2949-7906(25)00085-0?_returnURL=https%3A%2F%2Flinkinghub.elsevier.com%2Fretrieve%2Fpii%2FS2949790625000850%3Fshowall%3Dtrue" },
       { report_id: "R5", title: "Reaching carbon neutrality in China: Temporal and subnational limitations of renewable energy scale-up", url: "https://www.sciencedirect.com/science/article/pii/S2666792425000320?via%3Dihub" },
     ],
@@ -143,7 +143,7 @@ If you'd like to require a complete methodology for this dataset, please specify
     relevantReports: [
       { report_id: "R1", title: "Resource adequacy under institutional constraints and the low-carbon energy transition in China - ScienceDirect", url: "https://www.sciencedirect.com/science/article/pii/S030142152600042X#da0010" },
       { report_id: "R2", title: "North China and Northeast China Interprovincial Electricity Trade Brief", url: "https://emtracker.org/research/north-china-and-northeast-china-interprovincial-electricity-trade-brief/" },
-      { report_id: "R3", title: "Spatially resolved land and grid model of carbon neutrality in China | PNAS", url: "https://www.pnas.org/doi/10.1073/pnas.2306517121#data-availability" },
+      { report_id: "R3", title: "Spatially resolved land and grid model of carbon neutrality in China | PNAS", url: "https://www.pnas.org/doi/10.1073/pnas.2306517121" },
       { report_id: "R4", title: "Ratcheting up wind and solar targets for decarbonizing the power sector in China and beyond", url: "https://www.cell.com/cell-reports-sustainability/fulltext/S2949-7906(25)00085-0?_returnURL=https%3A%2F%2Flinkinghub.elsevier.com%2Fretrieve%2Fpii%2FS2949790625000850%3Fshowall%3Dtrue" },
       { report_id: "R5", title: "Reaching carbon neutrality in China: Temporal and subnational limitations of renewable energy scale-up", url: "https://www.sciencedirect.com/science/article/pii/S2666792425000320?via%3Dihub" },
     ],
@@ -193,7 +193,7 @@ Users should be aware that data collected by GEM on various types of generators 
     relevantReports: [
       { report_id: "R1", title: "Resource adequacy under institutional constraints and the low-carbon energy transition in China - ScienceDirect", url: "https://www.sciencedirect.com/science/article/pii/S030142152600042X#da0010" },
       { report_id: "R2", title: "North China and Northeast China Interprovincial Electricity Trade Brief", url: "https://emtracker.org/research/north-china-and-northeast-china-interprovincial-electricity-trade-brief/" },
-      { report_id: "R3", title: "Spatially resolved land and grid model of carbon neutrality in China | PNAS", url: "https://www.pnas.org/doi/10.1073/pnas.2306517121#data-availability" },
+      { report_id: "R3", title: "Spatially resolved land and grid model of carbon neutrality in China | PNAS", url: "https://www.pnas.org/doi/10.1073/pnas.2306517121" },
       { report_id: "R4", title: "Ratcheting up wind and solar targets for decarbonizing the power sector in China and beyond", url: "https://www.cell.com/cell-reports-sustainability/fulltext/S2949-7906(25)00085-0?_returnURL=https%3A%2F%2Flinkinghub.elsevier.com%2Fretrieve%2Fpii%2FS2949790625000850%3Fshowall%3Dtrue" },
       { report_id: "R5", title: "Reaching carbon neutrality in China: Temporal and subnational limitations of renewable energy scale-up", url: "https://www.sciencedirect.com/science/article/pii/S2666792425000320?via%3Dihub" },
     ],
@@ -240,7 +240,7 @@ Users should be aware that the NBS may periodically revise historical data to im
     relevantReports: [
       { report_id: "R1", title: "Resource adequacy under institutional constraints and the low-carbon energy transition in China - ScienceDirect", url: "https://www.sciencedirect.com/science/article/pii/S030142152600042X#da0010" },
       { report_id: "R2", title: "North China and Northeast China Interprovincial Electricity Trade Brief", url: "https://emtracker.org/research/north-china-and-northeast-china-interprovincial-electricity-trade-brief/" },
-      { report_id: "R3", title: "Spatially resolved land and grid model of carbon neutrality in China | PNAS", url: "https://www.pnas.org/doi/10.1073/pnas.2306517121#data-availability" },
+      { report_id: "R3", title: "Spatially resolved land and grid model of carbon neutrality in China | PNAS", url: "https://www.pnas.org/doi/10.1073/pnas.2306517121" },
       { report_id: "R4", title: "Ratcheting up wind and solar targets for decarbonizing the power sector in China and beyond", url: "https://www.cell.com/cell-reports-sustainability/fulltext/S2949-7906(25)00085-0?_returnURL=https%3A%2F%2Flinkinghub.elsevier.com%2Fretrieve%2Fpii%2FS2949790625000850%3Fshowall%3Dtrue" },
       { report_id: "R5", title: "Reaching carbon neutrality in China: Temporal and subnational limitations of renewable energy scale-up", url: "https://www.sciencedirect.com/science/article/pii/S2666792425000320?via%3Dihub" },
     ],
@@ -287,7 +287,7 @@ Users should be aware that the NBS may periodically revise historical data to im
     relevantReports: [
       { report_id: "R1", title: "Resource adequacy under institutional constraints and the low-carbon energy transition in China - ScienceDirect", url: "https://www.sciencedirect.com/science/article/pii/S030142152600042X#da0010" },
       { report_id: "R2", title: "North China and Northeast China Interprovincial Electricity Trade Brief", url: "https://emtracker.org/research/north-china-and-northeast-china-interprovincial-electricity-trade-brief/" },
-      { report_id: "R3", title: "Spatially resolved land and grid model of carbon neutrality in China | PNAS", url: "https://www.pnas.org/doi/10.1073/pnas.2306517121#data-availability" },
+      { report_id: "R3", title: "Spatially resolved land and grid model of carbon neutrality in China | PNAS", url: "https://www.pnas.org/doi/10.1073/pnas.2306517121" },
       { report_id: "R4", title: "Ratcheting up wind and solar targets for decarbonizing the power sector in China and beyond", url: "https://www.cell.com/cell-reports-sustainability/fulltext/S2949-7906(25)00085-0?_returnURL=https%3A%2F%2Flinkinghub.elsevier.com%2Fretrieve%2Fpii%2FS2949790625000850%3Fshowall%3Dtrue" },
       { report_id: "R5", title: "Reaching carbon neutrality in China: Temporal and subnational limitations of renewable energy scale-up", url: "https://www.sciencedirect.com/science/article/pii/S2666792425000320?via%3Dihub" },
     ],
@@ -332,7 +332,7 @@ Users should be aware that installed capacity data on Dianchacha is reportedly s
       { model_id: "M3", name: "Renewable Energy Pathways Model", url: "https://github.com/Power-Lab/AdvAppliedEnergy_Pathways_2025" },
     ],
     relevantReports: [
-      { report_id: "R3", title: "Spatially resolved land and grid model of carbon neutrality in China | PNAS", url: "https://www.pnas.org/doi/10.1073/pnas.2306517121#data-availability" },
+      { report_id: "R3", title: "Spatially resolved land and grid model of carbon neutrality in China | PNAS", url: "https://www.pnas.org/doi/10.1073/pnas.2306517121" },
       { report_id: "R4", title: "Ratcheting up wind and solar targets for decarbonizing the power sector in China and beyond", url: "https://www.cell.com/cell-reports-sustainability/fulltext/S2949-7906(25)00085-0?_returnURL=https%3A%2F%2Flinkinghub.elsevier.com%2Fretrieve%2Fpii%2FS2949790625000850%3Fshowall%3Dtrue" },
       { report_id: "R5", title: "Reaching carbon neutrality in China: Temporal and subnational limitations of renewable energy scale-up", url: "https://www.sciencedirect.com/science/article/pii/S2666792425000320?via%3Dihub" },
     ],
@@ -377,7 +377,7 @@ Users should be aware that the solar PV installed capacity data released by the 
       { model_id: "M3", name: "Renewable Energy Pathways Model", url: "https://github.com/Power-Lab/AdvAppliedEnergy_Pathways_2025" },
     ],
     relevantReports: [
-      { report_id: "R3", title: "Spatially resolved land and grid model of carbon neutrality in China | PNAS", url: "https://www.pnas.org/doi/10.1073/pnas.2306517121#data-availability" },
+      { report_id: "R3", title: "Spatially resolved land and grid model of carbon neutrality in China | PNAS", url: "https://www.pnas.org/doi/10.1073/pnas.2306517121" },
       { report_id: "R4", title: "Ratcheting up wind and solar targets for decarbonizing the power sector in China and beyond", url: "https://www.cell.com/cell-reports-sustainability/fulltext/S2949-7906(25)00085-0?_returnURL=https%3A%2F%2Flinkinghub.elsevier.com%2Fretrieve%2Fpii%2FS2949790625000850%3Fshowall%3Dtrue" },
       { report_id: "R5", title: "Reaching carbon neutrality in China: Temporal and subnational limitations of renewable energy scale-up", url: "https://www.sciencedirect.com/science/article/pii/S2666792425000320?via%3Dihub" },
     ],
@@ -423,7 +423,7 @@ Users should be aware that installed capacity data on PK Thinker is reportedly s
       { model_id: "M3", name: "Renewable Energy Pathways Model", url: "https://github.com/Power-Lab/AdvAppliedEnergy_Pathways_2025" },
     ],
     relevantReports: [
-      { report_id: "R3", title: "Spatially resolved land and grid model of carbon neutrality in China | PNAS", url: "https://www.pnas.org/doi/10.1073/pnas.2306517121#data-availability" },
+      { report_id: "R3", title: "Spatially resolved land and grid model of carbon neutrality in China | PNAS", url: "https://www.pnas.org/doi/10.1073/pnas.2306517121" },
       { report_id: "R4", title: "Ratcheting up wind and solar targets for decarbonizing the power sector in China and beyond", url: "https://www.cell.com/cell-reports-sustainability/fulltext/S2949-7906(25)00085-0?_returnURL=https%3A%2F%2Flinkinghub.elsevier.com%2Fretrieve%2Fpii%2FS2949790625000850%3Fshowall%3Dtrue" },
       { report_id: "R5", title: "Reaching carbon neutrality in China: Temporal and subnational limitations of renewable energy scale-up", url: "https://www.sciencedirect.com/science/article/pii/S2666792425000320?via%3Dihub" },
     ],
@@ -469,7 +469,7 @@ Users should be aware that installed capacity data on PK Thinker is reportedly s
       { model_id: "M3", name: "Renewable Energy Pathways Model", url: "https://github.com/Power-Lab/AdvAppliedEnergy_Pathways_2025" },
     ],
     relevantReports: [
-      { report_id: "R3", title: "Spatially resolved land and grid model of carbon neutrality in China | PNAS", url: "https://www.pnas.org/doi/10.1073/pnas.2306517121#data-availability" },
+      { report_id: "R3", title: "Spatially resolved land and grid model of carbon neutrality in China | PNAS", url: "https://www.pnas.org/doi/10.1073/pnas.2306517121" },
       { report_id: "R4", title: "Ratcheting up wind and solar targets for decarbonizing the power sector in China and beyond", url: "https://www.cell.com/cell-reports-sustainability/fulltext/S2949-7906(25)00085-0?_returnURL=https%3A%2F%2Flinkinghub.elsevier.com%2Fretrieve%2Fpii%2FS2949790625000850%3Fshowall%3Dtrue" },
       { report_id: "R5", title: "Reaching carbon neutrality in China: Temporal and subnational limitations of renewable energy scale-up", url: "https://www.sciencedirect.com/science/article/pii/S2666792425000320?via%3Dihub" },
     ],
@@ -525,7 +525,7 @@ If you'd like to require a complete methodology for this dataset, please specify
     relevantReports: [
       { report_id: "R1", title: "Resource adequacy under institutional constraints and the low-carbon energy transition in China - ScienceDirect", url: "https://www.sciencedirect.com/science/article/pii/S030142152600042X#da0010" },
       { report_id: "R2", title: "North China and Northeast China Interprovincial Electricity Trade Brief", url: "https://emtracker.org/research/north-china-and-northeast-china-interprovincial-electricity-trade-brief/" },
-      { report_id: "R3", title: "Spatially resolved land and grid model of carbon neutrality in China | PNAS", url: "https://www.pnas.org/doi/10.1073/pnas.2306517121#data-availability" },
+      { report_id: "R3", title: "Spatially resolved land and grid model of carbon neutrality in China | PNAS", url: "https://www.pnas.org/doi/10.1073/pnas.2306517121" },
       { report_id: "R4", title: "Ratcheting up wind and solar targets for decarbonizing the power sector in China and beyond", url: "https://www.cell.com/cell-reports-sustainability/fulltext/S2949-7906(25)00085-0?_returnURL=https%3A%2F%2Flinkinghub.elsevier.com%2Fretrieve%2Fpii%2FS2949790625000850%3Fshowall%3Dtrue" },
       { report_id: "R5", title: "Reaching carbon neutrality in China: Temporal and subnational limitations of renewable energy scale-up", url: "https://www.sciencedirect.com/science/article/pii/S2666792425000320?via%3Dihub" },
     ],
@@ -587,7 +587,7 @@ Capacity values are estimated and may differ from real-time operational limits. 
     relevantReports: [
       { report_id: "R1", title: "Resource adequacy under institutional constraints and the low-carbon energy transition in China - ScienceDirect", url: "https://www.sciencedirect.com/science/article/pii/S030142152600042X#da0010" },
       { report_id: "R2", title: "North China and Northeast China Interprovincial Electricity Trade Brief", url: "https://emtracker.org/research/north-china-and-northeast-china-interprovincial-electricity-trade-brief/" },
-      { report_id: "R3", title: "Spatially resolved land and grid model of carbon neutrality in China | PNAS", url: "https://www.pnas.org/doi/10.1073/pnas.2306517121#data-availability" },
+      { report_id: "R3", title: "Spatially resolved land and grid model of carbon neutrality in China | PNAS", url: "https://www.pnas.org/doi/10.1073/pnas.2306517121" },
       { report_id: "R4", title: "Ratcheting up wind and solar targets for decarbonizing the power sector in China and beyond", url: "https://www.cell.com/cell-reports-sustainability/fulltext/S2949-7906(25)00085-0?_returnURL=https%3A%2F%2Flinkinghub.elsevier.com%2Fretrieve%2Fpii%2FS2949790625000850%3Fshowall%3Dtrue" },
       { report_id: "R5", title: "Reaching carbon neutrality in China: Temporal and subnational limitations of renewable energy scale-up", url: "https://www.sciencedirect.com/science/article/pii/S2666792425000320?via%3Dihub" },
     ],
@@ -632,7 +632,7 @@ Capacity values are estimated and may differ from real-time operational limits. 
     relevantReports: [
       { report_id: "R1", title: "Resource adequacy under institutional constraints and the low-carbon energy transition in China - ScienceDirect", url: "https://www.sciencedirect.com/science/article/pii/S030142152600042X#da0010" },
       { report_id: "R2", title: "North China and Northeast China Interprovincial Electricity Trade Brief", url: "https://emtracker.org/research/north-china-and-northeast-china-interprovincial-electricity-trade-brief/" },
-      { report_id: "R3", title: "Spatially resolved land and grid model of carbon neutrality in China | PNAS", url: "https://www.pnas.org/doi/10.1073/pnas.2306517121#data-availability" },
+      { report_id: "R3", title: "Spatially resolved land and grid model of carbon neutrality in China | PNAS", url: "https://www.pnas.org/doi/10.1073/pnas.2306517121" },
       { report_id: "R4", title: "Ratcheting up wind and solar targets for decarbonizing the power sector in China and beyond", url: "https://www.cell.com/cell-reports-sustainability/fulltext/S2949-7906(25)00085-0?_returnURL=https%3A%2F%2Flinkinghub.elsevier.com%2Fretrieve%2Fpii%2FS2949790625000850%3Fshowall%3Dtrue" },
       { report_id: "R5", title: "Reaching carbon neutrality in China: Temporal and subnational limitations of renewable energy scale-up", url: "https://www.sciencedirect.com/science/article/pii/S2666792425000320?via%3Dihub" },
     ],
@@ -789,7 +789,7 @@ const chinaREResourceDatasets: Dataset[] = [
       { model_id: "M2", name: "RESPO Model", url: "https://github.com/mrziheng/RESPO" },
     ],
     relevantReports: [
-      { report_id: "R3", title: "Spatially resolved land and grid model of carbon neutrality in China | PNAS", url: "https://www.pnas.org/doi/10.1073/pnas.2306517121#data-availability" },
+      { report_id: "R3", title: "Spatially resolved land and grid model of carbon neutrality in China | PNAS", url: "https://www.pnas.org/doi/10.1073/pnas.2306517121" },
     ],
   },
   {
@@ -822,7 +822,7 @@ const chinaREResourceDatasets: Dataset[] = [
       { model_id: "M2", name: "RESPO Model", url: "https://github.com/mrziheng/RESPO" },
     ],
     relevantReports: [
-      { report_id: "R3", title: "Spatially resolved land and grid model of carbon neutrality in China | PNAS", url: "https://www.pnas.org/doi/10.1073/pnas.2306517121#data-availability" },
+      { report_id: "R3", title: "Spatially resolved land and grid model of carbon neutrality in China | PNAS", url: "https://www.pnas.org/doi/10.1073/pnas.2306517121" },
     ],
   },
   {
@@ -855,7 +855,7 @@ const chinaREResourceDatasets: Dataset[] = [
       { model_id: "M2", name: "RESPO Model", url: "https://github.com/mrziheng/RESPO" },
     ],
     relevantReports: [
-      { report_id: "R3", title: "Spatially resolved land and grid model of carbon neutrality in China | PNAS", url: "https://www.pnas.org/doi/10.1073/pnas.2306517121#data-availability" },
+      { report_id: "R3", title: "Spatially resolved land and grid model of carbon neutrality in China | PNAS", url: "https://www.pnas.org/doi/10.1073/pnas.2306517121" },
     ],
   },
   {
@@ -888,7 +888,7 @@ const chinaREResourceDatasets: Dataset[] = [
       { model_id: "M2", name: "RESPO Model", url: "https://github.com/mrziheng/RESPO" },
     ],
     relevantReports: [
-      { report_id: "R3", title: "Spatially resolved land and grid model of carbon neutrality in China | PNAS", url: "https://www.pnas.org/doi/10.1073/pnas.2306517121#data-availability" },
+      { report_id: "R3", title: "Spatially resolved land and grid model of carbon neutrality in China | PNAS", url: "https://www.pnas.org/doi/10.1073/pnas.2306517121" },
     ],
   },
 ];
