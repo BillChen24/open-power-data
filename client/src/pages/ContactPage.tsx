@@ -181,7 +181,7 @@ export default function ContactPage() {
                       <div>
                         <h3 className="font-semibold mb-1">Email</h3>
                         <p className="text-muted-foreground">
-                          mrdavidson@ucsd.edu
+                          mrdavidson AT ucsd.edu
                         </p>
                       </div>
                     </div>
@@ -193,15 +193,10 @@ export default function ContactPage() {
                         <MapPin className="h-6 w-6 text-primary" />
                       </div>
                       <div>
-                        <h3 className="font-semibold mb-1">Office Location</h3>
+                        <h3 className="font-semibold mb-1">More Information</h3>
                         <p className="text-muted-foreground">
-                          Power Transformation Lab
-                          <br />
-                          UC San Diego, 9500 Gilman Dr
-                          <br />
-                          La Jolla, CA 92093
-                          <br />
-                          United States
+                          For more information on the Power Transformation Lab,
+                          please visit: pwrlab.org
                         </p>
                       </div>
                     </div>

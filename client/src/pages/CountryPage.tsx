@@ -37,7 +37,7 @@ export default function CountryPage() {
     indonesia:
       "Indonesia's electricity system is dominated by the Java-Bali grid, which serves the majority of the country's power demand. The archipelagic nature poses unique challenges for grid interconnection and renewable energy integration.",
     vietnam:
-      "Vietnam has experienced rapid growth in electricity demand over the past decade, driven by industrial development and rising living standards. The country is transitioning from hydropower dependence to a more diversified generation mix.",
+      "Vietnam has experienced rapid growth in electricity demand over the past decade, driven by industrial development and rising living standards. The country is transitioning to a more diversified generation mix.",
     asean:
       "The ASEAN Power Grid initiative aims to integrate the electricity systems of Southeast Asian nations through cross-border interconnections. This region represents diverse power systems with varying levels of development and renewable energy potential.",
   };
