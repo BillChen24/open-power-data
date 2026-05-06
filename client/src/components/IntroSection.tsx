@@ -11,10 +11,12 @@ export default function IntroSection() {
           </div>
           <h2 className="text-4xl font-semibold mb-6">About Our Initiative</h2>
           <p className="text-lg text-muted-foreground leading-relaxed">
-            Open Power Data is a collaborative research initiative dedicated to providing
-            transparent, accessible energy and power system data. Our mission is to enable
-            researchers, policymakers, and industry professionals to make data-driven decisions
-            that advance sustainable energy futures.
+            Open Power Data (name pending) is a collaborative research
+            initiative dedicated to providing transparent and accessible power
+            system data built on public use sources curated and validated from
+            the ground-up. Our mission is to enable researchers, policymakers,
+            and industry professionals to make data-driven decisions that
+            advance sustainable energy futures.
           </p>
         </div>
 
@@ -23,7 +25,7 @@ export default function IntroSection() {
             <div className="inline-flex items-center justify-center w-12 h-12 rounded-lg bg-primary/10 text-primary mb-4">
               <Globe className="h-6 w-6" />
             </div>
-            <div className="text-2xl font-bold mb-2">Global Coverage</div>
+            <div className="text-2xl font-bold mb-2">Key Regional Coverage</div>
             <p className="text-sm text-muted-foreground">
               Comprehensive datasets from major economies and emerging markets
             </p>
@@ -35,7 +37,7 @@ export default function IntroSection() {
             </div>
             <div className="text-2xl font-bold mb-2">Expert Team</div>
             <p className="text-sm text-muted-foreground">
-              Led by energy researchers and data scientists worldwide
+              Led by power system researchers and data scientists
             </p>
           </Card>
 
@@ -45,7 +47,8 @@ export default function IntroSection() {
             </div>
             <div className="text-2xl font-bold mb-2">Regular Updates</div>
             <p className="text-sm text-muted-foreground">
-              Continuously updated with latest power system information
+              Regularly updated with power sector information to reflect recent
+              trends
             </p>
           </Card>
         </div>

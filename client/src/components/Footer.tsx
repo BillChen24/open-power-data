@@ -13,8 +13,8 @@ export default function Footer() {
             </div>
             <p className="text-sm text-muted-foreground max-w-md">
               A collaborative research initiative providing transparent,
-              accessible energy and power system data for researchers and
-              policymakers worldwide.
+              accessible and validated power system data built from the ground
+              up.
             </p>
           </div>
 

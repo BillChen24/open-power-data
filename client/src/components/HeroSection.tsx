@@ -20,19 +20,18 @@ export default function HeroSection() {
           <div className="flex items-center gap-2 mb-4">
             <Database className="h-5 w-5 text-primary" />
             <span className="text-sm uppercase tracking-wide font-medium text-primary">
-              Global Energy Dataset Repository
+              Regional Open Power Systems Dataset Repository
             </span>
           </div>
 
           <h1 className="text-5xl md:text-6xl font-bold leading-tight mb-6">
-            Powering Research with
-            <span className="text-primary"> Open Energy Data</span>
+            Powering Research and impact with
+            <span className="text-primary"> Open Power Data</span>
           </h1>
 
           <p className="text-xl text-muted-foreground leading-relaxed mb-8">
-            Access comprehensive power and energy datasets from countries
-            worldwide. Explore demand patterns, generation capacity, and
-            infrastructure data to drive your research forward.
+            Access ground-up validated power sector datasets in key regions:
+            demand, generation, networks and renewable resources.
           </p>
 
           <div className="flex flex-wrap gap-4">
