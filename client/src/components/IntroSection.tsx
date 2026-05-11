@@ -27,7 +27,7 @@ export default function IntroSection() {
             </div>
             <div className="text-2xl font-bold mb-2">Key Regional Coverage</div>
             <p className="text-sm text-muted-foreground">
-              Comprehensive datasets from major economies and emerging markets
+              Regional datasets from major economies and emerging markets
             </p>
           </Card>
 

@@ -81,7 +81,7 @@ export default function CountryPage() {
               data-testid="text-country-intro"
             >
               {countryIntros[country.id] ||
-                "Explore comprehensive power sector data for this region."}
+                "Explore power sector data for this region."}
             </p>
           </div>
 
