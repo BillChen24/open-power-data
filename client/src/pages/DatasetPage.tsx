@@ -391,7 +391,7 @@ export default function DatasetPage() {
                   </ReactMarkdown>
                 </div>
               </div> */}
-              {dataset.methodologyUrl && (
+              {/* {dataset.methodologyUrl && (
                 <div>
                   <h2 className="text-2xl font-semibold mb-4">Methodology</h2>
                   <Card
@@ -422,6 +422,40 @@ export default function DatasetPage() {
                         <ExternalLink className="h-4 w-4" />
                       </div>
                     </a>
+                  </Card>
+                </div>
+              )} */}
+              {dataset.methodologyUrl && (
+                <div>
+                  <div className="flex items-center justify-between mb-4">
+                    <h2 className="text-2xl font-semibold">Methodology</h2>
+
+                    <a
+                      href={dataset.methodologyUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-1.5 text-sm font-medium text-primary hover:underline"
+                    >
+                      Open in New Tab (Google Drive Link)
+                      <ExternalLink className="h-4 w-4" />
+                    </a>
+                  </div>
+
+                  <Card
+                    className="p-2 overflow-hidden hover-elevate"
+                    data-testid="card-methodology"
+                  >
+                    <iframe
+                      src={
+                        dataset.methodologyUrl.includes("drive.google.com")
+                          ? dataset.methodologyUrl
+                              .replace("/view?usp=sharing", "/preview")
+                              .replace("/view", "/preview")
+                          : dataset.methodologyUrl
+                      }
+                      className="w-full h-[600px] rounded-md border-0"
+                      title="Methodology PDF"
+                    />
                   </Card>
                 </div>
               )}
