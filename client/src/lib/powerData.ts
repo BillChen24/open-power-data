@@ -2166,44 +2166,44 @@ export const Countries: Country[] = [
       },
     ],
   },
-  {
-    id: "other",
-    name: "Other Countries",
-    flag: "🌏",
-    datasetCount: otherCountryDemandDatasets.length + otherCountrySupplyDatasets.length + otherCountryTransmissionDatasets.length + otherCountryREResourceDatasets.length + otherCountryParametersDatasets.length,
-    categories: [
-      {
-        id: "demand",
-        name: "Demand",
-        icon: "TrendingUp",
-        datasets: otherCountryDemandDatasets,
-      },
-      {
-        id: "supply",
-        name: "Supply",
-        icon: "Zap",
-        datasets: otherCountrySupplyDatasets,
-      },
-      {
-        id: "transmission",
-        name: "Transmission",
-        icon: "Network",
-        datasets: otherCountryTransmissionDatasets,
-      },
-      {
-        id: "re-resource",
-        name: "RE Resource Potential",
-        icon: "Sun",
-        datasets: otherCountryREResourceDatasets,
-      },
-      {
-        id: "parameters",
-        name: "Parameters",
-        icon: "DollarSign",
-        datasets: otherCountryParametersDatasets,
-      },
-    ],
-  },
+  // {
+  //   id: "other",
+  //   name: "Other Countries",
+  //   flag: "🌏",
+  //   datasetCount: otherCountryDemandDatasets.length + otherCountrySupplyDatasets.length + otherCountryTransmissionDatasets.length + otherCountryREResourceDatasets.length + otherCountryParametersDatasets.length,
+  //   categories: [
+  //     {
+  //       id: "demand",
+  //       name: "Demand",
+  //       icon: "TrendingUp",
+  //       datasets: otherCountryDemandDatasets,
+  //     },
+  //     {
+  //       id: "supply",
+  //       name: "Supply",
+  //       icon: "Zap",
+  //       datasets: otherCountrySupplyDatasets,
+  //     },
+  //     {
+  //       id: "transmission",
+  //       name: "Transmission",
+  //       icon: "Network",
+  //       datasets: otherCountryTransmissionDatasets,
+  //     },
+  //     {
+  //       id: "re-resource",
+  //       name: "RE Resource Potential",
+  //       icon: "Sun",
+  //       datasets: otherCountryREResourceDatasets,
+  //     },
+  //     {
+  //       id: "parameters",
+  //       name: "Parameters",
+  //       icon: "DollarSign",
+  //       datasets: otherCountryParametersDatasets,
+  //     },
+  //   ],
+  // },
 ];
 
 export const powerDatasets: Dataset[] = [
@@ -2227,9 +2227,9 @@ export const powerDatasets: Dataset[] = [
   ...vietnamTransmissionDatasets,
   ...vietnamREResourceDatasets,
   ...vietnamParametersDatasets,
-  ...otherCountryDemandDatasets,
-  ...otherCountrySupplyDatasets,
-  ...otherCountryTransmissionDatasets,
-  ...otherCountryREResourceDatasets,
-  ...otherCountryParametersDatasets,
+  //...otherCountryDemandDatasets,
+  //...otherCountrySupplyDatasets,
+  //...otherCountryTransmissionDatasets,
+  //...otherCountryREResourceDatasets,
+  //...otherCountryParametersDatasets,
 ];
