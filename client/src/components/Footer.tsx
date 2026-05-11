@@ -83,14 +83,14 @@ export default function Footer() {
             <h4 className="font-semibold mb-4">Connect</h4>
             <ul className="space-y-2 text-sm">
               <li>
-                <a
-                  href="mailto:mrdavidson@ucsd.edu"
+                <Link
+                  href="/contact"
                   className="text-muted-foreground hover:text-primary flex items-center gap-2"
                   data-testid="link-email"
                 >
                   <Mail className="h-4 w-4" />
                   Email Us
-                </a>
+                </Link>
               </li>
               <li>
                 <a

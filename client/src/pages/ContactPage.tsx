@@ -187,20 +187,29 @@ export default function ContactPage() {
                     </div>
                   </Card>
 
-                  <Card className="p-6">
-                    <div className="flex items-start gap-4">
-                      <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center">
-                        <MapPin className="h-6 w-6 text-primary" />
+                  <a
+                    href="https://pwrlab.org"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block"
+                  >
+                    <Card className="p-6 hover:shadow-lg transition-shadow duration-200">
+                      <div className="flex items-start gap-4">
+                        <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center">
+                          <MapPin className="h-6 w-6 text-primary" />
+                        </div>
+                        <div>
+                          <h3 className="font-semibold mb-1">
+                            More Information
+                          </h3>
+                          <p className="text-muted-foreground">
+                            For more information on the Power Transformation
+                            Lab, please visit: pwrlab.org
+                          </p>
+                        </div>
                       </div>
-                      <div>
-                        <h3 className="font-semibold mb-1">More Information</h3>
-                        <p className="text-muted-foreground">
-                          For more information on the Power Transformation Lab,
-                          please visit: pwrlab.org
-                        </p>
-                      </div>
-                    </div>
-                  </Card>
+                    </Card>
+                  </a>
                 </div>
               </div>
 
