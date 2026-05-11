@@ -1,3 +1,4 @@
+import { Link } from "wouter";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Card } from "@/components/ui/card";
@@ -18,12 +19,13 @@ export default function AboutPage() {
         "project_funder/The William and Flora Hewlett Foundation Logo.svg",
     },
     {
-      name: "The Rockefeller Brothers Fund",
-      shortName: "RBF",
-      url: "https://www.rbf.org",
+      name: "Climate Imperative Foundation",
+      shortName: "CIF",
+      url: "https://climateimperative.org/",
       description:
-        "Created in 1940, the Rockefeller Brothers Fund (RBF) is a private family foundation rooted in the Rockefeller tradition of philanthropy. It advances social change that contributes to a more just, sustainable, and peaceful world.",
-      image_path: "project_funder/The Rockefeller Brothers Fund Logo.png",
+        "Climate Imperative Foundation provides funding, technical support, and expertise to inform the most important climate policy decisions in major-emitting countries around the world.",
+      image_path:
+        "https://climateimperative.org/wp-content/uploads/2021/10/ci-logo.png",
     },
     {
       name: "Carnegie Corporation of New York",
@@ -49,7 +51,8 @@ export default function AboutPage() {
             <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-16 w-full">
               <h1 className="text-5xl font-bold mb-4">About Us</h1>
               <p className="text-xl text-muted-foreground max-w-2xl">
-                Advancing energy transition through high-resolution open data
+                Advancing the power sector transition through high-resolution,
+                validated open power data
               </p>
             </div>
           </div>
@@ -59,21 +62,27 @@ export default function AboutPage() {
           <section className="mb-16">
             <h2 className="text-4xl font-semibold mb-6">Our Mission</h2>
             <p className="text-lg text-muted-foreground leading-relaxed mb-4">
-              The Open Regional Electricity Observatory (OREO), an initiative by
-              the Power Transformation Lab, is dedicated to the belief that
-              transparent and high-resolution energy data is the bedrock of a
-              sustainable future. We bridge the critical data gap by collecting,
-              curating, and sharing sub-national power system data—from
-              provincial to prefecture levels—across annual, monthly, and hourly
-              granularities.
+              Open Power Data (name pending), an initiative of the Power
+              Transformation Lab at the University of California San Diego, is
+              dedicated to expanding access to high-quality, transparent power
+              data in pivotal regions where such data remains limited. The core
+              of this effort is to collect, reconstruct, curate and validate
+              publicly available data on power systems.
             </p>
-            <p className="text-lg text-muted-foreground leading-relaxed">
-              Starting with pivotal regions like China and Southeast Asia, our
-              mission is to build a borderless platform that empowers
-              researchers, policymakers, and energy professionals. By providing
-              open access to detailed generation, consumption, and transmission
-              data, we aim to accelerate evidence-based decision-making and
-              foster global collaboration for the energy transition.
+            <p className="text-lg text-muted-foreground leading-relaxed mb-4">
+              By developing and sharing high-resolution datasets for
+              sub-national planning and operational power system modeling, we
+              seek to lower barriers to rigorous analysis and enable a wider
+              community of researchers, policymakers, and practitioners to
+              engage with energy systems on an equal footing with traditional
+              incumbents.
+            </p>
+            <p className="text-lg text-muted-foreground leading-relaxed mb-4">
+              In line with the Lab's commitment to open and collaborative
+              modeling, we promote transparency and replicability in model
+              inputs and outputs, support more diverse and creative uses of
+              analytical tools, and inform more inclusive decision-making in the
+              energy transition.
             </p>
           </section>
 
@@ -82,30 +91,74 @@ export default function AboutPage() {
             <div className="space-y-4">
               <Card className="p-6">
                 <h3 className="text-xl font-semibold mb-2">
-                  Data Collection & Curation
+                  Data Collection and Assimilation
                 </h3>
                 <p className="text-muted-foreground">
-                  We aggregate power system data from official sources, verify
-                  its accuracy, and standardize formats to ensure consistency
-                  and usability.
-                </p>
-              </Card>
-              <Card className="p-6">
-                <h3 className="text-xl font-semibold mb-2">Research Support</h3>
-                <p className="text-muted-foreground">
-                  We provide datasets, documentation, and technical support to
-                  researchers studying energy systems, climate change, and
-                  sustainable development.
+                  We collect data from multiple publicly available sources both
+                  official and non-official, verify their accuracy through
+                  cross-checking and validation, and standardize formats to
+                  ensure consistency and usability across power modeling
+                  frameworks. Core datasets are anchored by products of national
+                  energy authorities and statistical agencies with important
+                  limitations. Furthermore, we build on numerous global open
+                  source efforts, augmented with ground-truthing and
+                  complementary collection of local announcements, planning
+                  documents and news reports. Renewable energy profiles are
+                  derived from major global reanalysis products such as ERA5 and
+                  the Goddard Earth Observing System (GEOS-5) and diverse
+                  geospatial datasets reflecting land-use constraints. These
+                  datasets are converted for use in power system planning and
+                  operational models to evaluate generation expansion,
+                  transmission development, renewable integration, system
+                  reliability, and decarbonization pathways.
                 </p>
               </Card>
               <Card className="p-6">
                 <h3 className="text-xl font-semibold mb-2">
-                  Community Building
+                  Data Reconstruction and Reproducibility
                 </h3>
                 <p className="text-muted-foreground">
-                  We foster a global community of energy data users and
-                  contributors through workshops, conferences, and collaborative
-                  projects.
+                  Due to inevitable gaps in the publicly available data series
+                  collected, there are substantial additional efforts to
+                  reconstruct missing data and produce simulated datasets that
+                  reflect real-world conditions. These reconstruction
+                  methodologies are fit-for-purpose to the given research
+                  questions, for example aiming to replicate extreme behavior
+                  for reliability assessments and seasonal variation for annual
+                  operations. Where applicable, our simulated data tries to
+                  minimize errors with our collected datasets through tunable
+                  parameters reflecting weights assigned for importance and
+                  accuracy. We provide datasets, methodological notes, and
+                  supporting documentation so that users can reconstruct our
+                  data, understand the underlying assumptions, and reproduce the
+                  results in a transparent and consistent manner.
+                </p>
+              </Card>
+              <Card className="p-6">
+                <h3 className="text-xl font-semibold mb-2">
+                  Data Sharing and Modeling Applications
+                </h3>
+                <p className="text-muted-foreground">
+                  We provide datasets and documentation for modeling power
+                  systems, with open-source data profiles, standardized formats,
+                  and transparent methodologies for data generation and
+                  processing. To support reproducibility and broader adoption,
+                  we document how datasets are constructed and harmonized across
+                  multiple sources. We also help researchers navigate modeling
+                  applications by curating links to open-source models, research
+                  reports, and high-impact studies that use the same or related
+                  datasets, enabling users to understand and identify relevant
+                  use cases for their own analyses.{" "}
+                  <a
+                    href="/contact"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-blue-600 hover:underline"
+                  >
+                    We welcome inquiries
+                  </a>{" "}
+                  for additional data creation and modeling application
+                  collaborations.
                 </p>
               </Card>
             </div>
@@ -162,15 +215,15 @@ export default function AboutPage() {
                     className="flex flex-col items-center gap-3 text-center"
                   >
                     {/* Logo */}
-                    <img
+                    {/* <img
                       src={`/${funder.image_path}`}
                       alt={`${funder.name} logo`}
                       className="h-12 w-auto object-contain"
                       loading="lazy"
-                    />
+                    /> */}
 
                     {/* Name (optional but good for accessibility) */}
-                    <p className="text-sm text-muted-foreground font-medium">
+                    <p className="text-lg text-muted-foreground font-medium">
                       {funder.name}
                     </p>
                   </a>
