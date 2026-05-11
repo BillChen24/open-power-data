@@ -44,8 +44,9 @@ export default function DatasetPage() {
   const requestFormRef = useRef<HTMLDivElement>(null);
   const getDatasetPageUrl = (id: string) =>
     `https://open-power-data.onrender.com/dataset/${id}`;
-  const citationText =
-    dataset.citation?.replace("[URL]", getDatasetPageUrl(dataset.id)) ?? "";
+  const citationText = dataset
+    ? (dataset.citation?.replace("[URL]", getDatasetPageUrl(dataset.id)) ?? "")
+    : "";
   const scrollToRequestForm = () => {
     requestFormRef.current?.scrollIntoView({ behavior: "smooth" });
   };
