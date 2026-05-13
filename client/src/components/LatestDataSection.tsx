@@ -9,35 +9,26 @@ export default function LatestDataSection() {
   const latestDatasets = powerDatasets.slice(0, 3);
 
   return (
-    <section className="py-16 md:py-24 bg-muted/30">
-      <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-16">
-        <div className="flex items-center justify-between mb-12">
+    <section className="py-20 md:py-28">
+      <div className="max-w-5xl mx-auto px-6 md:px-12 lg:px-16">
+        <div className="text-center mb-16">
           <div>
             <h2 className="text-4xl font-semibold mb-4">Latest Datasets</h2>
             <p className="text-lg text-muted-foreground">
-              Recently updated power and energy data from around the world
+              Recently updated regional power system datasets
             </p>
           </div>
-          <Link href="/explore" data-testid="link-view-all">
-            <Button
-              variant="outline"
-              className="hidden md:flex"
-              data-testid="button-view-all"
-            >
-              View All Datasets
-              <ArrowRight className="ml-2 h-4 w-4" />
-            </Button>
-          </Link>
         </div>
 
-        <div className="flex gap-6 overflow-x-auto pb-2 -mx-2 px-2">
+        {/* <div className="flex gap-6 overflow-x-auto pb-2 mx-3 px-2"> */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12 justify-items-center">
           {latestDatasets.map((dataset) => (
             <Card
               key={dataset.id}
-              className="p-6 hover-elevate w-80 flex-shrink-0"
+              className="p-4 hover-elevate w-full max-w-xs items-center space-y-3"
               data-testid={`card-dataset-${dataset.id}`}
             >
-              <div className="flex items-start justify-between mb-4">
+              <div className="flex items-start justify-between mb-3">
                 <Badge variant="secondary" className="text-xs">
                   {dataset.category}
                 </Badge>
@@ -48,17 +39,17 @@ export default function LatestDataSection() {
               </div>
 
               <h3
-                className="text-xl font-medium mb-2 line-clamp-2"
+                className="text-lg font-medium mb-1 line-clamp-2"
                 data-testid={`text-dataset-name-${dataset.id}`}
               >
                 {dataset.name}
               </h3>
 
-              <p className="text-sm text-muted-foreground mb-4 line-clamp-2">
+              <p className="text-sm text-muted-foreground mb-2 line-clamp-2">
                 {dataset.description}
               </p>
 
-              <div className="flex flex-wrap gap-2 mb-4">
+              <div className="flex flex-wrap gap-2 mb-2">
                 <Badge variant="outline" className="text-xs">
                   {dataset.format.split(",")[0].trim()}
                 </Badge>
@@ -87,8 +78,19 @@ export default function LatestDataSection() {
           ))}
         </div>
 
-        <div className="mt-8 text-center md:hidden">
-          <Link href="/explore" data-testid="link-view-all-mobile">
+        <div className="mt-12 flex justify-center gap-4">
+          <Link href="/explore" data-testid="link-view-all" className="hidden md:inline-flex">
+            <Button
+              variant="outline"
+              className="justify-between"
+              data-testid="button-view-all"
+            >
+              View All Datasets
+              <ArrowRight className="ml-2 h-4 w-4" />
+            </Button>
+          </Link>
+
+          <Link href="/explore" data-testid="link-view-all-mobile" className="md:hidden inline-flex">
             <Button variant="outline" data-testid="button-view-all-mobile">
               View All Datasets
               <ArrowRight className="ml-2 h-4 w-4" />

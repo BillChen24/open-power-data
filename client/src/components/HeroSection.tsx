@@ -24,7 +24,7 @@ export default function HeroSection() {
             </span>
           </div>
 
-          <h1 className="text-5xl md:text-6xl font-bold leading-tight mb-6">
+          <h1 className="text-5xl md:text-5xl font-bold leading-tight mb-6">
             Powering Research and impact with
             <span className="text-primary"> Open Power Data</span>
           </h1>
@@ -59,19 +59,19 @@ export default function HeroSection() {
 
           <div className="grid grid-cols-3 gap-8 mt-12 pt-8 border-t border-border/50">
             <div>
-              <div className="text-3xl font-bold text-primary">5+</div>
+              <div className="text-3xl font-bold text-primary">3</div>
               <div className="text-sm text-muted-foreground mt-1">
                 Countries
               </div>
             </div>
             <div>
-              <div className="text-3xl font-bold text-primary">45+</div>
+              <div className="text-3xl font-bold text-primary">35+</div>
               <div className="text-sm text-muted-foreground mt-1">Datasets</div>
             </div>
             <div>
-              <div className="text-3xl font-bold text-primary">5M+</div>
+              <div className="text-3xl font-bold text-primary">5</div>
               <div className="text-sm text-muted-foreground mt-1">
-                Data Points
+                Data Categories
               </div>
             </div>
           </div>

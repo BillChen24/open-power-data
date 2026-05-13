@@ -8,8 +8,8 @@ import CountryIcon from "./CountryIcon";
 
 export default function CountryGallery() {
   return (
-    <section className="py-16 md:py-24">
-      <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-16">
+    <section className="py-16 md:py-24 bg-muted/30">
+      <div className="max-w-6xl mx-auto px-6 md:px-12 lg:px-16">
         <div className="text-center mb-12">
           <h2 className="text-4xl font-semibold mb-4">Explore by Country</h2>
           <p className="text-lg text-muted-foreground">

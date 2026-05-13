@@ -4,14 +4,14 @@ import { Database, Mail, Github } from "lucide-react";
 export default function Footer() {
   return (
     <footer className="border-t bg-muted/30 mt-16">
-      <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-16 py-12">
+      <div className="max-w-6xl mx-auto px-6 md:px-12 lg:px-16 py-12">
         <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
           <div className="md:col-span-2">
             <div className="flex items-center gap-2 mb-4">
               <Database className="h-6 w-6 text-primary" />
               <span className="text-xl font-semibold">Open Power Data</span>
             </div>
-            <p className="text-sm text-muted-foreground max-w-md">
+            <p className="text-md text-muted-foreground max-w-md">
               A collaborative research initiative providing transparent,
               accessible and validated power system data built from the ground
               up.
