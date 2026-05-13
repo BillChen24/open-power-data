@@ -1286,7 +1286,7 @@ const indonesiaTransmissionDatasets: Dataset[] = [
     regionLevel: "Intra-island",
     frequency: "Annual",
     dataCoverage: "Not specified",
-    downloadUrl: "https://drive.google.com/uc?export=download&id=1G4Rg32e9-MQcd4pLMOesRNUkgCCMJ_sO",
+    downloadUrl: "https://drive.google.com/uc?export=download&id=1YgO9KliKBJKvA7UV07hdzMGePeTx1SB4",
     methodologyUrl: "https://drive.google.com/file/d/1zMOrnp08TV3EV16Dtx_k1Kkz4L4YB9FZ/view?usp=drive_link",
     methodology: "",
     preview: [
@@ -1483,7 +1483,7 @@ const vietnamDemandDatasets: Dataset[] = [
     regionLevel: "Zonal",
     frequency: "Annual",
     dataCoverage: "2030-2050",
-    downloadUrl: "https://drive.google.com/uc?export=download&id=1G4Rg32e9-MQcd4pLMOesRNUkgCCMJ_sO",
+    downloadUrl: "https://drive.google.com/uc?export=download&id=1Gy5Y3hLXu-HN10OnB0R-K89tXNE5dooj",
     methodologyUrl: "https://drive.google.com/file/d/1StuTWrjxOMI7dYsPEINl3nZKIeUJ1ut5/view?usp=drive_link",
     methodology: `## 1. Vietnam Regional Annual Electricity Consumption
 
