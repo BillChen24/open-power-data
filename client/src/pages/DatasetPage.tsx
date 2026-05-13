@@ -40,6 +40,7 @@ import { powerDatasets } from "@/lib/powerData";
 export default function DatasetPage() {
   const [, params] = useRoute("/dataset/:id");
   const [citationOpen, setCitationOpen] = useState(false);
+  const [citationCopied, setCitationCopied] = useState(false);
   const dataset = powerDatasets.find((d) => d.id === params?.id);
   const requestFormRef = useRef<HTMLDivElement>(null);
   const getDatasetPageUrl = (id: string) =>
@@ -610,7 +611,7 @@ export default function DatasetPage() {
                 }`} */}
               {citationText}
             </div>
-            <Button
+            {/* <Button
               variant="outline"
               className="mt-4 w-full"
               onClick={() => {
@@ -627,6 +628,22 @@ export default function DatasetPage() {
               data-testid="button-copy-citation"
             >
               Copy Citation
+            </Button> */}
+            <Button
+              variant="outline"
+              className="mt-4 w-full"
+              onClick={() => {
+                navigator.clipboard.writeText(citationText);
+
+                setCitationCopied(true);
+
+                setTimeout(() => {
+                  setCitationCopied(false);
+                }, 2000);
+              }}
+              data-testid="button-copy-citation"
+            >
+              {citationCopied ? "Citation Copied!" : "Copy Citation"}
             </Button>
           </div>
         </DialogContent>
