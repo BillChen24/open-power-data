@@ -17,6 +17,8 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { useToast } from "@/hooks/use-toast";
+import { useMutation } from "@tanstack/react-query";
+import { apiRequest } from "@/lib/queryClient";
 import { Mail, MapPin, Send } from "lucide-react";
 
 const contactSchema = z.object({
@@ -42,19 +44,23 @@ export default function ContactPage() {
     },
   });
 
-  const onSubmit = async (data: ContactForm) => {
-    setIsSubmitting(true);
-    console.log("Contact form submitted:", data);
-
-    setTimeout(() => {
+  const mutation = useMutation({
+    mutationFn: (data: ContactForm) => apiRequest("POST", "/api/contact", data),
+    onSuccess: () => {
       toast({
         title: "Message Sent",
         description: "Thank you for contacting us. We'll respond shortly.",
       });
       form.reset();
-      setIsSubmitting(false);
-    }, 1000);
-  };
+    },
+    onError: () => {
+      toast({
+        title: "Submission Failed",
+        description: "Something went wrong. Please try again.",
+        variant: "destructive",
+      });
+    },
+  });
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -76,7 +82,7 @@ export default function ContactPage() {
 
               <Form {...form}>
                 <form
-                  onSubmit={form.handleSubmit(onSubmit)}
+                  onSubmit={form.handleSubmit((data) => mutation.mutate(data))}
                   className="space-y-6"
                 >
                   <FormField
@@ -156,11 +162,11 @@ export default function ContactPage() {
                   <Button
                     type="submit"
                     size="lg"
-                    disabled={isSubmitting}
+                    disabled={mutation.isPending} //disabled={isSubmitting}
                     className="w-full"
                     data-testid="button-submit-contact"
                   >
-                    {isSubmitting ? "Sending..." : "Send Message"}
+                    {mutation.isPending ? "Sending..." : "Send Message"}
                     <Send className="ml-2 h-4 w-4" />
                   </Button>
                 </form>

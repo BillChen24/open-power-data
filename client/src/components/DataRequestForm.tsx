@@ -15,6 +15,8 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { useToast } from "@/hooks/use-toast";
+import { useMutation } from "@tanstack/react-query";
+import { apiRequest } from "@/lib/queryClient";
 import { Send } from "lucide-react";
 import ReCAPTCHA from "react-google-recaptcha";
 
@@ -45,6 +47,7 @@ export default function DataRequestForm({
       organization: "",
       purpose: "",
       datasetId,
+      datasetName,
     },
   });
 
@@ -52,21 +55,10 @@ export default function DataRequestForm({
     setRecaptchaToken(token);
   };
 
-  const onSubmit = async (data: DataRequest) => {
-    if (!recaptchaToken) {
-      toast({
-        title: "Verification Required",
-        description: "Please complete the reCAPTCHA verification.",
-        variant: "destructive",
-      });
-      return;
-    }
-
-    setIsSubmitting(true);
-    console.log("Data request submitted:", data);
-    console.log("reCAPTCHA token:", recaptchaToken);
-
-    setTimeout(() => {
+  const mutation = useMutation({
+    mutationFn: (data: DataRequest) =>
+      apiRequest("POST", "/api/data-requests", data),
+    onSuccess: () => {
       toast({
         title: "Request Submitted",
         description: "We'll review your request and contact you shortly.",
@@ -77,12 +69,51 @@ export default function DataRequestForm({
         organization: "",
         purpose: "",
         datasetId,
+        datasetName,
       });
-      setRecaptchaToken(null);
-      recaptchaRef.current?.reset();
-      setIsSubmitting(false);
-    }, 1000);
-  };
+    },
+    onError: () => {
+      toast({
+        title: "Submission Failed",
+        description: "Something went wrong. Please try again.",
+        variant: "destructive",
+      });
+    },
+  });
+
+  const onSubmit = (data: DataRequest) => mutation.mutate(data);
+
+  // const onSubmit = async (data: DataRequest) => {
+  //   if (!recaptchaToken) {
+  //     toast({
+  //       title: "Verification Required",
+  //       description: "Please complete the reCAPTCHA verification.",
+  //       variant: "destructive",
+  //     });
+  //     return;
+  //   }
+
+  //   setIsSubmitting(true);
+  //   console.log("Data request submitted:", data);
+  //   console.log("reCAPTCHA token:", recaptchaToken);
+
+  //   setTimeout(() => {
+  //     toast({
+  //       title: "Request Submitted",
+  //       description: "We'll review your request and contact you shortly.",
+  //     });
+  //     form.reset({
+  //       name: "",
+  //       email: "",
+  //       organization: "",
+  //       purpose: "",
+  //       datasetId,
+  //     });
+  //     setRecaptchaToken(null);
+  //     recaptchaRef.current?.reset();
+  //     setIsSubmitting(false);
+  //   }, 1000);
+  // };
 
   return (
     <div className="max-w-4xl mx-auto">
@@ -185,11 +216,13 @@ export default function DataRequestForm({
             <Button
               type="submit"
               size="lg"
-              disabled={isSubmitting || !recaptchaToken}
+              //disabled={isSubmitting || !recaptchaToken}
+              disabled={mutation.isPending || !recaptchaToken}
               className="w-full md:w-auto"
               data-testid="button-submit-request"
             >
-              {isSubmitting ? "Submitting..." : "Submit Request"}
+              {/* {isSubmitting ? "Submitting..." : "Submit Request"} */}
+              {mutation.isPending ? "Submitting..." : "Submit Request"}
               <Send className="ml-2 h-4 w-4" />
             </Button>
           </div>
