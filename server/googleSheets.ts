@@ -32,7 +32,6 @@ export async function appendToSheet(record: StoredDataRequest): Promise<void> {
       requestBody: {
         values: [[
           record.submittedAt?.toISOString() ?? new Date().toISOString(),
-          "data_request",
           record.name,
           record.email,
           record.organization,
