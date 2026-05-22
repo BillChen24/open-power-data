@@ -1401,6 +1401,7 @@ const indonesiaTransmissionDatasets: Dataset[] = [
 ];
 
 const indonesiaREResourceDatasets: Dataset[] = [
+  /*
   {
     id: "indonesia-solar-regional-monthly",
     country: "Indonesia",
@@ -1427,6 +1428,7 @@ const indonesiaREResourceDatasets: Dataset[] = [
     figureLink: "",
     inPreparation: true,
   },
+  */
 ];
 
 const indonesiaParametersDatasets: Dataset[] = [
@@ -1746,6 +1748,7 @@ The 500 kV power network (Section 4) references 10 additional substations as tra
 ];
 
 const vietnamREResourceDatasets: Dataset[] = [
+  /*
   {
     id: "vietnam-wind-regional-monthly",
     country: "Vietnam",
@@ -1804,6 +1807,7 @@ Onshore wind capacity factors from Renewables.ninja, aggregated to model zones b
     ],
     figureLink: "/dataset_charts/vn_wind_regional_monthly_profile.svg"
   },
+  */
 ];
 
 const vietnamParametersDatasets: Dataset[] = [
