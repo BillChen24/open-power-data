@@ -1542,7 +1542,7 @@ We decompose these 3 PDP8 regions into **6 model zones** per PDP8's subregional 
       { zone: "TTB", zone_number: 3, zone_en: "Central", zone_vn: "Trung Trung Bộ", year: 2030, demand_gwh: 36222 }
     ],
     modelImplementations: [
-      { model_id: "M5", name: "Vietnam Power Capacity Expansion Model", url: "" }
+      { model_id: "M5", name: "Vietnam Power Capacity Expansion Model (Link coming soon)" }
     ],
     relevantReports: [
       { report_id: "R7", title: "Policy Brief - Vietnam 2035 Power - Nov 2025 - UCSD Power Lab.pdf", url: "https://drive.google.com/file/d/1IJeenNwuhSGLyOuSck65YCpzck9NBrho/view" }
@@ -1609,7 +1609,7 @@ Global Energy Monitor (GEM) Global Coal Plant Tracker, January 2024 snapshot, fi
       { type: "coal", zone_en: "North", plant_name: "Hai Phong Thermal Power Station", capacity_mw: 1200, status: "operating", technology: "subcritical", fuel: "anthracite", units: 4, unit_capacity_mw: 300 },
     ],
     modelImplementations: [
-      { model_id: "M5", name: "Vietnam Power Capacity Expansion Model", url: "" }
+      { model_id: "M5", name: "Vietnam Power Capacity Expansion Model (Link coming soon)" }
     ],
     relevantReports: [
       { report_id: "R7", title: "Policy Brief - Vietnam 2035 Power - Nov 2025 - UCSD Power Lab.pdf", url: "https://drive.google.com/file/d/1IJeenNwuhSGLyOuSck65YCpzck9NBrho/view" }
@@ -1670,7 +1670,7 @@ PDP8 Draft Table 4, validated transmission line dataset.
       { line_id: "T_500_01041", substation_a: "Nghi Sơn", substation_b: "Hà Tĩnh", province_a: "Thanh Hoa", province_b: "Ha Tinh", voltage: "500 kV", count: 1 }
     ],
     modelImplementations: [
-      { model_id: "M5", name: "Vietnam Power Capacity Expansion Model", url: "" }
+      { model_id: "M5", name: "Vietnam Power Capacity Expansion Model (Link coming soon)" }
     ],
     relevantReports: [
       { report_id: "R7", title: "Policy Brief - Vietnam 2035 Power - Nov 2025 - UCSD Power Lab.pdf", url: "https://drive.google.com/file/d/1IJeenNwuhSGLyOuSck65YCpzck9NBrho/view" }
@@ -1738,7 +1738,7 @@ The 500 kV power network (Section 4) references 10 additional substations as tra
       { sub_id: 1686, name: "Ia Blứ", name_full: "Trạm biến áp 500kV Ia Blứ", province: "Gia Lai", zone_number: 4, voltage: "500 kV", status: "existing", count: 1 }
     ],
     modelImplementations: [
-      { model_id: "M5", name: "Vietnam Power Capacity Expansion Model", url: "" }
+      { model_id: "M5", name: "Vietnam Power Capacity Expansion Model (Link coming soon)" }
     ],
     relevantReports: [
       { report_id: "R7", title: "Policy Brief - Vietnam 2035 Power - Nov 2025 - UCSD Power Lab.pdf", url: "https://drive.google.com/file/d/1IJeenNwuhSGLyOuSck65YCpzck9NBrho/view" }
@@ -1800,7 +1800,7 @@ Onshore wind capacity factors from Renewables.ninja, aggregated to model zones b
       { zone: "BB", zone_en: "North", zone_vn: "Bắc Bộ", month: 3, wind_type: "onshore", capacity_factor: 0.1173 }
     ],
     modelImplementations: [
-      { model_id: "M5", name: "Vietnam Power Capacity Expansion Model", url: "" }
+      { model_id: "M5", name: "Vietnam Power Capacity Expansion Model (Link coming soon)" }
     ],
     relevantReports: [
       { report_id: "R7", title: "Policy Brief - Vietnam 2035 Power - Nov 2025 - UCSD Power Lab.pdf", url: "https://drive.google.com/file/d/1IJeenNwuhSGLyOuSck65YCpzck9NBrho/view" }
@@ -1861,7 +1861,7 @@ World Bank Commodity Price Data (Pink Sheet), via IndexMundi.
       { fuel_type: "coal", index_name: "Newcastle FOB | Thermal Coal | Australian Export Benchmark", calorific_grade: "6000K", price_usd_per_ton: 93.12, year: 2019, month: 3 }
     ],
     modelImplementations: [
-      { model_id: "M5", name: "Vietnam Power Capacity Expansion Model", url: "" }
+      { model_id: "M5", name: "Vietnam Power Capacity Expansion Model (Link coming soon)" }
     ],
     relevantReports: [
       { report_id: "R7", title: "Policy Brief - Vietnam 2035 Power - Nov 2025 - UCSD Power Lab.pdf", url: "https://drive.google.com/file/d/1IJeenNwuhSGLyOuSck65YCpzck9NBrho/view" }

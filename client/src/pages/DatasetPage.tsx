@@ -480,15 +480,19 @@ export default function DatasetPage() {
                           •
                         </span>
                         <div className="space-y-1">
-                          <a
-                            href={model.url || "#"}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="text-primary hover:underline inline-flex items-center gap-1"
-                          >
-                            <ExternalLink className="h-3.5 w-3.5" />
+                          {model.url ? (
+                            <a
+                              href={model.url}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="text-primary hover:underline inline-flex items-center gap-1"
+                            >
+                              <ExternalLink className="h-3.5 w-3.5" />
+                              <span className="font-medium">{model.name}</span>
+                            </a>
+                          ) : (
                             <span className="font-medium">{model.name}</span>
-                          </a>
+                          )}
                           {model.description && (
                             <div className="text-muted-foreground text-xs">
                               {model.description}
