@@ -1,4 +1,3 @@
-import { Link } from "wouter";
 import { BarChart3, Zap, Network, Sun, SlidersHorizontal } from "lucide-react";
 
 const categories = [
@@ -65,31 +64,28 @@ function Hexagon({
 }) {
   const Icon = category.icon;
   return (
-    <Link href="/explore" data-testid={`link-category-${category.id}`}>
-      <div
-        className={`flex flex-col items-center gap-4 cursor-pointer group ${
-          offset ? "mt-16" : ""
-        }`}
-      >
-        <div className="relative">
-          <div
-            className={`w-36 h-36 ${category.color} flex flex-col items-center justify-center transition-transform duration-200 group-hover:scale-105`}
-            style={{
-              clipPath:
-                "polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)",
-            }}
-          >
-            <Icon className="h-10 w-10 text-white mb-1" strokeWidth={1.5} />
-            <span className="text-white text-sm font-semibold tracking-wide">
-              {category.label}
-            </span>
-          </div>
+    <div
+      className={`flex flex-col items-center gap-4 ${offset ? "mt-16" : ""}`}
+      data-testid={`category-${category.id}`}
+    >
+      <div className="relative">
+        <div
+          className={`w-36 h-36 ${category.color} flex flex-col items-center justify-center`}
+          style={{
+            clipPath:
+              "polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)",
+          }}
+        >
+          <Icon className="h-10 w-10 text-white mb-1" strokeWidth={1.5} />
+          <span className="text-white text-sm font-semibold tracking-wide">
+            {category.label}
+          </span>
         </div>
-        <p className="text-xs text-muted-foreground text-center max-w-[130px] leading-relaxed">
-          {category.description}
-        </p>
       </div>
-    </Link>
+      <p className="text-xs text-muted-foreground text-center max-w-[130px] leading-relaxed">
+        {category.description}
+      </p>
+    </div>
   );
 }
 

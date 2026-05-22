@@ -11,6 +11,10 @@ import { ArrowRight } from "lucide-react";
 export default function CountryPage() {
   const [, params] = useRoute("/country/:countryId");
   const country = Countries.find((c) => c.id === params?.countryId);
+  const selectedCategory =
+    typeof window !== "undefined"
+      ? new URLSearchParams(window.location.search).get("category")
+      : null;
 
   if (!country) {
     return (
@@ -137,7 +141,14 @@ export default function CountryPage() {
           )}
 
           {/* Category Tabs */}
-          <Tabs defaultValue="all" className="w-full">
+          <Tabs
+            defaultValue={
+              country.categories.some((category) => category.id === selectedCategory)
+                ? selectedCategory!
+                : "all"
+            }
+            className="w-full"
+          >
             <TabsList
               className="mb-8 flex-wrap h-auto gap-2"
               data-testid="tabs-categories"

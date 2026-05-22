@@ -145,6 +145,22 @@ export default function ExplorePage() {
                               </div>
                             </AccordionTrigger>
                             <AccordionContent className="px-6 pb-6 pt-2">
+                              <div className="mb-3">
+                                <Button
+                                  variant="outline"
+                                  size="sm"
+                                  asChild
+                                  data-testid={`button-country-category-${country.id}-${category.id}`}
+                                >
+                                  <Link
+                                    href={`/country/${country.id}?category=${category.id}`}
+                                    data-testid={`link-country-category-${country.id}-${category.id}`}
+                                  >
+                                    View {category.name} Category
+                                    <ArrowRight className="ml-2 h-4 w-4" />
+                                  </Link>
+                                </Button>
+                              </div>
                               <ul className="space-y-1">
                                 {category.datasets.map((dataset) => (
                                   <li key={dataset.id}>

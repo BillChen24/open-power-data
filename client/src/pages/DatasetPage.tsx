@@ -35,7 +35,7 @@ import {
 } from "lucide-react";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
-import { powerDatasets } from "@/lib/powerData";
+import { Countries, powerDatasets } from "@/lib/powerData";
 
 export default function DatasetPage() {
   const [, params] = useRoute("/dataset/:id");
@@ -78,6 +78,17 @@ export default function DatasetPage() {
     );
   }
 
+  const datasetCountry = Countries.find((country) => country.name === dataset.country);
+  const datasetCategory = datasetCountry?.categories.find(
+    (category) => category.name === dataset.category,
+  );
+  const countryHref = `/country/${
+    datasetCountry?.id ?? dataset.country.toLowerCase()
+  }`;
+  const categoryHref = datasetCategory
+    ? `${countryHref}?category=${datasetCategory.id}`
+    : countryHref;
+
   if (dataset.inPreparation) {
     return (
       <div className="min-h-screen flex flex-col">
@@ -99,7 +110,7 @@ export default function DatasetPage() {
                 </Link>
                 <ChevronRight className="h-4 w-4" />
                 <Link
-                  href={`/country/${dataset.country.toLowerCase()}`}
+                  href={countryHref}
                   data-testid="link-breadcrumb-country"
                 >
                   <span className="hover:text-primary cursor-pointer">
@@ -107,7 +118,14 @@ export default function DatasetPage() {
                   </span>
                 </Link>
                 <ChevronRight className="h-4 w-4" />
-                <span>{dataset.category}</span>
+                <Link
+                  href={categoryHref}
+                  data-testid="link-breadcrumb-category"
+                >
+                  <span className="hover:text-primary cursor-pointer">
+                    {dataset.category}
+                  </span>
+                </Link>
               </div>
 
               <h1
@@ -118,7 +136,11 @@ export default function DatasetPage() {
               </h1>
               <div className="flex flex-wrap gap-2">
                 <Badge variant="secondary">{dataset.country}</Badge>
-                <Badge variant="secondary">{dataset.category}</Badge>
+                <Link href={categoryHref} data-testid="link-category-badge">
+                  <Badge variant="secondary" className="cursor-pointer">
+                    {dataset.category}
+                  </Badge>
+                </Link>
               </div>
             </div>
           </div>
@@ -191,7 +213,7 @@ export default function DatasetPage() {
               </Link>
               <ChevronRight className="h-4 w-4" />
               <Link
-                href={`/country/${dataset.country.toLowerCase()}`}
+                href={countryHref}
                 data-testid="link-breadcrumb-country"
               >
                 <span className="hover:text-primary cursor-pointer">
@@ -199,7 +221,11 @@ export default function DatasetPage() {
                 </span>
               </Link>
               <ChevronRight className="h-4 w-4" />
-              <span>{dataset.category}</span>
+              <Link href={categoryHref} data-testid="link-breadcrumb-category">
+                <span className="hover:text-primary cursor-pointer">
+                  {dataset.category}
+                </span>
+              </Link>
             </div>
 
             <div className="flex items-start justify-between gap-8">
@@ -212,7 +238,11 @@ export default function DatasetPage() {
                 </h1>
                 <div className="flex flex-wrap gap-2">
                   <Badge variant="secondary">{dataset.country}</Badge>
-                  <Badge variant="secondary">{dataset.category}</Badge>
+                  <Link href={categoryHref} data-testid="link-category-badge">
+                    <Badge variant="secondary" className="cursor-pointer">
+                      {dataset.category}
+                    </Badge>
+                  </Link>
                   <Link href="/licence" data-testid="link-license-badge">
                     <Badge variant="outline" className="cursor-pointer">
                       {dataset.license}
