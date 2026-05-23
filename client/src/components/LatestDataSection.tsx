@@ -21,7 +21,7 @@ export default function LatestDataSection() {
       <div className="max-w-5xl mx-auto px-6 md:px-12 lg:px-16">
         <div className="text-center mb-16">
           <div>
-            <h2 className="text-4xl font-semibold mb-4">Feature Datasets</h2>
+            <h2 className="text-4xl font-semibold mb-4">Featured Datasets</h2>
             <p className="text-lg text-muted-foreground">
               Featured regional power system datasets
             </p>
