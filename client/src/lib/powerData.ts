@@ -181,7 +181,7 @@ If you'd like to require a complete methodology for this dataset, please specify
     relevantReports: [
       { report_id: "R3", title: "Spatially resolved land and grid model of carbon neutrality in China | PNAS", url: "https://www.pnas.org/doi/10.1073/pnas.2306517121" },
     ],
-    figureLink: "/dataset_charts/EMTracker/cn_prov_hourly_load_2030_2035.png"
+    figureLink: "/dataset_charts/cn_prov_hourly_load_2030_2035.png"
   },
   {
     id: "china-east-grid-hourly-load-2030",
@@ -216,7 +216,7 @@ If you'd like to require a complete methodology for this dataset, please specify
     relevantReports: [
       { report_id: "R9", title: "Resource Adequacy Assessment for the East China Grid: Policy Interventions and Contingent Scenarios for 2030", url: "https://emtracker.org/research/resource-adequacy-assessment-for-the-east-china-grid-policy-interventions-and-contingent-scenarios-for-2030/" },
     ],
-    figureLink: "/dataset_charts/EMTracker/cn_east_grid_hourly_load_2030.png"
+    figureLink: "/dataset_charts/cn_east_grid_hourly_load_2030.png"
   },
   {
     id: "china-south-grid-hourly-load-2030-2060",
@@ -251,7 +251,7 @@ If you'd like to require a complete methodology for this dataset, please specify
     relevantReports: [
       { report_id: "R8", title: "Offshore Wind Power and Resource Adequacy in the China Southern Grid", url: "https://www.law.berkeley.edu/wp-content/uploads/archive/2026/03/Offshore-wind-Report-Feb-2026.pdf" },
     ],
-    figureLink: "/dataset_charts/EMTracker/cn_south_grid_hourly_load_2030_2060.png"
+    figureLink: "/dataset_charts/cn_south_grid_hourly_load_2030_2060.png"
   },
   {
     id: "china-guangdong-prefecture-hourly-load-2030-2060",
@@ -285,7 +285,7 @@ If you'd like to require a complete methodology for this dataset, please specify
     relevantReports: [
       { report_id: "R8", title: "Offshore Wind Power and Resource Adequacy in the China Southern Grid", url: "https://www.law.berkeley.edu/wp-content/uploads/archive/2026/03/Offshore-wind-Report-Feb-2026.pdf" },
     ],
-    figureLink: "/dataset_charts/EMTracker/cn_gd_prefecture_hourly_load_2030_2060.png"
+    figureLink: "/dataset_charts/cn_gd_prefecture_hourly_load_2030_2060.png"
   },
 ];
 
