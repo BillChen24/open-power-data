@@ -41,6 +41,7 @@ export default function DatasetPage() {
   const [, params] = useRoute("/dataset/:id");
   const [citationOpen, setCitationOpen] = useState(false);
   const [citationCopied, setCitationCopied] = useState(false);
+  const [citationCopyFailed, setCitationCopyFailed] = useState(false);
   const dataset = powerDatasets.find((d) => d.id === params?.id);
   const requestFormRef = useRef<HTMLDivElement>(null);
   const getDatasetPageUrl = (id: string) =>
@@ -666,18 +667,28 @@ export default function DatasetPage() {
             <Button
               variant="outline"
               className="mt-4 w-full"
-              onClick={() => {
-                navigator.clipboard.writeText(citationText);
-
-                setCitationCopied(true);
+              onClick={async () => {
+                try {
+                  await navigator.clipboard.writeText(citationText);
+                  setCitationCopied(true);
+                  setCitationCopyFailed(false);
+                } catch {
+                  setCitationCopied(false);
+                  setCitationCopyFailed(true);
+                }
 
                 setTimeout(() => {
                   setCitationCopied(false);
+                  setCitationCopyFailed(false);
                 }, 2000);
               }}
               data-testid="button-copy-citation"
             >
-              {citationCopied ? "Citation Copied!" : "Copy Citation"}
+              {citationCopied
+                ? "Citation Copied!"
+                : citationCopyFailed
+                  ? "Copy failed"
+                  : "Copy Citation"}
             </Button>
           </div>
         </DialogContent>
