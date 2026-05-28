@@ -25,7 +25,7 @@ export default function HeroSection() {
           </div>
 
           <h1 className="text-5xl md:text-5xl font-bold leading-tight mb-6">
-            Powering Research and impact with
+            Powering Research and Impact with
             <span className="text-primary"> Open Power Data</span>
           </h1>
 
