@@ -1952,25 +1952,24 @@ The 500 kV power network (Section 4) references 10 additional substations as tra
 ];
 
 const vietnamREResourceDatasets: Dataset[] = [
-  /*
   {
-    id: "vietnam-wind-regional-monthly",
+    id: "vietnam-hourly-wind-profiles",
     country: "Vietnam",
     category: "RE Resource Potential",
-    name: "Vietnam Wind Regional Monthly Profile",
+    name: "Vietnam Hourly Wind Profiles",
     featured: true,
     downloadable: false,
-    updated: "2026-02-17",
+    updated: "2026-05-28",
     format: "CSV",
-    size: "3 KB",
+    size: "1007 KB",
     license: "CC BY 4.0",
-    citation: "Power Transformation Lab. (2026). Vietnam Wind Regional Monthly Profile [Dataset], Version 1.0. University of California, San Diego. [URL]. Licensed under CC BY 4.0.",
-    about: "This dataset contains Vietnam onshore wind capacity factors from Renewables.ninja, aggregated to model zones by capacity-weighted averaging.",
+    citation: "Power Transformation Lab. (2026). Vietnam Hourly Wind Profiles [Dataset], Version 1.0. University of California, San Diego. [URL]. Licensed under CC BY 4.0.",
+    about: "This dataset contains hourly wind profiles for each zone in Vietnam averaged over the period 2016-2020.",
     regionLevel: "Zonal",
-    frequency: "Monthly",
-    dataCoverage: "Not specified",
+    frequency: "Hourly",
+    dataCoverage: "Average of 2016-2020",
     downloadUrl: "#",
-    methodologyUrl: "https://drive.google.com/file/d/1StuTWrjxOMI7dYsPEINl3nZKIeUJ1ut5/view?usp=drive_link",
+    methodologyUrl: "https://drive.google.com/file/d/1r1oJIZEbm68FpKdwjXYNgSG8bcUxGTRU/view?usp=drive_link",
     methodology: `## 5. Vietnam Wind Regional Monthly Profile
 
 ### Source
@@ -1999,9 +1998,9 @@ Onshore wind capacity factors from Renewables.ninja, aggregated to model zones b
 - Renewables.ninja (ERA5 reanalysis)  
 - Build-out locations: GEM Global Wind Power Tracker, June 2024`,
     preview: [
-      { zone: "BB", zone_en: "North", zone_vn: "Bắc Bộ", month: 1, wind_type: "onshore", capacity_factor: 0.2111 },
-      { zone: "BB", zone_en: "North", zone_vn: "Bắc Bộ", month: 2, wind_type: "onshore", capacity_factor: 0.2026 },
-      { zone: "BB", zone_en: "North", zone_vn: "Bắc Bộ", month: 3, wind_type: "onshore", capacity_factor: 0.1173 }
+      { zone_1: 0.09069378642, zone_2: 0.257774575, zone_3: 0.3496495688, zone_4: 0.6347000047, zone_5: 0.5774614027, zone_6: 0.615193354 },
+      { zone_1: 0.1049238526, zone_2: 0.2549942501, zone_3: 0.3882292163, zone_4: 0.8240537189, zone_5: 0.6010741433, zone_6: 0.5770391577 },
+      { zone_1: 0.1018161453, zone_2: 0.2507416629, zone_3: 0.437669834, zone_4: 0.9662256042, zone_5: 0.6883781877, zone_6: 0.5791632389 }
     ],
     modelImplementations: [
       { model_id: "M5", name: "Vietnam Power Capacity Expansion Model (Link coming soon)" }
@@ -2009,9 +2008,40 @@ Onshore wind capacity factors from Renewables.ninja, aggregated to model zones b
     relevantReports: [
       { report_id: "R7", title: "Policy Brief - Vietnam 2035 Power - Nov 2025 - UCSD Power Lab.pdf", url: "https://drive.google.com/file/d/1IJeenNwuhSGLyOuSck65YCpzck9NBrho/view" }
     ],
-    figureLink: "/dataset_charts/vn_wind_regional_monthly_profile.svg"
+    figureLink: "/dataset_charts/vn_wind_zonal_hourly_cf_2016_2020_avg.png"
   },
-  */
+  {
+    id: "vietnam-hourly-solar-profiles",
+    country: "Vietnam",
+    category: "RE Resource Potential",
+    name: "Vietnam Hourly Solar Profiles",
+    featured: true,
+    downloadable: false,
+    updated: "2026-05-28",
+    format: "CSV",
+    size: "589 KB",
+    license: "CC BY 4.0",
+    citation: "Power Transformation Lab. (2026). Vietnam Hourly Solar Profiles [Dataset], Version 1.0. University of California, San Diego. [URL]. Licensed under CC BY 4.0.",
+    about: "This dataset contains hourly solar profiles for each zone in Vietnam averaged over the period 2016-2020.",
+    regionLevel: "Zonal",
+    frequency: "Hourly",
+    dataCoverage: "Average of 2016-2020",
+    downloadUrl: "#",
+    methodologyUrl: "https://drive.google.com/file/d/1r1oJIZEbm68FpKdwjXYNgSG8bcUxGTRU/view?usp=drive_link",
+    methodology: ``,
+    preview: [
+      { zone_1: 0.0006606323764, zone_2: 0.004722476051, zone_3: 0.008052089248, zone_4: 0.02627847426, zone_5: 0.03957966558, zone_6: 0.02494013712 },
+      { zone_1: 0.07300816849, zone_2: 0.06750952615, zone_3: 0.07331494753, zone_4: 0.1496773066, zone_5: 0.2016295567, zone_6: 0.1628122469 },
+      { zone_1: 0.2184735153, zone_2: 0.1392782811, zone_3: 0.1515128644, zone_4: 0.2631100553, zone_5: 0.3616315333, zone_6: 0.308783885 },
+    ],
+    modelImplementations: [
+      { model_id: "M5", name: "Vietnam Power Capacity Expansion Model (Link coming soon)" }
+    ],
+    relevantReports: [
+      { report_id: "R7", title: "Policy Brief - Vietnam 2035 Power - Nov 2025 - UCSD Power Lab.pdf", url: "https://drive.google.com/file/d/1IJeenNwuhSGLyOuSck65YCpzck9NBrho/view" }
+    ],
+    figureLink: "/dataset_charts/vn_solar_zonal_hourly_cf_2016_2020_avg.png"
+  },
 ];
 
 const vietnamParametersDatasets: Dataset[] = [
